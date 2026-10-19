@@ -1,0 +1,303 @@
+{
+  "dateModified": "2026-10-16T01:04:59+03:00",
+  "person": {
+    "name": "Yakup Gündüz",
+    "alternateName": [
+      "Yakup Gunduz"
+    ],
+    "givenName": "Yakup",
+    "familyName": "Gündüz",
+    "jobTitle": {
+      "tr": "Full-Stack Yazılım Geliştirici",
+      "en": "Full-Stack Software Developer"
+    },
+    "description": {
+      "tr": "Yakup Gündüz, İstanbul'da full-stack yazılım geliştirici ve Harpos'un kurucusu. Next.js ve Laravel ile SaaS, web ve otomasyon sistemleri geliştirir; 42 İstanbul ve İstanbul Üniversitesi'nde eğitimine devam ediyor.",
+      "en": "Yakup Gündüz is a full-stack software developer in Istanbul and the founder of Harpos. He builds SaaS, web and automation systems with Next.js and Laravel, and studies at 42 İstanbul and Istanbul University."
+    },
+    "knowsAbout": {
+      "tr": [
+        "Next.js",
+        "React",
+        "Laravel",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "C",
+        "C++",
+        "SQL Server (MSSQL)",
+        "PostgreSQL",
+        "MySQL",
+        "Docker",
+        "Nginx",
+        "Git",
+        "RESTful API",
+        "SQL sorgu optimizasyonu",
+        "CTE ve stored procedure",
+        "SOLID",
+        "MVC",
+        "Repository Pattern",
+        "CQRS",
+        "LLM entegrasyonları"
+      ],
+      "en": [
+        "Next.js",
+        "React",
+        "Laravel",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "C",
+        "C++",
+        "SQL Server (MSSQL)",
+        "PostgreSQL",
+        "MySQL",
+        "Docker",
+        "Nginx",
+        "Git",
+        "RESTful APIs",
+        "SQL query optimization",
+        "CTEs and stored procedures",
+        "SOLID",
+        "MVC",
+        "Repository Pattern",
+        "CQRS",
+        "LLM integrations"
+      ]
+    },
+    "award": {
+      "tr": [
+        "Monad Blitz İstanbul, 46 takım arasında üçüncülük (Inscribi Director)"
+      ],
+      "en": [
+        "3rd of 46 teams, Monad Blitz Istanbul (Inscribi Director)"
+      ]
+    },
+    "sameAs": [
+      "https://github.com/yakup-gunduz",
+      "https://www.linkedin.com/in/yakupgunduz"
+    ]
+  },
+  "pages": {
+    "home": {
+      "tr": {
+        "title": "Yakup Gündüz: Full-Stack Yazılım Geliştirici, İstanbul",
+        "description": "Yakup Gündüz, İstanbul'da full-stack yazılım geliştirici ve Harpos'un kurucusu. Next.js ve Laravel ile SaaS, web ve otomasyon sistemleri geliştirir; 42 İstanbul ve İstanbul Üniversitesi'nde eğitimine devam ediyor.",
+        "og": "İstanbul'da full-stack yazılım geliştirici ve Harpos kurucusu. Next.js ve Laravel ile SaaS, web ve otomasyon sistemleri.",
+        "og_alt": "Yakup Gündüz adı ve portresi",
+        "crumb": "Ana sayfa"
+      },
+      "en": {
+        "title": "Yakup Gündüz: Full-Stack Software Developer in Istanbul",
+        "description": "Yakup Gündüz is a full-stack software developer in Istanbul and the founder of Harpos. He builds SaaS, web and automation systems with Next.js and Laravel, and studies at 42 İstanbul and Istanbul University.",
+        "og": "Full-stack software developer in Istanbul and founder of Harpos. SaaS, web and automation systems with Next.js and Laravel.",
+        "og_alt": "Yakup Gündüz's name and portrait",
+        "crumb": "Home"
+      }
+    },
+    "about": {
+      "tr": {
+        "title": "Yakup Gündüz kimdir? Hakkımda",
+        "description": "Yakup Gündüz, İstanbul'da full-stack yazılım geliştirici: Harpos kurucusu, Kle Bilgi Teknolojileri ve Uniqh deneyimi, 42 İstanbul ve İstanbul Üniversitesi. Biyografi ve teknik yetkinlikler.",
+        "og": "Yakup Gündüz: biyografi, kilometre taşları, teknik yetkinlikler ve sık sorulanlar.",
+        "og_alt": "Yakup Gündüz adı ve portresi",
+        "crumb": "Hakkımda"
+      },
+      "en": {
+        "title": "Yakup Gündüz: About",
+        "description": "Yakup Gündüz is a full-stack software developer in Istanbul: founder of Harpos, experience at Kle Bilgi Teknolojileri and Uniqh, studying at 42 İstanbul and Istanbul University. Bio and technical skills.",
+        "og": "Yakup Gündüz: bio, milestones, technical skills and frequently asked questions.",
+        "og_alt": "Yakup Gündüz's name and portrait",
+        "crumb": "About"
+      }
+    },
+    "contact": {
+      "tr": {
+        "title": "İletişim: Yakup Gündüz",
+        "description": "Yakup Gündüz ile iletişim: proje, iş birliği ya da kısa bir soru için ykpgunduz@icloud.com. İstanbul, Türkiye; uzaktan çalışmaya açık.",
+        "og": "Proje, iş birliği ya da kısa bir soru için ykpgunduz@icloud.com.",
+        "og_alt": "Yakup Gündüz adı ve portresi",
+        "crumb": "İletişim"
+      },
+      "en": {
+        "title": "Contact: Yakup Gündüz",
+        "description": "Contact Yakup Gündüz about a project, a collaboration or a quick question at ykpgunduz@icloud.com. Istanbul, Türkiye; open to remote work.",
+        "og": "Write to ykpgunduz@icloud.com about a project, a collaboration or a quick question.",
+        "og_alt": "Yakup Gündüz's name and portrait",
+        "crumb": "Contact"
+      }
+    }
+  },
+  "facts": {
+    "tr": {
+      "heading": "Kısaca",
+      "rows": [
+        [
+          "Ad",
+          "Yakup Gündüz (Latin harflerle Yakup Gunduz)"
+        ],
+        [
+          "Konum",
+          "İstanbul, Türkiye · diğer şehirlerde uzaktan çalışmaya açık"
+        ],
+        [
+          "Rol",
+          "Full-stack yazılım geliştirici"
+        ],
+        [
+          "Kurduğu şirket",
+          "Harpos Teknoloji (SaaS, Ağustos 2024 – Ağustos 2026)"
+        ],
+        [
+          "Deneyim",
+          "Kle Bilgi Teknolojileri (stajyer, ardından yazılım geliştirici, 2023–2024); Uniqh, Londra (veri bilimi uzmanı, 2024)"
+        ],
+        [
+          "Eğitim",
+          "42 İstanbul, bilgisayar bilimi (Haziran 2025'ten beri); İstanbul Üniversitesi, grafik tasarım (2024'ten beri)"
+        ],
+        [
+          "Odak",
+          "SaaS, kurumsal web, SQL optimizasyonu, RESTful API, Docker/Nginx"
+        ],
+        [
+          "Başarı",
+          "Monad Blitz İstanbul, 46 takım arasında üçüncülük (Inscribi Director)"
+        ],
+        [
+          "Diller",
+          "Türkçe, İngilizce (B1)"
+        ],
+        [
+          "İletişim",
+          "ykpgunduz@icloud.com · github.com/yakup-gunduz · linkedin.com/in/yakupgunduz"
+        ]
+      ]
+    },
+    "en": {
+      "heading": "At a glance",
+      "rows": [
+        [
+          "Name",
+          "Yakup Gündüz (also spelled Yakup Gunduz)"
+        ],
+        [
+          "Location",
+          "Istanbul, Türkiye · open to remote work for other cities"
+        ],
+        [
+          "Role",
+          "Full-stack software developer"
+        ],
+        [
+          "Founded",
+          "Harpos Teknoloji (SaaS, August 2024 – August 2026)"
+        ],
+        [
+          "Experience",
+          "Kle Bilgi Teknolojileri (intern, then software developer, 2023–2024); Uniqh, London (data science specialist, 2024)"
+        ],
+        [
+          "Education",
+          "42 İstanbul, computer science (since June 2025); Istanbul University, graphic design (since 2024)"
+        ],
+        [
+          "Focus",
+          "SaaS, corporate web, SQL optimization, RESTful APIs, Docker/Nginx"
+        ],
+        [
+          "Achievement",
+          "3rd of 46 teams, Monad Blitz Istanbul (Inscribi Director)"
+        ],
+        [
+          "Languages",
+          "Turkish, English (B1)"
+        ],
+        [
+          "Contact",
+          "ykpgunduz@icloud.com · github.com/yakup-gunduz · linkedin.com/in/yakupgunduz"
+        ]
+      ]
+    }
+  },
+  "faq": {
+    "tr": [
+      [
+        "Yakup Gündüz kimdir?",
+        "Yakup Gündüz, İstanbul'da yaşayan bir full-stack yazılım geliştiricidir. Restoran ve kafeler için POS platformu Harpos'un kurucusudur; 42 İstanbul'da bilgisayar bilimi, İstanbul Üniversitesi'nde grafik tasarım eğitimi almaktadır."
+      ],
+      [
+        "Yakup Gündüz ne iş yapar?",
+        "Next.js ve Laravel ile SaaS ve web uygulamaları, kurumsal web siteleri ve portallar geliştirir; MSSQL, PostgreSQL ve MySQL sorgularını optimize eder, Docker ve Nginx ile dağıtım süreçlerini yönetir ve LLM entegrasyonları kurar."
+      ],
+      [
+        "Harpos nedir?",
+        "Harpos, Yakup Gündüz'ün Ağustos 2024'te kurduğu SaaS girişimidir. Restoran, kafe ve oteller için adisyon, masa/sipariş ve QR menü özellikli, çoklu şubeli bir POS platformudur ve 5 kafe ve restorana hizmet vermiştir."
+      ],
+      [
+        "Yakup Gündüz hangi teknolojilerle çalışır?",
+        "Next.js, React, Laravel, JavaScript, HTML5, CSS3, C, C++; SQL Server (MSSQL), PostgreSQL, MySQL; Docker, Nginx, Git, GitHub ve Postman. Mimari tarafında RESTful API, SOLID, MVC, Repository Pattern ve CQRS kullanır."
+      ],
+      [
+        "Yakup Gündüz uzaktan çalışıyor mu?",
+        "Evet. İstanbul'da yaşıyor ve diğer şehirlerdeki projeler için uzaktan çalışmaya açık."
+      ],
+      [
+        "Yakup Gündüz'e nasıl ulaşılır?",
+        "En hızlı yol ykpgunduz@icloud.com adresine e-posta göndermektir. LinkedIn (linkedin.com/in/yakupgunduz) ve GitHub (github.com/yakup-gunduz) üzerinden de ulaşabilirsiniz."
+      ]
+    ],
+    "en": [
+      [
+        "Who is Yakup Gündüz?",
+        "Yakup Gündüz is a full-stack software developer based in Istanbul. He founded Harpos, a POS platform for restaurants and cafés, and studies computer science at 42 İstanbul and graphic design at Istanbul University."
+      ],
+      [
+        "What does Yakup Gündüz do?",
+        "He builds SaaS and web applications, corporate websites and portals with Next.js and Laravel, optimizes MSSQL, PostgreSQL and MySQL queries, runs deployments with Docker and Nginx and builds LLM integrations."
+      ],
+      [
+        "What is Harpos?",
+        "Harpos is the SaaS startup Yakup Gündüz founded in August 2024: a multi-branch POS platform with billing, table/order management and QR menus for restaurants, cafés and hotels. It served 5 cafés and restaurants."
+      ],
+      [
+        "Which technologies does Yakup Gündüz work with?",
+        "Next.js, React, Laravel, JavaScript, HTML5, CSS3, C, C++; SQL Server (MSSQL), PostgreSQL, MySQL; Docker, Nginx, Git, GitHub and Postman. On the architecture side he uses RESTful APIs, SOLID, MVC, the Repository Pattern and CQRS."
+      ],
+      [
+        "Does Yakup Gündüz work remotely?",
+        "Yes. He lives in Istanbul and is open to remote work for projects in other cities."
+      ],
+      [
+        "How can I contact Yakup Gündüz?",
+        "The fastest way is email at ykpgunduz@icloud.com. He is also on LinkedIn at linkedin.com/in/yakupgunduz and on GitHub at github.com/yakup-gunduz."
+      ]
+    ]
+  },
+  "faq_heading": {
+    "tr": "Sık sorulanlar",
+    "en": "Frequently asked questions"
+  },
+  "notfound": {
+    "tr": {
+      "title": "Sayfa bulunamadı | Yakup Gündüz",
+      "h1": "Aradığınız sayfa burada değil.",
+      "body": "Bağlantı eskimiş olabilir. Ana sayfadan devam edebilirsiniz.",
+      "cta": "Ana sayfaya dön"
+    },
+    "en": {
+      "title": "Page not found | Yakup Gündüz",
+      "h1": "This page isn't here.",
+      "body": "The link may be out of date. You can continue from the home page.",
+      "cta": "Back to home"
+    }
+  },
+  "updated_label": {
+    "tr": "Son güncelleme",
+    "en": "Last updated"
+  },
+  "photo_caption": {
+    "tr": "Yakup Gündüz",
+    "en": "Yakup Gündüz"
+  }
+}

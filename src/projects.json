@@ -1,0 +1,285 @@
+{
+ "_note": "Project pages for Yakup Gündüz. Every sentence comes from his CV; do not add claims that are not in it.",
+ "index": {
+  "tr": {
+   "title": "Projeler | Yakup Gündüz",
+   "h1": "Yakup Gündüz'ün projeleri",
+   "description": "Yakup Gündüz'ün geliştirdiği projeler: Harpos POS platformu, Inscribi Director, Meringa QR Menü ve kurumsal web ve portal projeleri.",
+   "lead": "Kurduğum ürün, hackathon projesi ve müşteriler için geliştirdiğim web projeleri. Her sayfada ne yapıldığını ve rolümü bulabilirsiniz.",
+   "crumb": "Projeler"
+  },
+  "en": {
+   "title": "Projects | Yakup Gündüz",
+   "h1": "Projects by Yakup Gündüz",
+   "description": "Projects built by Yakup Gündüz: the Harpos POS platform, Inscribi Director, Meringa QR Menu and corporate web and portal projects.",
+   "lead": "The product I founded, a hackathon build and web projects for clients. Each page covers what was built and my role.",
+   "crumb": "Projects"
+  }
+ },
+ "labels": {
+  "tr": {
+   "about": "Proje",
+   "facts": "Kısaca",
+   "links": "Bağlantılar",
+   "all": "Tüm projeler"
+  },
+  "en": {
+   "about": "The project",
+   "facts": "At a glance",
+   "links": "Links",
+   "all": "All projects"
+  }
+ },
+ "projects": [
+  {
+   "slug": "harpos",
+   "date": "2024-08",
+   "modifiedAt": "2026-10-16T20:00:00+03:00",
+   "pageCreatedAt": "2026-10-16T20:00:00+03:00",
+   "schema": {
+    "@type": "WebApplication",
+    "name": "Harpos",
+    "url": "https://harpos.app",
+    "applicationCategory": "BusinessApplication"
+   },
+   "tr": {
+    "name": "Harpos",
+    "title": "Harpos: restoran ve kafeler için POS platformu | Yakup Gündüz",
+    "description": "Harpos, Yakup Gündüz'ün kurduğu çoklu şubeli POS, adisyon ve QR menü SaaS platformu. 5 kafe ve restorana hizmet verdi.",
+    "summary": "Kurduğum çoklu şubeli POS, adisyon ve QR menü SaaS platformu.",
+    "lead": "Harpos, Ağustos 2024'te kurduğum SaaS girişimi: restoran, kafe ve oteller için adisyon, masa/sipariş ve QR menü özellikli, çoklu şubeli bir POS platformu.",
+    "paragraphs": [
+     "Sistemi kurucu ve full-stack geliştirici olarak uçtan uca tasarlayıp geliştirdim. Platform 5 kafe ve restorana hizmet verdi.",
+     "Sipariş ve ödeme servislerini Next.js, Laravel ve REST ile geliştirdim; Docker/Nginx altyapısını ve dağıtım süreçlerini yönettim.",
+     "MSSQL, PostgreSQL ve MySQL sorgularını CTE ve stored procedure yapılarıyla optimize ettim."
+    ],
+    "facts": [
+     [
+      "Rol",
+      "Kurucu ve full-stack geliştirici"
+     ],
+     [
+      "Dönem",
+      "Ağustos 2024 – Ağustos 2026"
+     ],
+     [
+      "Teknolojiler",
+      "Next.js, Laravel, REST, Docker, Nginx"
+     ],
+     [
+      "Veritabanı",
+      "MSSQL, PostgreSQL, MySQL"
+     ],
+     [
+      "Kullanım",
+      "5 kafe ve restoran"
+     ]
+    ],
+    "links": [
+     [
+      "harpos.app",
+      "https://harpos.app"
+     ]
+    ]
+   },
+   "en": {
+    "name": "Harpos",
+    "title": "Harpos: a POS platform for restaurants and cafés | Yakup Gündüz",
+    "description": "Harpos is the multi-branch POS, billing and QR menu SaaS platform founded by Yakup Gündüz. It served 5 cafés and restaurants.",
+    "summary": "The multi-branch POS, billing and QR menu SaaS platform I founded.",
+    "lead": "Harpos is the SaaS startup I founded in August 2024: a multi-branch POS platform with billing, table/order management and QR menus for restaurants, cafés and hotels.",
+    "paragraphs": [
+     "As founder and full-stack developer I designed and built the system end to end. The platform served 5 cafés and restaurants.",
+     "I built the order and payment services with Next.js, Laravel and REST, and ran the Docker/Nginx infrastructure and deployments.",
+     "I optimized MSSQL, PostgreSQL and MySQL queries with CTEs and stored procedures."
+    ],
+    "facts": [
+     [
+      "Role",
+      "Founder and full-stack developer"
+     ],
+     [
+      "Period",
+      "August 2024 – August 2026"
+     ],
+     [
+      "Stack",
+      "Next.js, Laravel, REST, Docker, Nginx"
+     ],
+     [
+      "Databases",
+      "MSSQL, PostgreSQL, MySQL"
+     ],
+     [
+      "Usage",
+      "5 cafés and restaurants"
+     ]
+    ],
+    "links": [
+     [
+      "harpos.app",
+      "https://harpos.app"
+     ]
+    ]
+   }
+  },
+  {
+   "slug": "inscribi-director",
+   "modifiedAt": "2026-10-16T20:00:00+03:00",
+   "pageCreatedAt": "2026-10-16T20:00:00+03:00",
+   "schema": {
+    "@type": "CreativeWork",
+    "name": "Inscribi Director"
+   },
+   "tr": {
+    "name": "Inscribi Director",
+    "title": "Inscribi Director: Monad Blitz İstanbul üçüncüsü | Yakup Gündüz",
+    "description": "Inscribi Director, Monad Blitz İstanbul'da 46 takım arasında üçüncü oldu. Yakup Gündüz frontend'i ve oylama sonrası video görselleştirmesini geliştirdi.",
+    "summary": "Monad Blitz İstanbul'da 46 takım arasında üçüncü olan hackathon projesi.",
+    "lead": "Inscribi Director, Monad oylamasıyla yönlenen yapay zekâ destekli canlı bir video. Proje Monad Blitz İstanbul'da 46 takım arasında üçüncü oldu.",
+    "paragraphs": [
+     "Ekipte projenin frontend'ini ve oylama sonrası video görselleştirmesini geliştirdim."
+    ],
+    "facts": [
+     [
+      "Rolüm",
+      "Frontend, oylama sonrası video görselleştirmesi"
+     ],
+     [
+      "Etkinlik",
+      "Monad Blitz İstanbul"
+     ],
+     [
+      "Sonuç",
+      "46 takım arasında üçüncülük"
+     ]
+    ],
+    "links": []
+   },
+   "en": {
+    "name": "Inscribi Director",
+    "title": "Inscribi Director: 3rd at Monad Blitz Istanbul | Yakup Gündüz",
+    "description": "Inscribi Director placed third among 46 teams at Monad Blitz Istanbul. Yakup Gündüz built the frontend and the post-vote video visualization.",
+    "summary": "A hackathon project that placed third among 46 teams at Monad Blitz Istanbul.",
+    "lead": "Inscribi Director is an AI-powered live video steered by Monad voting. It placed third among 46 teams at Monad Blitz Istanbul.",
+    "paragraphs": [
+     "On the team I built the frontend and the post-vote video visualization."
+    ],
+    "facts": [
+     [
+      "My role",
+      "Frontend, post-vote video visualization"
+     ],
+     [
+      "Event",
+      "Monad Blitz Istanbul"
+     ],
+     [
+      "Result",
+      "3rd of 46 teams"
+     ]
+    ],
+    "links": []
+   }
+  },
+  {
+   "slug": "meringa-qr-menu",
+   "modifiedAt": "2026-10-16T20:00:00+03:00",
+   "pageCreatedAt": "2026-10-16T20:00:00+03:00",
+   "schema": {
+    "@type": "WebApplication",
+    "name": "Meringa QR Menü",
+    "applicationCategory": "BusinessApplication"
+   },
+   "tr": {
+    "name": "Meringa QR Menü",
+    "title": "Meringa QR Menü | Yakup Gündüz",
+    "description": "Meringa için geliştirilen responsive katalog, dinamik QR menü ve anlık sipariş sistemi.",
+    "summary": "Responsive katalog, dinamik QR menü ve anlık sipariş.",
+    "lead": "Meringa için responsive bir katalog, dinamik QR menü ve anlık sipariş sistemi geliştirdim.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Kapsam",
+      "Responsive katalog, dinamik QR menü, anlık sipariş"
+     ]
+    ],
+    "links": []
+   },
+   "en": {
+    "name": "Meringa QR Menu",
+    "title": "Meringa QR Menu | Yakup Gündüz",
+    "description": "A responsive catalog, dynamic QR menu and live ordering system built for Meringa.",
+    "summary": "Responsive catalog, dynamic QR menu and live ordering.",
+    "lead": "I built a responsive catalog, a dynamic QR menu and a live ordering system for Meringa.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Scope",
+      "Responsive catalog, dynamic QR menu, live ordering"
+     ]
+    ],
+    "links": []
+   }
+  },
+  {
+   "slug": "kurumsal-web-projeleri",
+   "modifiedAt": "2026-10-16T20:00:00+03:00",
+   "pageCreatedAt": "2026-10-16T20:00:00+03:00",
+   "schema": {
+    "@type": "CreativeWork",
+    "name": "Kurumsal web ve portal projeleri"
+   },
+   "tr": {
+    "name": "Kurumsal web ve portal projeleri",
+    "title": "Kurumsal web ve portal projeleri | Yakup Gündüz",
+    "description": "Yakup Gündüz'ün Next.js ve Laravel ile geliştirdiği kurumsal web ve portal projeleri: 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS ve Yavuzoğlu Mimarlık.",
+    "summary": "Next.js ve Laravel ile kurumsal web siteleri ve portallar; SEO ve Nginx.",
+    "lead": "Kurumlar için Next.js ve Laravel ile web siteleri ve portallar geliştirdim; SEO çalışmalarını yaptım ve Nginx üzerinde yayına aldım.",
+    "paragraphs": [
+     "Müşteriler: 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS ve Yavuzoğlu Mimarlık."
+    ],
+    "facts": [
+     [
+      "Teknolojiler",
+      "Next.js, Laravel, Nginx"
+     ],
+     [
+      "Kapsam",
+      "Kurumsal web siteleri, portallar, SEO"
+     ],
+     [
+      "Proje sayısı",
+      "7"
+     ]
+    ],
+    "links": []
+   },
+   "en": {
+    "name": "Corporate web and portal projects",
+    "title": "Corporate web and portal projects | Yakup Gündüz",
+    "description": "Corporate websites and portals built by Yakup Gündüz with Next.js and Laravel: 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS and Yavuzoğlu Mimarlık.",
+    "summary": "Corporate websites and portals with Next.js and Laravel; SEO and Nginx.",
+    "lead": "I built websites and portals for companies with Next.js and Laravel, handled SEO and served them on Nginx.",
+    "paragraphs": [
+     "Clients: 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS and Yavuzoğlu Mimarlık."
+    ],
+    "facts": [
+     [
+      "Stack",
+      "Next.js, Laravel, Nginx"
+     ],
+     [
+      "Scope",
+      "Corporate websites, portals, SEO"
+     ],
+     [
+      "Projects",
+      "7"
+     ]
+    ],
+    "links": []
+   }
+  }
+ ]
+}

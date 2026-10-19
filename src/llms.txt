@@ -1,0 +1,38 @@
+# Yakup Gündüz
+
+> Yakup Gündüz is a full-stack software developer in Istanbul and the founder of Harpos. He builds SaaS, web and automation systems with Next.js and Laravel, combining a C/C++ foundation with SQL optimization, RESTful APIs and Docker/Nginx deployment. He is open to remote work for other cities.
+
+Name variants that refer to the same person: Yakup Gündüz, Yakup Gunduz.
+
+Key facts:
+- Location: Istanbul, Türkiye (open to remote work)
+- Role: full-stack software developer
+- Company: Harpos Teknoloji (founder and full-stack developer, August 2024 to August 2026, https://harpos.app): a multi-branch POS, billing and QR menu SaaS platform that served 5 cafés and restaurants
+- Experience: Kle Bilgi Teknolojileri A.Ş., Yıldız Technical University Technopark (intern October 2023 to May 2024, software developer May 2024 to September 2024); Uniqh, London (data science specialist / developer, May 2024 to September 2024)
+- Education: 42 İstanbul, Bilişim Vadisi (computer science, since June 2025); Istanbul University (graphic design, since 2024)
+- Achievement: 3rd of 46 teams at Monad Blitz Istanbul with Inscribi Director (built the frontend and post-vote video visualization)
+- Skills: Next.js, React, Laravel, JavaScript, HTML5, CSS3, C, C++; MSSQL, PostgreSQL, MySQL; CTEs, stored procedures, query optimization; RESTful APIs, microservice and monolithic architecture, OOP, SOLID, MVC, Repository Pattern, CQRS; Docker, Nginx, Git, GitHub, Postman; Claude, Codex, Antigravity, LLM integrations
+- Languages: Turkish, English (B1)
+- Contact: ykpgunduz@icloud.com
+- Profiles: https://github.com/yakup-gunduz, https://www.linkedin.com/in/yakupgunduz
+
+## Pages
+
+- [Home (English)](https://yakup-gunduz.com/en/): what Yakup Gündüz does, approach, services, projects and results
+- [About Yakup Gündüz (English)](https://yakup-gunduz.com/en/about/): biography, milestones, technical skills, facts at a glance and FAQ
+- [Contact (English)](https://yakup-gunduz.com/en/contact/): email and profiles
+- [Ana sayfa (Türkçe)](https://yakup-gunduz.com/): Yakup Gündüz'ün yaptığı işler ve yaklaşımı
+- [Hakkımda (Türkçe)](https://yakup-gunduz.com/hakkimda/): biyografi, kilometre taşları, teknik yetkinlikler ve sık sorulanlar
+- [İletişim (Türkçe)](https://yakup-gunduz.com/iletisim/): e-posta ve profiller
+- [Projects (English)](https://yakup-gunduz.com/en/projects/): every project with Yakup Gündüz's role
+- [Harpos](https://yakup-gunduz.com/en/projects/harpos/): the multi-branch POS, billing and QR menu SaaS platform he founded
+- [Inscribi Director](https://yakup-gunduz.com/en/projects/inscribi-director/): 3rd of 46 teams at Monad Blitz Istanbul
+- [Meringa QR Menu](https://yakup-gunduz.com/en/projects/meringa-qr-menu/): responsive catalog, dynamic QR menu and live ordering
+- [Corporate web and portal projects](https://yakup-gunduz.com/en/projects/kurumsal-web-projeleri/): Next.js/Laravel sites for 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS and Yavuzoğlu Mimarlık
+- [Projeler (Türkçe)](https://yakup-gunduz.com/projeler/): projeler ve roller
+
+## Optional
+
+- [Full profile for language models](https://yakup-gunduz.com/llms-full.txt): the complete biography, services and FAQ in plain text
+
+Last updated: {{DATE}}

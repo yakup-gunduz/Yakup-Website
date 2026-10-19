@@ -1,0 +1,3100 @@
+<title>Yakup Gündüz</title>
+<meta name="description"
+  content="Yakup Gündüz: İstanbul'da full-stack yazılım geliştirici ve Harpos kurucusu. Next.js ve Laravel ile SaaS, web ve otomasyon sistemleri.">
+<style>
+  @font-face {
+    font-family: "Fraunces Display";
+    src: url(assets/fonts/fraunces-display-300.woff2) format("woff2");
+    font-weight: 300 400;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Fraunces";
+    src: url(assets/fonts/fraunces-text-300.woff2) format("woff2");
+    font-weight: 300 400;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Manrope";
+    src: url(assets/fonts/manrope-var.woff2) format("woff2");
+    font-weight: 300 600;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Manrope Fallback";
+    src: local("Arial"), local("ArialMT"), local("Helvetica");
+    size-adjust: 102.34%;
+    ascent-override: 104.16%;
+    descent-override: 29.31%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "Fraunces Fallback";
+    src: local("Georgia");
+    size-adjust: 100.86%;
+    ascent-override: 96.96%;
+    descent-override: 25.28%;
+    line-gap-override: 0%;
+  }
+
+  /* Layout: near-black page with off-white inset panels, one 90rem container, square edges, serif display over light sans body. */
+  :root {
+    color-scheme: dark;
+    --ink: #0c0c0c;
+    --paper: #f6f6f6;
+    --white: #ffffff;
+    --black: #000000;
+    --graphite: #3d3d3d;
+    --muted: #858585;
+    --muted-light: #666666;
+    --body-light: #414141;
+    --logo: #949494;
+    --green: #00b86b;
+    --green-deep: #006b3e;
+    --lime: #1de591;
+    --grad-mid: #bebebe;
+    --err: #b42318;
+    --err-bg: #fef3f2;
+    --serif: "Fraunces", "Fraunces Fallback", Georgia, serif;
+    --display: "Fraunces Display", "Fraunces Fallback", Georgia, serif;
+    --sans: "Manrope", "Manrope Fallback", Arial, sans-serif;
+    --gutter: 2%;
+    --sec-s: 3rem;
+    --sec-m: 5rem;
+    --ease-oq: cubic-bezier(.25, 1, .5, 1);
+    --ease-in: cubic-bezier(.42, 0, 1, 1);
+    --ease-roll: cubic-bezier(.65, 0, .35, 1);
+  }
+
+  @media (max-width: 991px) {
+    :root {
+      --sec-m: 4rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    :root {
+      --gutter: 3%;
+      --sec-s: 2rem;
+      --sec-m: 3rem;
+    }
+  }
+
+  @media (max-width: 479px) {
+    :root {
+      --gutter: 5%;
+    }
+  }
+
+  html {
+    background: var(--ink);
+  }
+
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--white);
+    font: 300 1rem/1.2 var(--sans);
+    overflow-x: clip;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    display: block;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  ul,
+  ol,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: var(--green);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--lime);
+    outline-offset: 3px;
+  }
+
+  .feature-card :focus-visible,
+  .contact-card :focus-visible {
+    outline-color: var(--ink);
+  }
+
+  @media (min-width: 992px) {
+    .hero-content :focus-visible {
+      outline-color: var(--ink);
+    }
+  }
+
+  [tabindex="-1"]:focus {
+    outline: none;
+  }
+
+  .serif {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-optical-sizing: auto;
+    font-variation-settings: "SOFT" 0, "WONK" 0;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .wrap {
+    padding-inline: max(16px, var(--gutter));
+  }
+
+  .container {
+    width: 100%;
+    max-width: 90rem;
+    margin-inline: auto;
+  }
+
+  .sec-s {
+    padding-block: var(--sec-s);
+  }
+
+  .sec-m {
+    padding-block: var(--sec-m);
+  }
+
+  .mw-xx {
+    max-width: 80rem;
+  }
+
+  .mt2 {
+    margin-top: 2rem;
+  }
+
+  .divider {
+    height: 1px;
+    border: 0;
+    margin: 0;
+    background: var(--paper);
+  }
+
+  /* Type */
+  .statement {
+    font: 400 3rem/1.2 var(--sans);
+    color: var(--white);
+    text-wrap: pretty;
+  }
+
+  .h5 {
+    font: 500 1.5rem/1.4 var(--sans);
+    color: var(--white);
+    text-wrap: balance;
+  }
+
+  .h4 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-variation-settings: "SOFT" 0, "WONK" 0;
+    font-size: 2rem;
+    line-height: 1.3;
+    color: var(--paper);
+  }
+
+  .t-md {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: var(--white);
+    max-width: 40rem;
+  }
+
+  .t-md a {
+    color: var(--green);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+
+  .t-md a:hover {
+    color: var(--lime);
+  }
+
+  .eyebrow {
+    font: 500 .875rem/1.4 var(--sans);
+    color: var(--muted);
+  }
+
+  @media (max-width: 991px) {
+    .statement {
+      font-size: 2.75rem;
+    }
+
+    .h4 {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .statement {
+      font-size: 2.25rem;
+    }
+
+    .h5 {
+      font-size: 1.25rem;
+    }
+
+    .h4 {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .t-md {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 479px) {
+    .statement {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Buttons: square, no radius */
+  .btn {
+    display: inline-block;
+    padding: .75rem 1.5rem;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--paper);
+    font: 500 1rem/1.2 var(--sans);
+    text-align: center;
+    border-radius: 0;
+    transition: background-color .2s, color .2s, border-color .2s;
+  }
+
+  .btn:hover {
+    background: var(--graphite);
+    border-color: var(--graphite);
+    color: var(--paper);
+  }
+
+  .btn-alt {
+    border-color: var(--graphite);
+    background: var(--graphite);
+    color: var(--paper);
+  }
+
+  .btn-alt:hover {
+    background: var(--paper);
+    border-color: var(--paper);
+    color: var(--ink);
+  }
+
+  .btn-sm {
+    padding: .5rem 1.25rem;
+  }
+
+  .btn-full {
+    width: 100%;
+  }
+
+  /* Navbar (scrolls away, not sticky) */
+  .nav {
+    position: relative;
+    z-index: 1000;
+    min-height: 4.5rem;
+    padding-inline: max(16px, 2%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--ink);
+  }
+
+  .nav.open {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    color: var(--paper);
+  }
+
+  .brand img {
+    width: 31px;
+    height: 31px;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-link {
+    padding: .5rem 1rem;
+    font: 500 1rem/1.5 var(--sans);
+    color: var(--paper);
+  }
+
+  .nav-link:hover,
+  .nav-link[aria-current="page"] {
+    color: var(--lime);
+  }
+
+  .lang {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    margin-left: 1rem;
+    font: 500 .875rem/1 var(--sans);
+  }
+
+  .lang button {
+    padding: .5rem .25rem;
+    color: var(--muted);
+    letter-spacing: .04em;
+  }
+
+  .lang button[aria-pressed="true"] {
+    color: var(--paper);
+  }
+
+  .lang button:hover {
+    color: var(--lime);
+  }
+
+  .lang span {
+    color: var(--graphite);
+  }
+
+  .nav-social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .icon-link {
+    display: inline-flex;
+    color: var(--paper);
+  }
+
+  .icon-link:hover {
+    color: var(--lime);
+  }
+
+  .icon-link svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  .burger {
+    display: none;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--paper);
+    transition: transform .5s var(--ease-roll), width .2s ease .2s;
+  }
+
+  .burger span:nth-child(2) {
+    margin: 6px 0;
+  }
+
+  .nav.open .burger span:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+  }
+
+  .nav.open .burger span:nth-child(2) {
+    width: 0;
+    transition: width .2s ease;
+  }
+
+  .nav.open .burger span:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+  }
+
+  .menu {
+    position: fixed;
+    inset: calc(4rem + env(safe-area-inset-top, 0px)) 0 0 0;
+    z-index: 999;
+    background: var(--ink);
+    padding: 1rem 5% 6.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    overflow-y: auto;
+    transform: translateY(-100%);
+    /* Closed menu stays out of the render tree; it slides in from @starting-style and leaves before display flips back */
+    display: none;
+    transition: transform .4s ease, display .4s allow-discrete;
+  }
+
+  .nav.open+.menu {
+    display: flex;
+    transform: none;
+  }
+
+  @starting-style {
+    .nav.open+.menu {
+      transform: translateY(-100%);
+    }
+  }
+
+  .menu .menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu .nav-link {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  .menu .lang {
+    margin: 1.5rem 0 0;
+    font-size: 1rem;
+  }
+
+  .menu .lang button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .menu .socials-round {
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+
+  @media (max-width: 991px) {
+
+    .nav-links,
+    .nav-right>.lang {
+      display: none;
+    }
+
+    .burger {
+      display: inline-flex;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .menu {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .nav {
+      min-height: 4rem;
+    }
+  }
+
+  /* Home and contact: nav + first section are one full-bleed light block, edge to edge with no dark frame. */
+  .nav,
+  .hero,
+  .contact-head {
+    --hero-pad: clamp(1rem, 2.2vw, 2rem);
+  }
+
+  body:has(:is(#view-home, #view-contact):not([hidden])) .nav:not(.open) {
+    padding-inline: var(--hero-pad);
+    background: var(--paper);
+  }
+
+  body:has(:is(#view-home, #view-contact):not([hidden])) .nav:not(.open) :is(.nav-link, .icon-link, .lang button[aria-pressed="true"], .lang a[aria-current="true"]) {
+    color: var(--ink);
+  }
+
+  body:has(:is(#view-home, #view-contact):not([hidden])) .nav:not(.open) :is(.nav-link, .icon-link, .lang button, .lang a):hover,
+  body:has(:is(#view-home, #view-contact):not([hidden])) .nav:not(.open) .nav-link[aria-current="page"][href] {
+    color: var(--green-deep);
+  }
+
+  body:has(:is(#view-home, #view-contact):not([hidden])) .nav:not(.open) .lang span {
+    color: var(--muted);
+  }
+
+  body:has(:is(#view-home, #view-contact):not([hidden])) .nav:not(.open) .burger span {
+    background: var(--ink);
+  }
+
+  body:has(:is(#view-home, #view-contact):not([hidden])) .nav:not(.open) :focus-visible {
+    outline-color: var(--ink);
+  }
+
+  @media (max-width: 991px) {
+    body:has(:is(#view-home, #view-contact):not([hidden])) .nav:not(.open) {
+      padding-right: calc(var(--hero-pad) - 12px);
+    }
+  }
+
+  .socials-round {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+  }
+
+  .circle {
+    display: inline-flex;
+    padding: .75rem;
+    border: 1px solid var(--paper);
+    border-radius: 40px;
+    color: var(--paper);
+    transition: background-color .2s, color .2s, border-color .2s;
+  }
+
+  .circle svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  .circle:hover {
+    background: var(--lime);
+    border-color: var(--lime);
+    color: var(--ink);
+  }
+
+  /* Hero: full-bleed light panel (no gutter, no container cap) */
+  .hero.wrap {
+    padding-inline: 0;
+  }
+
+  .hero .container {
+    max-width: none;
+  }
+
+  /* Shared hero geometry (in px via the hero-inner container):
+       --fs         name size (width / 5.8). "Yakup" is flush left, "Gündüz" flush right, so the word gap is ~0.78em
+                    and its centre sits ~0.28em left of the hero's middle.
+       --img-h      photo height, bottom-aligned; capped at 3.0em so the head (0.383 of the photo height) stays ~1.15em wide.
+       --g-overlap  how far the hair may cover the "G" from its left edge. G ink is 0.62em wide; 0.28em hides only the plain
+                    left bowl, the top terminal and the spur on its right stay visible, so the name still reads at a glance.
+       --head-x     photo centre: the middle of the hero, unless that would push the hair past --g-overlap; then it slides
+                    left just enough (hair's right edge is 0.2008 * --img-h from the centre). ~45px at 1440px wide.
+                    The head is wider than the gap, so it also clips the right side of the "p" bowl a little; its stem stays.
+       --hero-h     first screen under the 4.5rem nav, but never taller than the capped photo needs
+                    (H - top(H) = 3.0em solves to H = top padding + 3.16em), so tall windows don't leave a gap.
+     Fraunces Display 300, -0.02em tracking: "Yakup" ink 0.0055–2.2365em, "Gündüz" ink 0.036–2.8225em (2.7865em wide). */
+  .hero-inner {
+    --hero-h: min(clamp(34rem, calc(100svh - 4.5rem), max(48rem, 50vw)), calc(var(--hero-top) + 3.16 * var(--fs)));
+    --hero-top: 1rem;
+    --fs: calc((100cqw - 2 * var(--hero-pad)) / 5.8);
+    --hair-y: calc(var(--hero-top) + 0.2955 * var(--fs));
+    --img-top: max(0px, calc((var(--hair-y) - 0.0452 * var(--hero-h)) / 0.9548));
+    --img-h: min(calc(var(--hero-h) - var(--img-top)), calc(3 * var(--fs)));
+    --g-left: calc(100cqw - var(--hero-pad) - 2.7865 * var(--fs));
+    --g-overlap: 0.28;
+    --head-x: min(50cqw, calc(var(--g-left) + var(--g-overlap) * var(--fs) - 0.2008 * var(--img-h)));
+    position: relative;
+    background: var(--paper);
+    container-type: inline-size;
+  }
+
+  @supports not (height: 100svh) {
+    .hero-inner {
+      --hero-h: min(clamp(34rem, calc(100vh - 4.5rem), max(48rem, 50vw)), calc(var(--hero-top) + 3.16 * var(--fs)));
+    }
+  }
+
+  /* Name across the full width, cutout portrait in front of it standing on the hero's bottom edge. */
+  .hero-card {
+    position: relative;
+    overflow: hidden;
+    height: var(--hero-h);
+    background: var(--paper);
+  }
+
+  .wordmark {
+    position: absolute;
+    inset: 0 0 auto 0;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--hero-top) var(--hero-pad) 0;
+    color: var(--ink);
+    font-family: var(--display);
+    font-size: var(--fs);
+    line-height: .8;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
+  }
+
+  /* Ink-align both ends: "Y" starts 0.0055em into its box, the "z" overhangs its advance by 0.0065em */
+  .wordmark span {
+    display: block;
+    margin-top: -0.06em;
+  }
+
+  .wordmark span:first-child {
+    margin-left: -0.0055em;
+  }
+
+  .wordmark span:last-child {
+    margin-right: 0.0065em;
+  }
+
+  /* The cutout has 4.52% transparent headroom; painted after the name, so the head sits in front of the letters. */
+  .hero-portrait {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--img-h);
+    transform: translateX(calc(var(--head-x) - 50cqw));
+    pointer-events: none;
+  }
+
+  .hero-portrait img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+  /* Tagline vertically centred on the left, CTA near the bottom; both above the photo.
+     The tagline stops 1.5rem short of the neck (0.1185 * --img-h left of the photo centre). */
+  .hero-content {
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    left: var(--hero-pad);
+    z-index: 2;
+    max-width: min(30rem, calc(var(--head-x) - 0.1185 * var(--img-h) - var(--hero-pad) - 1.5rem));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tagline {
+    font: 600 clamp(1rem, 1.25vw, 1.25rem)/1.5 var(--sans);
+    color: var(--body-light);
+  }
+
+  .hero-cta {
+    position: absolute;
+    left: 0;
+    bottom: clamp(2.5rem, 9vh, 5.5rem);
+  }
+
+  /* Tablets and phones: the head would be wider than any word gap, so the photo starts just under the baseline
+     (the "p" descender still dips into the hair) and stays centred; tagline and CTA follow beneath the card. */
+  @media (max-width: 991px) {
+    .hero-inner {
+      --hero-h: 36rem;
+      --fs: calc((100cqw - 2 * var(--hero-pad)) / 5.27);
+      --hair-y: calc(var(--hero-top) + 0.8 * var(--fs));
+      --img-h: calc(var(--hero-h) - var(--img-top));
+      --head-x: 50cqw;
+    }
+
+    .hero-content {
+      position: static;
+      max-width: none;
+      padding: 2rem var(--hero-pad) 2.5rem;
+    }
+
+    .tagline {
+      max-width: 30rem;
+    }
+
+    .hero-cta {
+      position: static;
+      display: block;
+      width: 100%;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .hero-inner {
+      --hero-h: 30rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 479px) {
+    .hero-inner {
+      --hero-h: 26rem;
+    }
+  }
+
+  /* Narrow screens: fill the width and let the frame crop the shoulders rather than shrinking the face */
+  @media (max-width: 529px) {
+    .hero-portrait img {
+      object-fit: cover;
+      object-position: center top;
+    }
+  }
+
+  /* The hero paints in its final state on the first frame: no entrance motion, so LCP and Speed Index match first paint. */
+
+  /* Logo marquee (full bleed) */
+  .logos {
+    overflow: hidden;
+  }
+
+  .logos-label {
+    margin-bottom: 1.5rem;
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+  }
+
+  .logo-list {
+    display: flex;
+    align-items: center;
+    gap: 4.5rem;
+    padding-right: 4.5rem;
+  }
+
+  .logo-list li {
+    flex: none;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-list img {
+    display: block;
+    flex: none;
+    height: 2.75rem;
+    width: auto;
+    max-width: 12rem;
+    object-fit: contain;
+    filter: brightness(0) invert(.58);
+  }
+
+  .logo-list img.tall {
+    height: 3.5rem;
+  }
+
+  .logo-list img.short {
+    height: 1.9rem;
+  }
+
+  .logo-word {
+    font: 600 1.375rem/1 var(--sans);
+    color: var(--logo);
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+  }
+
+  .logo-word.serifw {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+  }
+
+  .logo-list .logo-word img {
+    height: 2.25rem;
+    max-width: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .marquee-track {
+      animation: marquee 40s linear infinite;
+    }
+  }
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .logo-list {
+      gap: 2.75rem;
+      padding-right: 2.75rem;
+    }
+
+    .logo-list li {
+      height: 3rem;
+    }
+
+    .logo-list img {
+      max-width: 9.5rem;
+    }
+
+    .logo-list img {
+      height: 2.4rem;
+    }
+
+    .logo-list img.tall {
+      height: 2.75rem;
+    }
+
+    .logo-list img.short {
+      height: 1.6rem;
+    }
+
+    .logo-list .logo-word img {
+      height: 1.9rem;
+    }
+
+    .logo-word {
+      font-size: 1.125rem;
+    }
+
+    .logo-word.serifw {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      width: auto;
+    }
+
+    .logo-list {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem 3rem;
+      padding-inline: 1rem;
+    }
+
+    .marquee-track {
+      width: 100%;
+    }
+
+    .logo-list[aria-hidden="true"] {
+      display: none;
+    }
+  }
+
+  /* Two column text grid */
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .grid2>* {
+    min-width: 0;
+  }
+
+  @media (max-width: 767px) {
+    .grid2 {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+
+  .approach .divider {
+    margin-bottom: 2rem;
+  }
+
+  .approach .grid2 {
+    margin-bottom: 2rem;
+  }
+
+  .media16 {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    overflow: hidden;
+    background: var(--graphite);
+  }
+
+  .media16 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  /* Process: sticky odometer digits */
+  .process {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 5rem;
+    align-items: start;
+    position: relative;
+  }
+
+  .process-left {
+    position: sticky;
+    top: 20vh;
+    height: 10rem;
+    overflow: hidden;
+    display: flex;
+    color: var(--white);
+  }
+
+  .digit {
+    display: block;
+    font-family: var(--display);
+    font-size: 10rem;
+    line-height: 1;
+    height: 10rem;
+  }
+
+  .digit-stack {
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    align-self: flex-start;
+    text-align: center;
+    transition: transform .7s var(--ease-roll);
+  }
+
+  .process-right {
+    display: grid;
+    row-gap: 6rem;
+  }
+
+  .p-item {
+    min-height: 28vh;
+  }
+
+  .p-item:last-child {
+    min-height: 0;
+    padding-bottom: 16vh;
+  }
+
+  @media (max-width: 991px) {
+    .p-item:last-child {
+      padding-bottom: 6vh;
+    }
+  }
+
+  .p-num {
+    display: none;
+    font-family: var(--display);
+  }
+
+  .p-item .statement {
+    transition: opacity .15s linear;
+    max-width: 62rem;
+  }
+
+  @media (max-width: 991px) {
+    .process {
+      grid-template-columns: .75fr 2.5fr;
+      column-gap: 2rem;
+    }
+
+    .process-left,
+    .digit {
+      height: 8rem;
+    }
+
+    .digit {
+      font-size: 8rem;
+    }
+
+    .process-right {
+      row-gap: 3rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .process {
+      display: block;
+    }
+
+    .process-left {
+      display: none;
+    }
+
+    .process-right {
+      row-gap: 2rem;
+    }
+
+    .p-item,
+    .p-item:last-child {
+      min-height: 0;
+      padding: 1rem 0;
+    }
+
+    .p-num {
+      display: flex;
+      font-size: 4rem;
+      line-height: 1;
+      margin-bottom: .75rem;
+    }
+
+    .p-item .statement {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 479px) {
+    .process-right {
+      row-gap: 1rem;
+    }
+
+    .p-item .statement {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Section order below desktop: process moves after the quote, as in the reference */
+  @media (max-width: 991px) {
+    #view-home {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #view-home>.sec-process {
+      order: 1;
+    }
+
+    #view-home>.sec-services {
+      order: 2;
+    }
+  }
+
+  /* Feature panel (light gradient) with results marquee */
+  .feature-sec {
+    overflow: hidden;
+  }
+
+  .feature-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 48rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    background-color: var(--paper);
+    background-image: linear-gradient(180deg, var(--paper), var(--grad-mid) 44%, var(--white));
+  }
+
+  .feature-grid {
+    width: 100%;
+    column-gap: 5rem;
+    row-gap: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .feature-card .h5 {
+    color: var(--black);
+  }
+
+  .feature-card .t-md {
+    color: var(--body-light);
+  }
+
+  .feature-card .t-md a {
+    color: var(--green-deep);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+
+  .feature-card .t-md a:hover {
+    color: var(--black);
+  }
+
+  .reel {
+    width: min(44rem, 100%);
+    margin-bottom: 3rem;
+  }
+
+  .reel video,
+  .reel img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: var(--ink);
+  }
+
+  .reel figcaption {
+    margin-top: .75rem;
+    font: 500 .875rem/1.4 var(--sans);
+    color: var(--body-light);
+    text-align: center;
+  }
+
+  .t-label {
+    align-self: flex-start;
+    margin-bottom: .5rem;
+    color: var(--body-light);
+  }
+
+  .t-marquee {
+    width: calc(100% + 8rem);
+    margin-inline: -4rem;
+    overflow: hidden;
+  }
+
+  .t-track {
+    display: flex;
+    width: max-content;
+  }
+
+  .t-row {
+    display: flex;
+  }
+
+  .t-card {
+    width: 25rem;
+    min-width: 25rem;
+    margin-right: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .t-stat {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font: 600 1rem/1.2 var(--sans);
+    color: var(--green-deep);
+    letter-spacing: .01em;
+  }
+
+  .t-stat svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    flex: none;
+  }
+
+  .t-quote {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-variation-settings: "SOFT" 0, "WONK" 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--black);
+    margin-block: 1.5rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .t-name {
+    display: block;
+    font-weight: 600;
+    color: var(--black);
+  }
+
+  .t-role {
+    display: block;
+    margin-top: .25rem;
+    font-weight: 300;
+    color: var(--black);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .t-track {
+      animation: marquee 30s linear infinite;
+    }
+
+    .t-marquee:hover .t-track,
+    .t-marquee:focus-within .t-track,
+    .logos:hover .marquee-track {
+      animation-play-state: paused;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .feature-card {
+      padding: 2rem;
+    }
+
+    .feature-grid {
+      gap: 2rem 3rem;
+    }
+
+    .t-marquee {
+      width: calc(100% + 4rem);
+      margin-inline: -2rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .feature-sec {
+      background-color: var(--paper);
+      background-image: linear-gradient(180deg, var(--paper), #fbfbfb 44%, var(--white));
+    }
+
+    .feature-card {
+      background-image: none;
+      background-color: transparent;
+      min-height: 32rem;
+      padding: 2rem 0;
+      overflow: visible;
+    }
+
+    .feature-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .t-marquee {
+      width: 100vw;
+      margin-inline: calc(50% - 50vw);
+    }
+
+    .t-card {
+      width: 18rem;
+      min-width: 18rem;
+      margin-right: 1rem;
+      padding: 1.5rem;
+    }
+
+    .t-quote {
+      font-size: 1rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .t-marquee {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+
+    .t-card {
+      scroll-snap-align: start;
+    }
+
+    .t-row[aria-hidden="true"] {
+      display: none;
+    }
+  }
+
+  /* Quote */
+  .quote .statement {
+    max-width: 80rem;
+  }
+
+  .attribution {
+    color: var(--lime);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  /* Services */
+  .services {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "tabs media" "cta media";
+    grid-template-rows: auto auto;
+    align-content: center;
+  }
+
+  .services>* {
+    min-width: 0;
+  }
+
+  .tabs {
+    grid-area: tabs;
+    padding-right: 2.5rem;
+    display: grid;
+  }
+
+  .services-cta {
+    grid-area: cta;
+    padding-right: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .services-media {
+    grid-area: media;
+    padding-left: 2.5rem;
+    align-self: center;
+  }
+
+  .m-detail {
+    display: none;
+  }
+
+  .tab {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--paper);
+    opacity: .4;
+    transition: opacity .3s ease;
+  }
+
+  .tab:first-child {
+    border-top: 1px solid var(--paper);
+  }
+
+  .tab[aria-selected="true"] {
+    opacity: 1;
+  }
+
+  .tab:hover {
+    opacity: .75;
+  }
+
+  .tab[aria-selected="true"]:hover {
+    opacity: 1;
+  }
+
+  .tab-title {
+    display: block;
+  }
+
+  .tab-short {
+    display: none;
+  }
+
+  .tab-desc {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .4s ease;
+  }
+
+  .tab-desc>span {
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .tab-p {
+    display: block;
+    margin-top: .5rem;
+    color: var(--white);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .tab[aria-selected="true"] .tab-desc {
+    grid-template-rows: 1fr;
+  }
+
+  .pane {
+    display: none;
+    overflow: hidden;
+  }
+
+  .pane.on {
+    display: block;
+  }
+
+  .pane img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 1.77;
+    object-fit: cover;
+  }
+
+  @media (max-width: 991px) {
+    .services {
+      grid-template-columns: 1fr;
+      grid-template-areas: "detail" "cta" "media" "tabs";
+    }
+
+    .services-media {
+      padding-left: 0;
+      margin-top: 2rem;
+    }
+
+    .pane img {
+      aspect-ratio: 3 / 2;
+    }
+
+    .m-detail {
+      display: block;
+      grid-area: detail;
+    }
+
+    .m-detail h3 {
+      margin-bottom: 1.5rem;
+      color: var(--white);
+    }
+
+    .m-detail p {
+      color: var(--white);
+      line-height: 1.5;
+      max-width: 40rem;
+    }
+
+    .services-cta {
+      padding-right: 0;
+    }
+
+    .tabs {
+      padding-right: 0;
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      justify-content: center;
+      scrollbar-width: none;
+    }
+
+    .tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab {
+      flex: 0 0 auto;
+      width: 9rem;
+      align-items: center;
+      text-align: center;
+      padding: .5rem 0;
+      opacity: 1;
+      border-top: 0 !important;
+      border-bottom: 1.5px solid var(--paper);
+    }
+
+    .tab[aria-selected="true"] {
+      border-bottom-color: var(--lime);
+    }
+
+    .tab .tab-title,
+    .tab .tab-desc {
+      display: none;
+    }
+
+    .tab-short {
+      display: block;
+      color: var(--white);
+      font-weight: 500;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .tabs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: .5rem;
+      overflow: visible;
+    }
+
+    .tab {
+      width: auto;
+    }
+
+    .tab-short {
+      font-size: .875rem;
+    }
+  }
+
+  /* Footer */
+  .footer {
+    color: var(--paper);
+    overflow: hidden;
+  }
+
+  /* Footer: links on the left, contact block (heading, e-mail, socials) on the right, side by side */
+  .f-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 50rem);
+    grid-template-areas: "links news" "links social" "bottom bottom";
+    column-gap: 4rem;
+    align-items: start;
+    padding-block: 4rem 2rem;
+  }
+
+  .f-news {
+    grid-area: news;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .f-news h2 {
+    max-width: 50rem;
+    width: 100%;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--paper);
+    text-wrap: balance;
+  }
+
+  .f-form {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 50rem;
+    align-items: stretch;
+  }
+
+  .f-field {
+    flex: 1;
+    min-width: 0;
+    min-height: 2.75rem;
+    padding: .5rem .75rem;
+    border-bottom: 1px solid var(--paper);
+    font: 300 1rem/1.6 var(--sans);
+    color: var(--paper);
+    user-select: all;
+    overflow-wrap: anywhere;
+  }
+
+  .f-form .btn-sm {
+    min-height: 2.75rem;
+    padding-inline: 1.5rem;
+  }
+
+  .f-top {
+    display: contents;
+  }
+
+  .f-top> :first-child {
+    grid-area: links;
+    min-width: 0;
+  }
+
+  /* Round portrait + the name in the hero's display face (Fraunces Display 300, same tracking and optical size) */
+  .f-lockup {
+    display: inline-flex;
+    align-items: center;
+    gap: .875rem;
+    margin-bottom: 1.25rem;
+    color: var(--paper);
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: 2.25rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
+    white-space: nowrap;
+  }
+
+  .f-lockup img {
+    flex: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--paper);
+    box-shadow: 0 0 0 1px rgba(246, 246, 246, .25);
+    transition: transform .25s ease;
+  }
+
+  .f-lockup:hover img {
+    transform: scale(1.06);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .f-lockup img {
+      transition: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .f-lockup {
+      font-size: 1.875rem;
+    }
+
+    .f-lockup img {
+      width: 2.625rem;
+      height: 2.625rem;
+    }
+  }
+
+  .f-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .f-links a {
+    padding: .5rem 0;
+    font: 500 1.5rem/1.5 var(--sans);
+    color: var(--paper);
+  }
+
+  .f-links a:hover {
+    color: var(--lime);
+  }
+
+  .f-social {
+    grid-area: social;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+  }
+
+  .f-bottom {
+    grid-area: bottom;
+    padding-top: 4rem;
+    font-size: .875rem;
+    color: var(--paper);
+  }
+
+  @media (max-width: 991px) {
+    .f-inner {
+      column-gap: 2.5rem;
+      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    }
+
+    .f-news h2 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .f-inner {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas: "news" "social" "links" "bottom";
+    }
+
+    .f-top> :first-child {
+      margin-top: 3rem;
+    }
+
+    .f-bottom {
+      padding-top: 3rem;
+    }
+  }
+
+  @media (max-width: 479px) {
+    .f-form {
+      flex-direction: column;
+      gap: .75rem;
+    }
+  }
+
+  /* About view */
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .arow {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem 4rem;
+  }
+
+  .arow>* {
+    min-width: 0;
+  }
+
+  .about-h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--white);
+    text-wrap: balance;
+  }
+
+  .a-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .rich p {
+    color: var(--white);
+    line-height: 1.5;
+    max-width: 42rem;
+  }
+
+  .rich p+p {
+    margin-top: 1.2em;
+  }
+
+  .rows li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.5rem;
+    padding: .25rem 0;
+  }
+
+  .rows .r-name {
+    font-size: 1.125rem;
+    line-height: 1.2;
+    color: var(--white);
+  }
+
+  .rows .r-meta {
+    flex: none;
+    font-size: 1rem;
+    color: var(--white);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .rows.tools li {
+    align-items: flex-start;
+    padding: .4rem 0;
+  }
+
+  .rows.proj li {
+    flex-wrap: wrap;
+    padding: .6rem 0;
+  }
+
+  .rows a.r-name {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
+
+  .rows a.r-name:hover {
+    color: var(--lime);
+  }
+
+  .rows .proj-sum {
+    flex-basis: 100%;
+    margin-top: .35rem;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .eyebrow a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .article-list .r-name {
+    flex: 1 1 20rem;
+    line-height: 1.45;
+  }
+
+  .article-list .r-meta {
+    color: var(--muted);
+    font-size: .875rem;
+  }
+
+  .article-body {
+    min-width: 0;
+    max-width: 48rem;
+    color: var(--paper);
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+  }
+
+  .article-section+.article-section {
+    margin-top: 2.75rem;
+  }
+
+  .article-section h2 {
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+
+  .article-section p+p,
+  .article-section p+ul {
+    margin-top: 1.2em;
+  }
+
+  .article-section ul {
+    list-style: disc;
+    padding-left: 1.4rem;
+  }
+
+  .article-section li+li {
+    margin-top: .5rem;
+  }
+
+  .article-section a {
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .article-section a:hover {
+    color: var(--lime);
+  }
+
+  .article-section pre {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+    background: var(--ink);
+    border: 1px solid var(--graphite);
+    font: .875rem/1.65 monospace;
+  }
+
+  .article-table {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+  }
+
+  .article-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9375rem;
+    text-align: left;
+  }
+
+  .article-table th,
+  .article-table td {
+    padding: .75rem;
+    border-bottom: 1px solid var(--graphite);
+    vertical-align: top;
+  }
+
+  .article-table th {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .rows.tools .r-meta {
+    flex: 0 1 60%;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 991px) {
+    .arow {
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .arow {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .a-empty {
+      display: none;
+    }
+
+    .a-left .btn {
+      width: 100%;
+    }
+
+    .about-h1 {
+      font-size: 2rem;
+    }
+
+    .rows.tools li {
+      flex-direction: column;
+      gap: .25rem;
+    }
+
+    .rows.tools .r-meta {
+      flex-basis: auto;
+      text-align: left;
+    }
+  }
+
+  /* Contact view: one full-bleed light page like the home hero (no dark frame); details stacked as rows */
+  .contact-head {
+    --hero-pad: clamp(1rem, 2.2vw, 2rem);
+    background: var(--paper);
+  }
+
+  .contact-head.wrap {
+    padding-inline: 0;
+  }
+
+  .contact-head .container {
+    max-width: none;
+  }
+
+  .contact-card {
+    color-scheme: light;
+    min-height: min(calc(100svh - 4.5rem), 46rem);
+    padding: clamp(2.5rem, 6vw, 6rem) var(--hero-pad) clamp(3rem, 7vw, 7rem);
+    color: var(--black);
+  }
+
+  .c-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: 3rem clamp(3rem, 8vw, 9rem);
+    align-items: start;
+  }
+
+  .c-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .c-h1 {
+    font-family: var(--display);
+    font-size: clamp(3rem, 5.6vw, 5.5rem);
+    line-height: 1.1;
+    color: var(--black);
+    text-wrap: balance;
+  }
+
+  .c-left p {
+    max-width: 32rem;
+    font-size: 1.125rem;
+    line-height: 1.55;
+    color: var(--body-light);
+  }
+
+  .c-list {
+    margin: 0;
+    border-top: 1px solid var(--ink);
+  }
+
+  .c-row {
+    display: grid;
+    grid-template-columns: 8rem minmax(0, 1fr);
+    gap: .375rem 1.5rem;
+    align-items: baseline;
+    padding-block: 1.5rem;
+    border-bottom: 1px solid rgba(12, 12, 12, .14);
+  }
+
+  .c-row dt {
+    font: 500 .8125rem/1.4 var(--sans);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted-light);
+  }
+
+  .c-row dd {
+    margin: 0;
+    font: 400 clamp(1.125rem, 1.6vw, 1.5rem)/1.35 var(--sans);
+    color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+
+  .c-row a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: .5rem;
+    color: var(--ink);
+    font-weight: 400;
+    transition: color .2s var(--ease-oq);
+  }
+
+  .c-row a::after {
+    content: "\2197";
+    font-size: .8em;
+    color: var(--muted);
+    transition: transform .25s var(--ease-oq), color .2s var(--ease-oq);
+  }
+
+  .c-row a:hover {
+    color: var(--green-deep);
+  }
+
+  .c-row a:hover::after {
+    color: var(--green-deep);
+    transform: translate(2px, -2px);
+  }
+
+  .c-row .c-note {
+    display: block;
+    margin-top: .25rem;
+    font-size: .875rem;
+    color: var(--muted-light);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .c-row a,
+    .c-row a::after {
+      transition: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .contact-card {
+      min-height: 0;
+    }
+
+    .c-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .contact-card {
+      padding-block: 2rem 3rem;
+    }
+
+    .c-h1 {
+      font-size: 2.75rem;
+    }
+
+    .c-row {
+      grid-template-columns: 1fr;
+      padding-block: 1.25rem;
+    }
+  }
+
+  /* About: answer-first facts and FAQ */
+  .a-left:has(> .a-photo) {
+    justify-content: flex-start;
+  }
+
+  .a-photo {
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  .a-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background: var(--graphite);
+  }
+
+  .a-photo figcaption {
+    margin-top: .5rem;
+    color: var(--muted);
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+
+  .facts {
+    display: grid;
+  }
+
+  .facts div {
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    gap: 1rem;
+    padding: .6rem 0;
+    border-bottom: 1px solid var(--graphite);
+  }
+
+  .facts dt {
+    color: var(--muted);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .facts dd {
+    color: var(--white);
+    line-height: 1.5;
+  }
+
+  .faq {
+    display: grid;
+    gap: 1.75rem;
+  }
+
+  .faq h3 {
+    font: 500 1.125rem/1.4 var(--sans);
+    color: var(--white);
+    margin-bottom: .5rem;
+  }
+
+  .faq p {
+    color: var(--white);
+    line-height: 1.6;
+    max-width: 42rem;
+  }
+
+  @media (max-width: 767px) {
+    .facts div {
+      grid-template-columns: 1fr;
+      gap: .15rem;
+    }
+  }
+
+  .lang a {
+    padding: .5rem .25rem;
+    color: var(--muted);
+    letter-spacing: .04em;
+    font-weight: 500;
+  }
+
+  .lang a[aria-current="true"] {
+    color: var(--paper);
+  }
+
+  .lang a:hover {
+    color: var(--lime);
+  }
+
+  .menu .lang a {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .updated {
+    margin-top: .5rem;
+    color: var(--muted);
+    font-size: .875rem;
+  }
+
+  .nf {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    min-height: 50vh;
+    justify-content: center;
+  }
+
+  /* Offscreen sections skip layout, paint, font and image loading until they get close to the viewport */
+  .logos,
+  .approach,
+  .sec-process,
+  .feature-sec,
+  .quote,
+  .sec-services,
+  .footer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
+  }
+
+  /* Scroll reveal: only applied by script to content that starts below the fold */
+  .will-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  .will-reveal.lg {
+    transform: translateY(100px);
+  }
+
+  .revealed {
+    opacity: 1;
+    transform: none;
+    transition: opacity .5s ease, transform .5s ease;
+  }
+
+  .revealed.lg {
+    transition: opacity 1s var(--ease-oq), transform 1s var(--ease-oq);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+</style>
+<!-- BODY -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-github" viewBox="0 0 24 24">
+    <path
+      d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3" />
+  </symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24">
+    <path
+      d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+  </symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24">
+    <path
+      d="M3.5 3.5h17A2.5 2.5 0 0 1 23 6v12a2.5 2.5 0 0 1-2.5 2.5h-17A2.5 2.5 0 0 1 1 18V6a2.5 2.5 0 0 1 2.5-2.5zm-.3 3.9v1.9l8.8 5.6 8.8-5.6V7.4L12 13z" />
+  </symbol>
+  <!-- Solid globe: meridian and latitude lines are cut out with a mask so it matches the filled GitHub/LinkedIn icons -->
+  <mask id="m-globe" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+    <circle cx="12" cy="12" r="11.6" fill="#fff" />
+    <g fill="none" stroke="#000" stroke-width="1.4">
+      <ellipse cx="12" cy="12" rx="4.6" ry="11.6" />
+      <path d="M0 12h24M1.6 7.2h20.8M1.6 16.8h20.8" />
+    </g>
+  </mask>
+  <symbol id="i-globe" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="11.6" mask="url(#m-globe)" />
+  </symbol>
+  <symbol id="i-star" viewBox="0 0 24 24">
+    <path d="M12 1.8l3.1 6.6 7.1.9-5.2 4.9 1.3 7.1L12 17.8l-6.3 3.5L7 14.2 1.8 9.3l7.1-.9z" />
+  </symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="nav-social">
+    <a class="icon-link" href="https://github.com/yakup-gunduz" target="_blank" rel="noopener" aria-label="GitHub"><svg>
+        <use href="#i-github" />
+      </svg></a>
+    <a class="icon-link" href="https://www.linkedin.com/in/yakupgunduz" target="_blank" rel="noopener"
+      aria-label="LinkedIn"><svg>
+        <use href="#i-linkedin" />
+      </svg></a>
+    <a class="icon-link" href="https://harpos.app" target="_blank" rel="noopener" aria-label="Harpos"><svg>
+        <use href="#i-globe" />
+      </svg></a>
+    <a class="icon-link" href="mailto:ykpgunduz@icloud.com" aria-label="E-posta: ykpgunduz@icloud.com"
+      data-i18n-attr="aria-label:nav.mail"><svg>
+        <use href="#i-mail" />
+      </svg></a>
+  </div>
+  <div class="nav-right">
+    <nav class="nav-links" aria-label="Ana menü" data-i18n-attr="aria-label:nav.menu">
+      <a class="nav-link" href="#home" data-route="home" data-i18n="nav.home">Ana sayfa</a>
+      <a class="nav-link" href="#about" data-route="about" data-i18n="nav.about">Hakkımda</a>
+      <a class="nav-link" href="#contact" data-route="contact" data-i18n="nav.contact">İletişim</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Dil" data-i18n-attr="aria-label:nav.lang">
+      <button type="button" data-lang="tr" aria-pressed="true">TR</button><span aria-hidden="true">/</span><button
+        type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menüyü aç"
+      data-i18n-attr="aria-label:nav.open"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="menu" id="menu" aria-label="Mobil menü" data-i18n-attr="aria-label:nav.mobileMenu">
+  <div class="menu-links">
+    <a class="nav-link" href="#home" data-route="home" data-i18n="nav.home">Ana sayfa</a>
+    <a class="nav-link" href="#about" data-route="about" data-i18n="nav.about">Hakkımda</a>
+    <a class="nav-link" href="#contact" data-route="contact" data-i18n="nav.contact">İletişim</a>
+  </div>
+  <div class="lang" role="group" aria-label="Dil" data-i18n-attr="aria-label:nav.lang">
+    <button type="button" data-lang="tr" aria-pressed="true">TR</button><span aria-hidden="true">/</span><button
+      type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+  <div class="socials-round">
+    <a class="circle" href="https://github.com/yakup-gunduz" target="_blank" rel="noopener" aria-label="GitHub"><svg>
+        <use href="#i-github" />
+      </svg></a>
+    <a class="circle" href="https://www.linkedin.com/in/yakupgunduz" target="_blank" rel="noopener"
+      aria-label="LinkedIn"><svg>
+        <use href="#i-linkedin" />
+      </svg></a>
+    <a class="circle" href="https://harpos.app" target="_blank" rel="noopener" aria-label="Harpos"><svg>
+        <use href="#i-globe" />
+      </svg></a>
+    <a class="circle" href="mailto:ykpgunduz@icloud.com" aria-label="E-posta: ykpgunduz@icloud.com"
+      data-i18n-attr="aria-label:nav.mail"><svg>
+        <use href="#i-mail" />
+      </svg></a>
+  </div>
+</nav>
+
+<!-- HOME -->
+<main class="view" id="view-home" data-view="home">
+  <section class="hero wrap" aria-label="Giriş" data-i18n-attr="aria-label:hero.label">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-card" id="hero-card">
+          <h1 class="wordmark serif" id="wordmark" tabindex="-1"><span>Yakup</span> <span>Gündüz</span></h1>
+          <div class="hero-portrait" id="hero-portrait">
+            <img src="assets/img/yakup-gunduz-bust-1200.webp"
+              srcset="assets/img/yakup-gunduz-bust-800.webp 800w, assets/img/yakup-gunduz-bust-1200.webp 1200w, assets/img/yakup-gunduz-bust-1600.webp 1600w"
+              sizes="(max-width: 529px) 105vw, (max-width: 991px) 70vw, 52vw" width="1600" height="1556" alt="Yakup Gündüz portresi"
+              data-i18n-attr="alt:hero.portrait" fetchpriority="high">
+          </div>
+        </div>
+        <div class="hero-content">
+          <p class="tagline" data-i18n="hero.tagline">Kodu tasarımcı gözüyle yazan full-stack geliştirici. Harpos'un kurucusu, 42 İstanbul öğrencisi.</p>
+          <a class="btn hero-cta" href="#contact" data-i18n="hero.cta">Birlikte çalışalım</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro wrap sec-s" id="intro">
+    <div class="container">
+      <div class="mw-xx">
+        <h2 class="statement intro-text" id="intro-text" data-i18n="intro.text">Ben Yakup Gündüz; İstanbul'da yaşayan bir full-stack yazılım geliştiriciyim. Next.js ve Laravel ile SaaS, web ve otomasyon sistemleri geliştiriyorum. Restoran ve kafeler için POS platformu Harpos'un kurucusuyum; 42 İstanbul'da bilgisayar bilimi, İstanbul Üniversitesi'nde grafik tasarım eğitimi alıyorum.</h2>
+        <div class="mt2"><a class="btn btn-alt" href="#about" data-i18n="intro.cta">Hikâyemi okuyun</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="logos sec-s" aria-labelledby="logos-label">
+    <div class="wrap">
+      <div class="container">
+        <p class="eyebrow logos-label" id="logos-label" data-i18n="logos.label">Çalıştığım, eğitim aldığım, projesini
+          tamamladığım ve bulunduğum yerler</p>
+      </div>
+    </div>
+    <div class="marquee-track">
+      <ul class="logo-list">
+        <li><img src="assets/logos/42-istanbul.png" width="285" height="200" alt="42 İstanbul" class="tall"></li>
+        <li><img src="assets/logos/bilisim-vadisi.png" width="1254" height="200" alt="Bilişim Vadisi" class="short"></li>
+        <li><img src="assets/logos/terminal-istanbul.png" width="613" height="200" alt="Terminal İstanbul"></li>
+        <li><img src="assets/logos/istanbul-universitesi.png" width="200" height="200" alt="İstanbul Üniversitesi"
+            class="tall"></li>
+        <li><img src="assets/logos/monad.png" width="1067" height="200" alt="Monad" class="short"></li>
+        <li><img src="assets/logos/90-ventures-white-20261016.avif" width="640" height="160" alt="+90 Ventures"></li>
+        <li><img src="assets/logos/ozkose-group.png" width="843" height="200" alt="Özköse Group"></li>
+        <li><img src="assets/logos/intermed-medical.png" width="988" height="200" alt="Intermed Medical Systems"
+            class="short"></li>
+        <li><img src="assets/logos/underground.png" width="222" height="200" alt="Underground" class="tall"></li>
+        <li><img src="assets/logos/kle-bilgi.png" width="491" height="200" alt="Kle Bilgi Teknolojileri" class="tall">
+        </li>
+        <li><img src="assets/logos/yildiz-teknopark.png" width="791" height="200" alt="YTÜ Yıldız Teknopark"></li>
+        <li><img src="assets/logos/bircan-turizm.png" width="801" height="200"
+            alt="Bircan Turizm &amp; Seyahat Acentesi"></li>
+        <li><img src="assets/logos/maip.png" width="534" height="200" alt="MAİP Malatya İş İnsanları Platformu"></li>
+        <li><img src="assets/logos/meringa.png" width="291" height="200" alt="Meringa Bakery" class="tall"></li>
+        <li><img src="assets/logos/yavuzoglu-mimarlik.png" width="999" height="200" alt="Yavuzoğlu Mimarlık"></li>
+        <li><img src="assets/logos/uniqh.png" width="154" height="200" alt="Uniqh" class="tall"></li>
+      </ul>
+      <ul class="logo-list" aria-hidden="true">
+        <li><img src="assets/logos/42-istanbul.png" width="285" height="200" alt="" class="tall"></li>
+        <li><img src="assets/logos/bilisim-vadisi.png" width="1254" height="200" alt="" class="short"></li>
+        <li><img src="assets/logos/terminal-istanbul.png" width="613" height="200" alt=""></li>
+        <li><img src="assets/logos/istanbul-universitesi.png" width="200" height="200" alt="" class="tall"></li>
+        <li><img src="assets/logos/monad.png" width="1067" height="200" alt="" class="short"></li>
+        <li><img src="assets/logos/90-ventures-white-20261016.avif" width="640" height="160" alt=""></li>
+        <li><img src="assets/logos/ozkose-group.png" width="843" height="200" alt=""></li>
+        <li><img src="assets/logos/intermed-medical.png" width="988" height="200" alt="" class="short"></li>
+        <li><img src="assets/logos/underground.png" width="222" height="200" alt="" class="tall"></li>
+        <li><img src="assets/logos/kle-bilgi.png" width="491" height="200" alt="" class="tall"></li>
+        <li><img src="assets/logos/yildiz-teknopark.png" width="791" height="200" alt=""></li>
+        <li><img src="assets/logos/bircan-turizm.png" width="801" height="200" alt=""></li>
+        <li><img src="assets/logos/maip.png" width="534" height="200" alt=""></li>
+        <li><img src="assets/logos/meringa.png" width="291" height="200" alt="" class="tall"></li>
+        <li><img src="assets/logos/yavuzoglu-mimarlik.png" width="999" height="200" alt=""></li>
+        <li><img src="assets/logos/uniqh.png" width="154" height="200" alt="" class="tall"></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="approach wrap sec-s">
+    <div class="container">
+      <hr class="divider">
+      <div class="grid2" data-reveal>
+        <div>
+          <h2 class="h5" data-i18n="approach.title">Yaklaşım: sağlam temel, hızlı sorgu, sorunsuz dağıtım.</h2>
+          <div class="mt2"><a class="btn btn-alt" href="https://github.com/yakup-gunduz" target="_blank" rel="noopener" data-i18n="approach.cta">Kodlarım GitHub'da</a></div>
+        </div>
+        <p class="t-md" data-i18n-html="approach.body">C/C++ ile edindiğim temeli günlük web işlerine taşıyorum: algoritma, bellek ve performans düşüncesi. Uygulamaları SOLID, MVC ve Repository Pattern ile kuruyor, RESTful API'lerle birbirine bağlıyorum. MSSQL, PostgreSQL ve MySQL sorgularını CTE ve stored procedure yapılarıyla optimize ediyor; Docker ve Nginx ile dağıtım süreçlerini yönetiyorum. Harpos'un sipariş ve ödeme servislerini Next.js, Laravel ve REST ile bu yaklaşımla geliştirdim.</p>
+      </div>
+      <figure class="media16" data-reveal="lg">
+        <img src="assets/img/feature-workspace.webp" width="1600" height="1067" loading="lazy" alt="Gece İstanbul manzaralı bir masada kod editörü açık dizüstü bilgisayar ve veritabanı sorgularını gösteren ekran" data-i18n-attr="alt:approach.alt">
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec-process wrap sec-m" aria-label="Nasıl çalışırım" data-i18n-attr="aria-label:process.label">
+    <div class="container">
+      <div class="process" id="process">
+        <div class="process-left" aria-hidden="true">
+          <span class="digit serif">0</span>
+          <span class="digit-stack" id="digit-stack">
+            <span class="digit serif">1</span><span class="digit serif">2</span><span class="digit serif">3</span><span class="digit serif">4</span>
+          </span>
+        </div>
+        <ol class="process-right">
+          <li class="p-item on"><span class="p-num serif" aria-hidden="true">01</span>
+            <h2 class="statement" data-i18n="process.s1">İşe insandan başlarım. Bunu kim kullanacak, neyi halletmesi gerekiyor?</h2>
+          </li>
+          <li class="p-item"><span class="p-num serif" aria-hidden="true">02</span>
+            <h2 class="statement" data-i18n="process.s2">Sade tutarım. Gerçek sorunu çözen en küçük şey kazanır.</h2>
+          </li>
+          <li class="p-item"><span class="p-num serif" aria-hidden="true">03</span>
+            <h2 class="statement" data-i18n="process.s3">Sağlam bir mimari kurarım. SOLID ilkeleri, temiz katmanlar ve bakımı kolay kod.</h2>
+          </li>
+          <li class="p-item"><span class="p-num serif" aria-hidden="true">04</span>
+            <h2 class="statement" data-i18n="process.s4">Hızlı ve güvenli yayına alırım. Optimize edilmiş sorgular, Docker ve Nginx ile tekrarlanabilir dağıtım.</h2>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-sec wrap" id="work">
+    <div class="container">
+      <div class="feature-card">
+        <div class="grid2 feature-grid" data-reveal>
+          <div>
+            <h2 class="h5" data-i18n="feature.title">Harpos: restoran ve kafeler için POS platformu</h2>
+            <div class="mt2"><a class="btn" href="https://harpos.app" target="_blank" rel="noopener" data-i18n="feature.cta">harpos.app'i ziyaret edin</a></div>
+          </div>
+          <p class="t-md" data-i18n-html="feature.body">Harpos, kurucusu olduğum SaaS girişimi. Restoran, kafe ve oteller için adisyon, masa/sipariş yönetimi ve QR menüyü tek bir platformda topluyor; çoklu şube yapısıyla çalışıyor. Sistemi uçtan uca tasarlayıp geliştirdim: sipariş ve ödeme servislerini Next.js, Laravel ve REST ile yazdım, Docker/Nginx altyapısını ve dağıtım süreçlerini yönettim. Platform 5 kafe ve restorana hizmet verdi.</p>
+        </div>
+        <figure class="reel">
+          <img src="assets/img/harpos-pos.webp" width="1600" height="900" loading="lazy" alt="Bir kafe tezgâhında masa ve sipariş yönetimi ekranını gösteren POS tableti ve QR menü standı" data-i18n-attr="alt:feature.alt">
+          <figcaption data-i18n="feature.caption">Adisyon, masa/sipariş ve QR menü tek platformda</figcaption>
+        </figure>
+        <p class="eyebrow t-label" id="results-label" data-i18n="rec.label">Projeler ve sonuçlar</p>
+        <div class="t-marquee" role="region" aria-labelledby="results-label" tabindex="0">
+          <div class="t-track">
+            <div class="t-row" id="t-row">
+              <article class="t-card">
+                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.1.stat">46 takım arasında üçüncülük</span></p>
+                <p class="t-quote" data-i18n="rec.1.body">Inscribi Director: Monad oylamasıyla yönlenen, yapay zekâ destekli canlı bir video. Frontend'i ve oylama sonrası video görselleştirmesini ben geliştirdim.</p>
+                <p><span class="t-name" data-i18n="rec.1.name">Monad Blitz İstanbul</span><span class="t-role" data-i18n="rec.1.role">Hackathon</span></p>
+              </article>
+              <article class="t-card">
+                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.2.stat">5 kafe ve restoran</span></p>
+                <p class="t-quote" data-i18n="rec.2.body">Adisyon, masa/sipariş ve QR menü özellikli POS sistemini tasarlayıp geliştirdim; sistem 5 kafe ve restorana hizmet verdi.</p>
+                <p><span class="t-name" data-i18n="rec.2.name">Harpos</span><span class="t-role" data-i18n="rec.2.role">Kendi girişimim, SaaS</span></p>
+              </article>
+              <article class="t-card">
+                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.3.stat">Veri boru hatları</span></p>
+                <p class="t-quote" data-i18n="rec.3.body">Veri setlerini analiz edip temizledim; analitik veri boru hatları kurdum, modelleme ve sorgu performansını iyileştirdim.</p>
+                <p><span class="t-name" data-i18n="rec.3.name">Uniqh</span><span class="t-role" data-i18n="rec.3.role">Londra, 2024</span></p>
+              </article>
+              <article class="t-card">
+                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.4.stat">Dinamik QR menü</span></p>
+                <p class="t-quote" data-i18n="rec.4.body">Responsive katalog, dinamik QR menü ve anlık sipariş akışı olan bir web uygulaması.</p>
+                <p><span class="t-name" data-i18n="rec.4.name">Meringa QR Menü</span><span class="t-role" data-i18n="rec.4.role">Web uygulaması</span></p>
+              </article>
+              <article class="t-card">
+                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.5.stat">7 kurumsal proje</span></p>
+                <p class="t-quote" data-i18n="rec.5.body">Next.js ve Laravel ile kurumsal web siteleri ve portallar: 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS ve Yavuzoğlu Mimarlık.</p>
+                <p><span class="t-name" data-i18n="rec.5.name">Kurumsal web ve portal projeleri</span><span class="t-role" data-i18n="rec.5.role">SEO, Nginx</span></p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-services wrap sec-m" aria-label="Neler yapıyorum" data-i18n-attr="aria-label:svc.label">
+    <div class="container">
+      <div class="services" id="services">
+        <div class="tabs" role="tablist" aria-orientation="vertical" aria-label="Hizmetler" data-i18n-attr="aria-label:svc.tabs">
+          <button class="tab" type="button" role="tab" id="tab-1" aria-selected="true" aria-controls="pane-1">
+            <span class="h4 tab-title" data-i18n="svc.1.title">SaaS ve web uygulamaları</span>
+            <span class="tab-short" data-i18n="svc.1.short">SaaS</span>
+            <span class="tab-desc"><span><span class="tab-p" data-i18n="svc.1.body">Next.js, React ve Laravel ile uçtan uca SaaS ve web uygulamaları geliştiririm: sipariş, ödeme, yönetim panelleri ve RESTful API'ler. Mimari SOLID ilkelerine ve temiz katmanlara dayanır.</span></span></span>
+          </button>
+          <button class="tab" type="button" role="tab" id="tab-2" aria-selected="false" aria-controls="pane-2" tabindex="-1">
+            <span class="h4 tab-title" data-i18n="svc.2.title">Kurumsal web siteleri ve portallar</span>
+            <span class="tab-short" data-i18n="svc.2.short">Web</span>
+            <span class="tab-desc"><span><span class="tab-p" data-i18n="svc.2.body">Kurumlar için hızlı, responsive ve SEO uyumlu web siteleri ve portallar kurarım. Next.js veya Laravel ile geliştirir, Nginx üzerinde yayına alırım.</span></span></span>
+          </button>
+          <button class="tab" type="button" role="tab" id="tab-3" aria-selected="false" aria-controls="pane-3" tabindex="-1">
+            <span class="h4 tab-title" data-i18n="svc.3.title">Veritabanı tasarımı ve sorgu optimizasyonu</span>
+            <span class="tab-short" data-i18n="svc.3.short">Veritabanı</span>
+            <span class="tab-desc"><span><span class="tab-p" data-i18n="svc.3.body">MSSQL, PostgreSQL ve MySQL için veritabanı tasarımı ve modelleme yaparım; yavaş sorguları CTE ve stored procedure yapılarıyla optimize ederim.</span></span></span>
+          </button>
+          <button class="tab" type="button" role="tab" id="tab-4" aria-selected="false" aria-controls="pane-4" tabindex="-1">
+            <span class="h4 tab-title" data-i18n="svc.4.title">Otomasyon, DevOps ve yapay zekâ</span>
+            <span class="tab-short" data-i18n="svc.4.short">Otomasyon</span>
+            <span class="tab-desc"><span><span class="tab-p" data-i18n="svc.4.body">Docker ve Nginx ile tekrarlanabilir dağıtım süreçleri kurar, iş akışlarını otomatikleştiririm. Claude ve Codex gibi araçlarla LLM entegrasyonları geliştiririm.</span></span></span>
+          </button>
+        </div>
+        <div class="services-media">
+          <figure class="pane on" id="pane-1" role="tabpanel" aria-labelledby="tab-1" aria-describedby="m-body"><img src="assets/img/svc-app.webp" width="1600" height="944" loading="lazy" alt="Masada satış grafikleri ve şube listesi gösteren bir SaaS yönetim paneli ve kod editörü açık dizüstü bilgisayar" data-i18n-attr="alt:svc.1.alt"></figure>
+          <figure class="pane" id="pane-2" role="tabpanel" aria-labelledby="tab-2" aria-describedby="m-body"><img src="assets/img/svc-web.webp" width="1600" height="944" alt="Monitörde kurumsal bir web sitesi tasarımı, yanında telefonda responsive görünümü" data-i18n-attr="alt:svc.2.alt"></figure>
+          <figure class="pane" id="pane-3" role="tabpanel" aria-labelledby="tab-3" aria-describedby="m-body"><img src="assets/img/svc-db.webp" width="1600" height="944" alt="Sunucu odası önünde SQL sorgusu ve veritabanı performans grafikleri gösteren dizüstü bilgisayar" data-i18n-attr="alt:svc.3.alt"></figure>
+          <figure class="pane" id="pane-4" role="tabpanel" aria-labelledby="tab-4" aria-describedby="m-body"><img src="assets/img/svc-automation.webp" width="1600" height="944" alt="Kod editöründe Nginx yapılandırması, terminalde çalışan Docker konteynerleri ve yapay zekâ asistanı paneli" data-i18n-attr="alt:svc.4.alt"></figure>
+        </div>
+        <div class="m-detail">
+          <h3 class="h4" id="m-title">SaaS ve web uygulamaları</h3>
+          <p id="m-body">Next.js, React ve Laravel ile uçtan uca SaaS ve web uygulamaları geliştiririm: sipariş, ödeme, yönetim panelleri ve RESTful API'ler. Mimari SOLID ilkelerine ve temiz katmanlara dayanır.</p>
+        </div>
+        <div class="services-cta"><a class="btn btn-alt btn-full" href="#contact" data-i18n="hero.cta">Birlikte çalışalım</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ABOUT -->
+<main class="view" id="view-about" data-view="about" hidden>
+  <section class="wrap sec-m">
+    <div class="container about">
+      <div class="arow" data-reveal>
+        <div class="a-empty"></div>
+        <h1 class="about-h1 serif" tabindex="-1" data-i18n="about.h1">Yakup Gündüz, İstanbul'da full-stack yazılım geliştirici. SaaS, web ve otomasyon sistemleri.</h1>
+      </div>
+      <hr class="divider">
+      <div class="arow" data-reveal>
+        <div class="a-left">
+          <h2 class="h5" data-i18n="about.bio">Biyografi</h2>
+          <a class="btn btn-alt" href="#contact" data-i18n="hero.cta">Birlikte çalışalım</a>
+        </div>
+        <div class="rich">
+          <p data-i18n="about.p1">Ben Yakup Gündüz. İstanbul'da yaşayan bir full-stack yazılım geliştiriciyim; Next.js ve Laravel ile SaaS, web ve otomasyon sistemleri geliştiriyorum. C/C++ temelimi SQL optimizasyonu, RESTful API ve Docker/Nginx ile dağıtım deneyimiyle birleştiriyorum. Diğer şehirlerden uzaktan çalışmaya da açığım.</p>
+          <p data-i18n="about.p2">Ağustos 2024'te kendi girişimim Harpos Teknoloji'yi kurdum ve Ağustos 2026'ya kadar kurucu ve full-stack geliştirici olarak yürüttüm. Restoran, kafe ve oteller için adisyon, masa/sipariş ve QR menü özellikli bir POS sistemi tasarlayıp geliştirdim; sistem 5 kafe ve restorana hizmet verdi. Sipariş ve ödeme servislerini Next.js, Laravel ve REST ile yazdım, Docker/Nginx altyapısını ve dağıtım süreçlerini yönettim; MSSQL, PostgreSQL ve MySQL sorgularını CTE ve stored procedure yapılarıyla optimize ettim.</p>
+          <p data-i18n="about.p3">Yazılıma Ekim 2023'te Yıldız Teknik Üniversitesi Teknopark'taki Kle Bilgi Teknolojileri'nde stajyer olarak başladım; HTML/CSS/JavaScript arayüzleri ve API tüketimi geliştirdim, Git, CI/CD ve hata ayıklama süreçlerine katkı sağladım. Mayıs–Eylül 2024 arasında aynı şirkette tam zamanlı yazılım geliştirici olarak kurumsal web ve backend uygulamalarını SOLID, MVC ve Repository Pattern ile geliştirdim. Aynı dönemde Londra merkezli Uniqh'te veri bilimi uzmanı olarak veri setlerini analiz edip temizledim ve analitik veri boru hatları kurdum.</p>
+          <p data-i18n="about.p4">Haziran 2025'ten beri 42 İstanbul'da (Bilişim Vadisi) proje tabanlı bilgisayar bilimi eğitimi alıyorum: C/C++, algoritmalar, bellek yönetimi, eşzamanlılık ve UNIX. 2024'ten beri İstanbul Üniversitesi'nde grafik tasarım okuyor, UX/UI ve dijital görsel tasarım prensipleri üzerine çalışıyorum. Monad Blitz İstanbul'da 46 takım arasında üçüncü olan Inscribi Director projesinde frontend'i ve oylama sonrası video görselleştirmesini geliştirdim.</p>
+          <p data-i18n="about.p5">Bunların yanında 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS ve Yavuzoğlu Mimarlık için Next.js ve Laravel ile kurumsal web ve portal projeleri geliştirdim; Meringa için responsive katalog, dinamik QR menü ve anlık sipariş sistemi kurdum.</p>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="arow" data-reveal>
+        <div class="a-left">
+          <h2 class="h5" data-i18n="about.milestones">Kilometre taşları</h2>
+          <a class="btn btn-alt" href="https://www.linkedin.com/in/yakupgunduz" target="_blank" rel="noopener" data-i18n="about.linkedin">LinkedIn profilim</a>
+        </div>
+        <ul class="rows" id="milestones">
+          <li><span class="r-name" data-i18n="ms.1">Monad Blitz İstanbul'da 46 takım arasında üçüncülük (Inscribi Director)</span><span class="r-meta" data-i18n="ms.1.date">Hackathon</span></li>
+          <li><span class="r-name" data-i18n="ms.2">42 İstanbul'da bilgisayar bilimi eğitimine başladım</span><span class="r-meta" data-date="2025-06">Haz 2025</span></li>
+          <li><span class="r-name" data-i18n="ms.3">Harpos Teknoloji'yi kurdum (Ağu 2024 – Ağu 2026)</span><span class="r-meta" data-date="2024-08">Ağu 2024</span></li>
+          <li><span class="r-name" data-i18n="ms.4">İstanbul Üniversitesi, Grafik Tasarım</span><span class="r-meta">2024</span></li>
+          <li><span class="r-name" data-i18n="ms.5">Kle Bilgi Teknolojileri'nde yazılım geliştirici (tam zamanlı)</span><span class="r-meta" data-date="2024-05">May 2024</span></li>
+          <li><span class="r-name" data-i18n="ms.6">Uniqh'te veri bilimi uzmanı / geliştirici (Londra)</span><span class="r-meta" data-date="2024-05">May 2024</span></li>
+          <li><span class="r-name" data-i18n="ms.7">Kle Bilgi Teknolojileri'nde stajyer yazılım geliştirici</span><span class="r-meta" data-date="2023-10">Eki 2023</span></li>
+        </ul>
+      </div>
+      <hr class="divider">
+      <div class="arow" data-reveal>
+        <div class="a-left">
+          <h2 class="h5" data-i18n="about.tools">Teknik yetkinlikler</h2>
+        </div>
+        <ul class="rows tools">
+          <li><span class="r-name" data-i18n="tools.dev">Geliştirme</span><span class="r-meta">Next.js, React, Laravel, JavaScript, HTML5, CSS3, C, C++</span></li>
+          <li><span class="r-name" data-i18n="tools.data">Veri</span><span class="r-meta">SQL Server (MSSQL), PostgreSQL, MySQL</span></li>
+          <li><span class="r-name" data-i18n="tools.db">Veritabanı</span><span class="r-meta" data-i18n="tools.dbList">CTE, stored procedure, sorgu optimizasyonu, tasarım ve modelleme</span></li>
+          <li><span class="r-name" data-i18n="tools.arch">Mimari</span><span class="r-meta" data-i18n="tools.archList">RESTful API, mikroservis ve monolitik mimari, OOP, SOLID</span></li>
+          <li><span class="r-name" data-i18n="tools.pattern">Tasarım desenleri</span><span class="r-meta">MVC, Repository Pattern, CQRS</span></li>
+          <li><span class="r-name">DevOps</span><span class="r-meta">Docker, Nginx, Git, GitHub, Postman</span></li>
+          <li><span class="r-name" data-i18n="tools.ai">Yapay zekâ</span><span class="r-meta" data-i18n="tools.aiList">Claude, Codex, Antigravity; LLM entegrasyonları</span></li>
+          <li><span class="r-name" data-i18n="tools.lang">Diller</span><span class="r-meta" data-i18n="tools.langList">Türkçe, İngilizce (B1)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- CONTACT -->
+<main class="view" id="view-contact" data-view="contact" hidden>
+  <section class="contact-head wrap">
+    <div class="container">
+      <div class="contact-card">
+        <div class="c-grid">
+          <div class="c-left">
+            <h1 class="c-h1 serif" tabindex="-1" data-i18n-html="contact.h1">Bir projeniz mi var?<br>Konuşalım.</h1>
+            <p data-i18n="contact.intro">Proje, iş birliği ya da kısa bir soru için bana en hızlı e-postayla ulaşırsınız.
+              LinkedIn ve GitHub'dan da yazabilirsiniz.</p>
+          </div>
+          <dl class="c-list">
+            <div class="c-row">
+              <dt data-i18n="contact.d.email">E-posta</dt>
+              <dd><a href="mailto:ykpgunduz@icloud.com">ykpgunduz@icloud.com</a></dd>
+            </div>
+            <div class="c-row">
+              <dt lang="en">LinkedIn</dt>
+              <dd><a href="https://www.linkedin.com/in/yakupgunduz" target="_blank" rel="noopener">linkedin.com/in/yakupgunduz</a></dd>
+            </div>
+            <div class="c-row">
+              <dt lang="en">GitHub</dt>
+              <dd><a href="https://github.com/yakup-gunduz" target="_blank" rel="noopener">github.com/yakup-gunduz</a></dd>
+            </div>
+            <div class="c-row">
+              <dt data-i18n="contact.d.loc">Konum</dt>
+              <dd data-i18n="contact.d.locVal">İstanbul, Türkiye · uzaktan çalışmaya açık</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer wrap" id="footer">
+  <div class="container f-inner">
+    <div class="f-news">
+      <h2 class="serif" data-i18n="footer.heading">Yeni bir proje, iş birliği ya da kısa bir soru için bana yazın.</h2>
+      <div class="f-form">
+        <span class="f-field" id="footer-email">ykpgunduz@icloud.com</span>
+        <button class="btn btn-alt btn-sm" type="button" id="copy-email" data-i18n="footer.copy">Kopyala</button>
+      </div>
+    </div>
+    <div class="f-top">
+      <div>
+        <a class="f-lockup" href="#home"><img src="assets/img/yakup-gunduz-avatar-96.webp"
+            srcset="assets/img/yakup-gunduz-avatar-96.webp 1x, assets/img/yakup-gunduz-avatar-192.webp 2x" width="48"
+            height="48" alt="" loading="lazy" decoding="async"><span>Yakup Gündüz</span></a>
+        <nav class="f-links" aria-label="Alt menü" data-i18n-attr="aria-label:footer.menu">
+          <a href="#home" data-i18n="nav.home">Ana sayfa</a>
+          <a href="#about" data-i18n="nav.about">Hakkımda</a>
+          <a href="#contact" data-i18n="nav.contact">İletişim</a>
+        </nav>
+      </div>
+      <div class="socials-round f-social">
+        <a class="circle" href="https://github.com/yakup-gunduz" target="_blank" rel="noopener" aria-label="GitHub"><svg>
+            <use href="#i-github" />
+          </svg></a>
+        <a class="circle" href="https://www.linkedin.com/in/yakupgunduz" target="_blank" rel="noopener"
+          aria-label="LinkedIn"><svg>
+            <use href="#i-linkedin" />
+          </svg></a>
+        <a class="circle" href="https://harpos.app" target="_blank" rel="noopener" aria-label="Harpos"><svg>
+            <use href="#i-globe" />
+          </svg></a>
+        <a class="circle" href="mailto:ykpgunduz@icloud.com" aria-label="E-posta: ykpgunduz@icloud.com"
+          data-i18n-attr="aria-label:nav.mail"><svg>
+            <use href="#i-mail" />
+          </svg></a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <p>&copy; <span id="year">2026</span> Yakup Gündüz. <span data-i18n="footer.rights">Tüm hakları saklıdır.</span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    "use strict";
+
+    var EN = {
+      "meta.description": "Yakup Gündüz: full-stack software developer in Istanbul and founder of Harpos. SaaS, web and automation systems with Next.js and Laravel.",
+      "title.home": "Yakup Gündüz",
+      "title.about": "About · Yakup Gündüz",
+      "title.contact": "Contact · Yakup Gündüz",
+      "nav.homeLabel": "Yakup Gündüz, home",
+      "nav.menu": "Main menu",
+      "nav.mobileMenu": "Mobile menu",
+      "nav.about": "About",
+      "nav.contact": "Contact",
+      "nav.home": "Home",
+      "nav.lang": "Language",
+      "nav.mail": "Email: ykpgunduz@icloud.com",
+      "nav.open": "Open menu",
+      "nav.close": "Close menu",
+      "hero.label": "Introduction",
+      "hero.tagline": "A full-stack developer who codes with a designer's eye. Founder of Harpos, student at 42 İstanbul.",
+      "hero.cta": "Work with me",
+      "hero.portrait": "Portrait of Yakup Gündüz",
+      "intro.text": "I'm Yakup Gündüz, a full-stack software developer based in Istanbul. I build SaaS, web and automation systems with Next.js and Laravel. I founded Harpos, a POS platform for restaurants and cafés, and I study computer science at 42 İstanbul and graphic design at Istanbul University.",
+      "intro.cta": "Read my story",
+      "logos.label": "Where I've worked, trained, delivered projects and been part of",
+      "approach.title": "Approach: a solid foundation, fast queries, smooth deploys.",
+      "approach.cta": "See my code on GitHub",
+      "approach.body": "I bring the foundation I built with C/C++ into everyday web work: thinking in algorithms, memory and performance. I structure applications with SOLID, MVC and the Repository Pattern and connect them through RESTful APIs. I optimize MSSQL, PostgreSQL and MySQL queries with CTEs and stored procedures, and run deployments with Docker and Nginx. That is how I built the order and payment services of Harpos with Next.js, Laravel and REST.",
+      "approach.alt": "A laptop with a code editor and a screen of database queries on a desk overlooking Istanbul at night",
+      "process.label": "How I work",
+      "process.s1": "I start from the person. Who will use this, and what do they need to get done?",
+      "process.s2": "I keep it simple. The smallest thing that solves the real problem wins.",
+      "process.s3": "I build on a solid architecture. SOLID principles, clean layers and code that is easy to maintain.",
+      "process.s4": "I ship fast and safely. Optimized queries and repeatable deployments with Docker and Nginx.",
+      "feature.title": "Harpos: a POS platform for restaurants and cafés",
+      "feature.cta": "Visit harpos.app",
+      "feature.body": "Harpos is the SaaS startup I founded. It brings billing, table and order management and QR menus together on one platform for restaurants, cafés and hotels, with multi-branch support. I designed and built the system end to end: I wrote the order and payment services with Next.js, Laravel and REST, and ran the Docker/Nginx infrastructure and deployments. The platform served 5 cafés and restaurants.",
+      "feature.alt": "A POS tablet showing table and order management next to a QR menu stand on a café counter",
+      "feature.caption": "Billing, tables, orders and QR menus on one platform",
+      "rec.label": "Projects and results",
+      "rec.1.stat": "3rd of 46 teams",
+      "rec.1.body": "Inscribi Director: an AI-powered live video steered by Monad voting. I built the frontend and the post-vote video visualization.",
+      "rec.1.name": "Monad Blitz Istanbul",
+      "rec.1.role": "Hackathon",
+      "rec.2.stat": "5 cafés and restaurants",
+      "rec.2.body": "I designed and built a POS system with billing, table/order management and QR menus; it served 5 cafés and restaurants.",
+      "rec.2.name": "Harpos",
+      "rec.2.role": "My own startup, SaaS",
+      "rec.3.stat": "Data pipelines",
+      "rec.3.body": "I analysed and cleaned datasets, built analytics data pipelines and improved modelling and query performance.",
+      "rec.3.name": "Uniqh",
+      "rec.3.role": "London, 2024",
+      "rec.4.stat": "Dynamic QR menu",
+      "rec.4.body": "A web app with a responsive catalog, a dynamic QR menu and live ordering.",
+      "rec.4.name": "Meringa QR Menu",
+      "rec.4.role": "Web application",
+      "rec.5.stat": "7 corporate projects",
+      "rec.5.body": "Corporate websites and portals built with Next.js and Laravel: 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS and Yavuzoğlu Mimarlık.",
+      "rec.5.name": "Corporate web and portal projects",
+      "rec.5.role": "SEO, Nginx",
+      "svc.label": "What I do",
+      "svc.tabs": "Services",
+      "svc.1.title": "SaaS and web applications",
+      "svc.1.short": "SaaS",
+      "svc.1.body": "I build SaaS and web applications end to end with Next.js, React and Laravel: ordering, payments, admin panels and RESTful APIs. The architecture rests on SOLID principles and clean layers.",
+      "svc.1.alt": "A SaaS admin dashboard with sales charts and a branch list next to a laptop with a code editor",
+      "svc.2.title": "Corporate websites and portals",
+      "svc.2.short": "Web",
+      "svc.2.body": "I build fast, responsive, SEO-friendly websites and portals for companies, developed with Next.js or Laravel and served on Nginx.",
+      "svc.2.alt": "A corporate website design on a monitor, with its responsive view on a phone beside it",
+      "svc.3.title": "Database design and query optimization",
+      "svc.3.short": "Database",
+      "svc.3.body": "I design and model databases on MSSQL, PostgreSQL and MySQL, and optimize slow queries with CTEs and stored procedures.",
+      "svc.3.alt": "A laptop showing an SQL query and database performance charts in front of a server room",
+      "svc.4.title": "Automation, DevOps and AI",
+      "svc.4.short": "Automation",
+      "svc.4.body": "I set up repeatable deployments with Docker and Nginx and automate workflows. I build LLM integrations with tools like Claude and Codex.",
+      "svc.4.alt": "An Nginx config in a code editor, Docker containers running in the terminal and an AI assistant panel",
+      "footer.heading": "Write to me about a new project, a collaboration or a quick question.",
+      "footer.copy": "Copy",
+      "footer.copied": "Copied",
+      "footer.copyFail": "Select the address",
+      "footer.menu": "Footer menu",
+      "footer.rights": "All rights reserved.",
+      "about.h1": "Yakup Gündüz, full-stack software developer in Istanbul. SaaS, web and automation systems.",
+      "about.bio": "Bio",
+      "about.p1": "I'm Yakup Gündüz, a full-stack software developer based in Istanbul. I build SaaS, web and automation systems with Next.js and Laravel, combining a C/C++ foundation with experience in SQL optimization, RESTful APIs and Docker/Nginx deployment. I'm also open to remote work for other cities.",
+      "about.p2": "In August 2024 I founded my own startup, Harpos Teknoloji, and ran it as founder and full-stack developer until August 2026. I designed and built a POS system with billing, table/order management and QR menus for restaurants, cafés and hotels; it served 5 cafés and restaurants. I wrote the order and payment services with Next.js, Laravel and REST, ran the Docker/Nginx infrastructure and deployments, and optimized MSSQL, PostgreSQL and MySQL queries with CTEs and stored procedures.",
+      "about.p3": "I started in software in October 2023 as an intern at Kle Bilgi Teknolojileri in Yıldız Technical University Technopark, building HTML/CSS/JavaScript interfaces and API integrations and contributing to Git, CI/CD and debugging. From May to September 2024 I worked there full time as a software developer, building enterprise web and backend applications with SOLID, MVC and the Repository Pattern. In the same period I worked as a data science specialist at London-based Uniqh, analysing and cleaning datasets and building analytics data pipelines.",
+      "about.p4": "Since June 2025 I have been studying computer science at 42 İstanbul (Bilişim Vadisi) in a project-based program: C/C++, algorithms, memory management, concurrency and UNIX. Since 2024 I have also been studying graphic design at Istanbul University, focusing on UX/UI and digital visual design. At Monad Blitz Istanbul I built the frontend and the post-vote video visualization of Inscribi Director, which placed third among 46 teams.",
+      "about.p5": "Alongside this I have built corporate websites and portals with Next.js and Laravel for 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS and Yavuzoğlu Mimarlık, and a responsive catalog, dynamic QR menu and live ordering system for Meringa.",
+      "about.milestones": "Milestones",
+      "about.linkedin": "My LinkedIn profile",
+      "ms.1": "3rd of 46 teams at Monad Blitz Istanbul (Inscribi Director)",
+      "ms.1.date": "Hackathon",
+      "ms.2": "Started computer science at 42 İstanbul",
+      "ms.3": "Founded Harpos Teknoloji (Aug 2024 – Aug 2026)",
+      "ms.4": "Istanbul University, Graphic Design",
+      "ms.5": "Software developer at Kle Bilgi Teknolojileri (full time)",
+      "ms.6": "Data science specialist / developer at Uniqh (London)",
+      "ms.7": "Intern software developer at Kle Bilgi Teknolojileri",
+      "about.tools": "Technical skills",
+      "tools.dev": "Development",
+      "tools.data": "Data",
+      "tools.db": "Databases",
+      "tools.dbList": "CTEs, stored procedures, query optimization, design and modelling",
+      "tools.arch": "Architecture",
+      "tools.archList": "RESTful APIs, microservice and monolithic architecture, OOP, SOLID",
+      "tools.pattern": "Design patterns",
+      "tools.ai": "AI",
+      "tools.aiList": "Claude, Codex, Antigravity; LLM integrations",
+      "tools.lang": "Languages",
+      "tools.langList": "Turkish, English (B1)",
+      "contact.h1": "Have a project?<br>Let’s talk.",
+      "contact.intro": "For projects, collaborations or a quick question, email is the fastest way to reach me. You can also write on LinkedIn or GitHub.",
+      "contact.d.email": "Email",
+      "contact.d.loc": "Location",
+      "contact.d.locVal": "Istanbul, Türkiye · open to remote work"
+    };
+    var TR_EXTRA = {
+      "title.home": "Yakup Gündüz",
+      "title.about": "Hakkımda · Yakup Gündüz",
+      "title.contact": "İletişim · Yakup Gündüz",
+      "nav.close": "Menüyü kapat",
+      "footer.copied": "Kopyalandı",
+      "footer.copyFail": "Adresi seçin"
+    };
+
+    var root = document.documentElement;
+    var TR = {};
+    var lang = "tr";
+    var metaDesc = document.querySelector('meta[name="description"]');
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    var nav = document.getElementById("nav");
+    var burgerBtn = document.getElementById("burger");
+    var views = { home: document.getElementById("view-home"), about: document.getElementById("view-about"), contact: document.getElementById("view-contact") };
+    var footer = document.getElementById("footer");
+    var currentView = null;
+    var scrollMem = {};
+
+    function captureTR() {
+      document.querySelectorAll("[data-i18n]").forEach(function (el) { TR[el.getAttribute("data-i18n")] = el.textContent; });
+      document.querySelectorAll("[data-i18n-html]").forEach(function (el) { TR[el.getAttribute("data-i18n-html")] = el.innerHTML; });
+      document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
+        el.getAttribute("data-i18n-attr").split(",").forEach(function (pair) {
+          var p = pair.split(":"); var key = p[1].trim();
+          if (!(key in TR)) TR[key] = el.getAttribute(p[0].trim());
+        });
+      });
+      if (metaDesc) TR["meta.description"] = metaDesc.getAttribute("content");
+      Object.keys(TR_EXTRA).forEach(function (k) { TR[k] = TR_EXTRA[k]; });
+    }
+    function t(key) { var d = lang === "en" ? EN : TR; return key in d ? d[key] : (TR[key] || ""); }
+
+    function applyLang(next) {
+      lang = next;
+      root.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach(function (el) { el.textContent = t(el.getAttribute("data-i18n")); });
+      document.querySelectorAll("[data-i18n-html]").forEach(function (el) { el.innerHTML = t(el.getAttribute("data-i18n-html")); });
+      document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
+        el.getAttribute("data-i18n-attr").split(",").forEach(function (pair) {
+          var p = pair.split(":"); el.setAttribute(p[0].trim(), t(p[1].trim()));
+        });
+      });
+      if (metaDesc) metaDesc.setAttribute("content", t("meta.description"));
+      document.querySelectorAll("[data-lang]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang)); });
+      var months = lang === "en"
+        ? ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        : ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Ağu", "Eyl", "Eki", "Kas", "Ara"];
+      document.querySelectorAll("[data-date]").forEach(function (el) {
+        var parts = el.getAttribute("data-date").split("-");
+        el.textContent = months[+parts[1] - 1] + " " + parts[0];
+      });
+      burgerBtn.setAttribute("aria-label", t(nav.classList.contains("open") ? "nav.close" : "nav.open"));
+      if (currentView) document.title = t("title." + currentView);
+      syncMobileDetail();
+      reserveDetailHeight();
+      cloneRows();
+      splitIntro();
+      renderStatus();
+      try { localStorage.setItem("yakup-lang", lang); } catch (e) { }
+    }
+
+    /* Mobile menu */
+    function setMenu(open) {
+      nav.classList.toggle("open", open);
+      burgerBtn.setAttribute("aria-expanded", String(open));
+      burgerBtn.setAttribute("aria-label", t(open ? "nav.close" : "nav.open"));
+      root.style.overflow = open ? "hidden" : "";
+      Object.keys(views).forEach(function (k) { views[k].inert = open; });
+      footer.inert = open;
+    }
+    burgerBtn.addEventListener("click", function () { setMenu(!nav.classList.contains("open")); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && nav.classList.contains("open")) { setMenu(false); burgerBtn.focus(); } });
+    window.matchMedia("(min-width: 992px)").addEventListener("change", function (m) { if (m.matches) setMenu(false); });
+
+    /* Hash routing between the three views */
+    function route() {
+      var h = (location.hash || "").replace("#", "");
+      var name = views[h] ? h : "home";
+      var changed = name !== currentView;
+      if (changed && currentView !== null) scrollMem[currentView] = window.scrollY;
+      Object.keys(views).forEach(function (k) { views[k].hidden = k !== name; });
+      document.querySelectorAll("[data-route]").forEach(function (a) {
+        if (a.getAttribute("data-route") === name) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+      });
+      setMenu(false);
+      document.title = t("title." + name);
+      var first = currentView === null;
+      currentView = name;
+      if (changed && !first) {
+        window.scrollTo(0, scrollMem[name] || 0);
+        var heading = views[name].querySelector("h1");
+        if (heading && name !== "home") heading.focus({ preventScroll: true });
+      }
+      prepareReveals();
+      onScroll();
+    }
+    window.addEventListener("hashchange", route);
+
+    /* Intro: words light up as the section scrolls through */
+    var intro = document.getElementById("intro");
+    var introText = document.getElementById("intro-text");
+    var words = [];
+    var introCur = 0;
+    function splitIntro() {
+      var text = introText.textContent;
+      introText.textContent = "";
+      words = [];
+      text.split(/(\s+)/).forEach(function (part) {
+        if (!part) return;
+        if (/^\s+$/.test(part)) { introText.appendChild(document.createTextNode(part)); return; }
+        var s = document.createElement("span"); s.className = "w"; s.textContent = part; introText.appendChild(s); words.push(s);
+      });
+      paintIntro(introCur);
+    }
+    function introTarget() {
+      var r = intro.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var mobile = window.innerWidth <= 767;
+      var a = mobile ? vh * 0.85 : vh * 0.8;
+      var b = mobile ? vh * 0.75 : vh * 0.6;
+      var span = Math.max(1, a - b + r.height);
+      return Math.max(0, Math.min(1, (a - r.top) / span));
+    }
+    function paintIntro(p) {
+      var n = words.length; if (!n) return;
+      if (reduceMotion) { words.forEach(function (w) { w.style.opacity = 1; }); return; }
+      var T = 0.5 + 0.1 * (n - 1);
+      for (var i = 0; i < n; i++) {
+        var local = Math.max(0, Math.min(1, (p * T - i * 0.1) / 0.5));
+        words[i].style.opacity = (0.42 + 0.58 * local).toFixed(3);
+      }
+    }
+
+    /* Process: odometer digits follow the statement level with the pinned digit */
+    var process = document.getElementById("process");
+    var stack = document.getElementById("digit-stack");
+    var digitWin = process.querySelector(".process-left");
+    var items = Array.prototype.slice.call(process.querySelectorAll(".p-item"));
+    process.classList.add("is-live");
+    function updateProcess() {
+      var vh = window.innerHeight;
+      var mobile = window.innerWidth <= 767;
+      var a = 0;
+      items.forEach(function (it, i) {
+        var top = it.getBoundingClientRect().top;
+        if (top < vh * 0.4) a = i;
+        var st = it.querySelector(".statement");
+        if (mobile || i === 0 || reduceMotion) { st.style.opacity = ""; return; }
+        var t = Math.max(0, Math.min(1, (vh * 0.9 - top) / (vh * 0.3)));
+        st.style.opacity = (0.42 + 0.58 * t).toFixed(3);
+      });
+      stack.style.transform = "translateY(" + (-a * 100 / items.length) + "%)";
+    }
+
+    /* Reveal on scroll, only for blocks that start below the fold */
+    var pending = [];
+    function prepareReveals() {
+      if (reduceMotion) return;
+      document.querySelectorAll("[data-reveal]").forEach(function (el) {
+        if (el.dataset.revealDone || el.closest("[hidden]")) return;
+        el.dataset.revealDone = "1";
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.95) return;
+        el.classList.add("will-reveal");
+        if (el.getAttribute("data-reveal") === "lg") el.classList.add("lg");
+        pending.push(el);
+      });
+    }
+    function checkReveals() {
+      if (!pending.length) return;
+      var vh = window.innerHeight;
+      pending = pending.filter(function (el) {
+        if (el.closest("[hidden]")) return true;
+        if (el.getBoundingClientRect().top < vh * 0.92) {
+          el.classList.add("revealed"); el.classList.remove("will-reveal");
+          return false;
+        }
+        return true;
+      });
+    }
+
+    /* Scroll loop */
+    var ticking = false;
+    function frame() {
+      ticking = false;
+      checkReveals();
+      if (views.home.hidden) return;
+      var target = introTarget();
+      introCur += (target - introCur) * (reduceMotion ? 1 : 0.3);
+      if (Math.abs(target - introCur) < 0.001) introCur = target;
+      paintIntro(introCur);
+      updateProcess();
+      if (Math.abs(target - introCur) > 0.001) requestTick();
+    }
+    function requestTick() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+    function onScroll() { requestTick(); }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", function () { reserveDetailHeight(); onScroll(); });
+
+    /* Services tabs */
+    var tabs = Array.prototype.slice.call(document.querySelectorAll("#services .tab"));
+    var activeTab = 0;
+    function selectTab(i, focus) {
+      activeTab = i;
+      tabs.forEach(function (tab, j) {
+        var on = j === i;
+        tab.setAttribute("aria-selected", String(on));
+        tab.tabIndex = on ? 0 : -1;
+        document.getElementById(tab.getAttribute("aria-controls")).classList.toggle("on", on);
+      });
+      if (focus) tabs[i].focus();
+      syncMobileDetail();
+    }
+    var mDetail = document.querySelector(".m-detail");
+    function reserveDetailHeight() {
+      if (getComputedStyle(mDetail).display === "none") { mDetail.style.minHeight = ""; return; }
+      var title = document.getElementById("m-title"), body = document.getElementById("m-body");
+      var keepT = title.textContent, keepB = body.textContent, max = 0;
+      mDetail.style.minHeight = "";
+      for (var n = 1; n <= tabs.length; n++) {
+        title.textContent = t("svc." + n + ".title"); body.textContent = t("svc." + n + ".body");
+        max = Math.max(max, mDetail.offsetHeight);
+      }
+      title.textContent = keepT; body.textContent = keepB;
+      mDetail.style.minHeight = max + "px";
+    }
+    function syncMobileDetail() {
+      var n = activeTab + 1;
+      document.getElementById("m-title").textContent = t("svc." + n + ".title");
+      document.getElementById("m-body").textContent = t("svc." + n + ".body");
+    }
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener("click", function () { selectTab(i, false); });
+      tab.addEventListener("keydown", function (e) {
+        var k = e.key;
+        if (k === "ArrowDown" || k === "ArrowRight") { e.preventDefault(); selectTab((i + 1) % tabs.length, true); }
+        else if (k === "ArrowUp" || k === "ArrowLeft") { e.preventDefault(); selectTab((i - 1 + tabs.length) % tabs.length, true); }
+        else if (k === "Home") { e.preventDefault(); selectTab(0, true); }
+        else if (k === "End") { e.preventDefault(); selectTab(tabs.length - 1, true); }
+      });
+    });
+
+    /* Results marquee: second, hidden copy for a seamless loop */
+    var tRow = document.getElementById("t-row");
+    function cloneRows() {
+      var track = tRow.parentNode;
+      var old = track.querySelector(".t-row[aria-hidden]");
+      if (old) old.remove();
+      var copy = tRow.cloneNode(true);
+      copy.removeAttribute("id");
+      copy.setAttribute("aria-hidden", "true");
+      copy.querySelectorAll("[data-i18n]").forEach(function (el) { el.removeAttribute("data-i18n"); });
+      track.appendChild(copy);
+    }
+
+    /* Copy email */
+    var copyBtn = document.getElementById("copy-email");
+    copyBtn.addEventListener("click", function () {
+      var done = function (key) {
+        copyBtn.textContent = t(key);
+        setTimeout(function () { copyBtn.textContent = t("footer.copy"); }, 1800);
+      };
+      var selectIt = function () {
+        var r = document.createRange(); r.selectNodeContents(document.getElementById("footer-email"));
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      };
+      try {
+        navigator.clipboard.writeText("ykpgunduz@icloud.com").then(function () { done("footer.copied"); }, function () { selectIt(); done("footer.copyFail"); });
+      } catch (e) { selectIt(); done("footer.copyFail"); }
+    });
+
+    /* Reel: respect reduced motion */
+    var reel = document.getElementById("reel");
+    if (reduceMotion && reel) { reel.removeAttribute("autoplay"); try { reel.pause(); } catch (e) { } reel.setAttribute("controls", ""); }
+
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+
+    /* Boot */
+    captureTR();
+    var saved = null;
+    try { saved = localStorage.getItem("yakup-lang"); } catch (e) { }
+    var initial = saved === "en" || saved === "tr" ? saved : ((navigator.language || "tr").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
+    document.querySelectorAll("[data-lang]").forEach(function (b) { b.addEventListener("click", function () { applyLang(b.getAttribute("data-lang")); }); });
+    applyLang(initial);
+    route();
+  })();
+</script>
