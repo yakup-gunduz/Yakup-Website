@@ -213,6 +213,19 @@ def project_time(project, lang):
     return f'<time datetime="{html.escape(date)}">{month_label(date, lang)}</time>' if date else ""
 
 
+def project_meta(project, lang):
+    """Render external live link and/or project date on project list rows."""
+    parts = []
+    for label, url in project[lang].get("links", []):
+        if not url.startswith("/"):
+            parts.append(f'<a href="{html.escape(url)}" target="_blank" rel="noopener">{html.escape(label)} ↗</a>')
+            break
+    t = project_time(project, lang)
+    if t:
+        parts.append(t)
+    return " · ".join(parts)
+
+
 def project_main(lang, page):
     """Markup for /projeler/ and /projeler/<slug>/, in the About page's layout."""
     e = html.escape
@@ -221,7 +234,7 @@ def project_main(lang, page):
         idx = PROJECTS["index"][lang]
         items = "\n".join(
             f'          <li><a class="r-name" href="{PAGES["p:" + p["slug"]][lang]}">{e(p[lang]["name"])}</a>'
-            f'<span class="r-meta">{project_time(p, lang)}</span>'
+            f'<span class="r-meta">{project_meta(p, lang)}</span>'
             f'<p class="proj-sum">{e(p[lang]["summary"])}</p></li>'
             for p in PROJECTS["projects"]
         )
@@ -248,7 +261,7 @@ def project_main(lang, page):
     paras = "\n".join(f"          <p>{e(t)}</p>" for t in c["paragraphs"])
     facts = "\n".join(f"          <div><dt>{e(k)}</dt><dd>{e(v)}</dd></div>" for k, v in c["facts"])
     links = "\n".join(
-        f'          <li><a class="r-name" href="{e(u)}"{"" if u.startswith("/") else " rel=\"noopener\""}>{e(t)}</a></li>'
+        f'          <li><a class="r-name" href="{e(u)}"{"" if u.startswith("/") else " target=\"_blank\" rel=\"noopener\""}>{e(t)}</a></li>'
         for t, u in c["links"]
     )
     return f"""<main class="view" id="view-project">
@@ -307,13 +320,15 @@ def about_extra(lang):
     faq = "\n".join(f'          <div class="faq-item"><h3>{html.escape(q)}</h3><p>{html.escape(a)}</p></div>' for q, a in CONTENT["faq"][lang])
     anchor = "sss" if lang == "tr" else "faq"
     proj_rows = "\n".join(
-        f'          <li><a class="r-name" href="{PAGES["p:" + p["slug"]][lang]}">{html.escape(p[lang]["name"])}</a><span class="r-meta">{project_time(p, lang)}</span><p class="proj-sum">{html.escape(p[lang]["summary"])}</p></li>'
+        f'          <li><a class="r-name" href="{PAGES["p:" + p["slug"]][lang]}">{html.escape(p[lang]["name"])}</a><span class="r-meta">{project_meta(p, lang)}</span><p class="proj-sum">{html.escape(p[lang]["summary"])}</p></li>'
         for p in PROJECTS["projects"]
     )
     return f"""
       <hr class="divider">
       <div class="arow" data-reveal>
-        <div class="a-left"><h2 class="h5">{html.escape(facts["heading"])}</h2></div>
+        <div class="a-left"><h2 class="h5">{html.escape(facts["heading"])}</h2>
+          <figure class="a-photo"><img src="assets/img/yakup-gunduz-photo-720.webp" srcset="assets/img/yakup-gunduz-photo-400.webp 400w, assets/img/yakup-gunduz-photo-720.webp 720w" sizes="(max-width: 767px) 92vw, 22rem" width="720" height="720" loading="lazy" decoding="async" alt="{html.escape(CONTENT["photo_caption"][lang])}"><figcaption>{html.escape(CONTENT["photo_caption"][lang])}</figcaption></figure>
+        </div>
         <dl class="facts">
 {rows}
         </dl>
@@ -340,6 +355,8 @@ def jsonld(lang, page):
     p = CONTENT["person"]
     url = BASE + PAGES[page][lang]
     person_id = BASE + "/#person"
+    photo_id = BASE + "/#photo"
+    photo_url = BASE + "/assets/img/yakup-gunduz-photo.jpg"
     graph = [
         {
             "@type": "Person",
@@ -349,10 +366,20 @@ def jsonld(lang, page):
             "givenName": p["givenName"],
             "familyName": p["familyName"],
             "url": BASE + "/",
+            "image": {
+                "@type": "ImageObject",
+                "@id": photo_id,
+                "url": photo_url,
+                "contentUrl": photo_url,
+                "width": 1200,
+                "height": 1200,
+                "caption": CONTENT["photo_caption"][lang],
+            },
             "jobTitle": p["jobTitle"][lang],
             "hasOccupation": {"@type": "Occupation", "name": "Full-stack software developer" if lang == "en" else "Full-stack yazılım geliştirici", "sameAs": "https://www.wikidata.org/wiki/Q183888"},
             "description": p["description"][lang],
             "email": "mailto:ykpgunduz@icloud.com",
+            "telephone": "+90 544 181 96 44",
             "address": {"@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR"},
             "nationality": {"@type": "Country", "name": "Türkiye"},
             "knowsLanguage": ["tr", "en"],
@@ -363,7 +390,7 @@ def jsonld(lang, page):
             "affiliation": [{"@id": BASE + "/#42-istanbul"}, {"@id": BASE + "/#istanbul-universitesi"}],
             "sameAs": p["sameAs"],
         },
-        {"@type": "Organization", "@id": BASE + "/#harpos", "name": "Harpos Teknoloji", "alternateName": "Harpos", "url": "https://harpos.app", "founder": {"@id": person_id}, "foundingDate": "2024-08", "address": {"@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR"}},
+        {"@type": "Organization", "@id": BASE + "/#harpos", "name": "Harpos Teknoloji", "alternateName": "Harpos", "url": "https://harpos.app", "founder": {"@id": person_id}, "foundingDate": "2024-10", "address": {"@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR"}},
         {"@type": "Organization", "@id": BASE + "/#kle", "name": "Kle Bilgi Teknolojileri A.Ş.", "address": {"@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR"}},
         {"@type": "CollegeOrUniversity", "@id": BASE + "/#istanbul-universitesi", "name": "İstanbul Üniversitesi", "url": "https://www.istanbul.edu.tr/"},
         {"@type": "EducationalOrganization", "@id": BASE + "/#42-istanbul", "name": "42 İstanbul", "url": "https://42turkiye.com.tr/", "parentOrganization": {"@type": "EducationalOrganization", "name": "42 Türkiye", "url": "https://42turkiye.com.tr/"}},
@@ -389,7 +416,8 @@ def jsonld(lang, page):
         "isPartOf": {"@id": BASE + "/#website"},
         "about": {"@id": person_id},
         "mainEntity": {"@id": person_id},
-        "primaryImageOfPage": BASE + f"/assets/img/og-yakup-gunduz-{lang}.jpg",
+        "primaryImageOfPage": {"@id": photo_id} if page in ("home", "about", "contact") else BASE + f"/assets/img/og-yakup-gunduz-{lang}.jpg",
+        "thumbnailUrl": photo_url,
         "author": {"@id": person_id},
     }
     if page != "home":
@@ -430,7 +458,13 @@ def head(lang, page):
     url = BASE + PAGES[page][lang]
     alt = "en" if lang == "tr" else "tr"
     og_img = BASE + f"/assets/img/og-yakup-gunduz-{lang}.jpg"
-    preload = ""
+    photo_img = BASE + "/assets/img/yakup-gunduz-photo.jpg"
+    preload = (
+        '<link rel="preload" as="image" type="image/webp" '
+        'imagesrcset="/assets/img/yakup-gunduz-bust-800.webp 800w, /assets/img/yakup-gunduz-bust-1200.webp 1200w, /assets/img/yakup-gunduz-bust-1600.webp 1600w" '
+        'imagesizes="(max-width: 529px) 105vw, (max-width: 991px) 70vw, 52vw" fetchpriority="high">'
+        if page == "home" else ""
+    )
     css = absolutize(CSS)
     css = minify_css(css)
     lines = [
@@ -443,11 +477,13 @@ def head(lang, page):
         f'<meta name="description" content="{html.escape(meta["description"])}">',
         '<meta name="author" content="Yakup Gündüz">',
         '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">',
+        f'<meta name="thumbnail" content="{photo_img}">',
+        f'<link rel="image_src" href="{photo_img}">',
         f'<link rel="canonical" href="{url}">',
         f'<link rel="alternate" hreflang="tr" href="{BASE + PAGES[page]["tr"]}">',
         f'<link rel="alternate" hreflang="en" href="{BASE + PAGES[page]["en"]}">',
         f'<link rel="alternate" hreflang="x-default" href="{BASE + PAGES[page]["tr"]}">',
-        '<link rel="me" href="https://github.com/yakup-gunduz">',
+        '<link rel="me" href="https://github.com/ykpgunduz">',
         '<link rel="me" href="https://www.linkedin.com/in/yakupgunduz">',
         f'<link rel="author" href="{PAGES["about"][lang]}">',
         '<link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">',
@@ -473,7 +509,7 @@ def head(lang, page):
         f'<meta property="og:image:alt" content="{html.escape(meta["og_alt"])}">',
         '<meta property="profile:first_name" content="Yakup">',
         '<meta property="profile:last_name" content="Gündüz">',
-        '<meta property="profile:username" content="yakup-gunduz">',
+        '<meta property="profile:username" content="ykpgunduz">',
         '<meta name="twitter:card" content="summary_large_image">',
         f'<meta name="twitter:title" content="{html.escape(meta["title"])}">',
         f'<meta name="twitter:description" content="{html.escape(meta["og"])}">',
@@ -542,7 +578,7 @@ def llms_full():
     lines += ["", "## Approach", "", e["approach.title"], "", re.sub(r"<[^>]+>", "", e["approach.body"])]
     lines += ["", "## How Yakup works", ""] + [f"{i}. {e[f'process.s{i}']}" for i in range(1, 5)]
     lines += ["", "## Services", ""] + [f"- {e[f'svc.{i}.title']}: {e[f'svc.{i}.body']}" for i in range(1, 5)]
-    lines += ["", "## Projects and results", ""] + [f"- {e[f'rec.{i}.stat']}, {e[f'rec.{i}.name']} ({e[f'rec.{i}.role']}): {e[f'rec.{i}.body']}" for i in range(1, 6)]
+    lines += ["", "## Projects and results", ""] + [f"- {e[f'rec.{i}.stat']}, {e[f'rec.{i}.name']} ({e[f'rec.{i}.role']}): {e[f'rec.{i}.body']}" for i in range(1, 7)]
     lines += ["", "## Featured work: Harpos", "", re.sub(r"<[^>]+>", "", e["feature.body"])]
     lines += ["", "## Projects", ""]
     for p in PROJECTS["projects"]:
@@ -554,7 +590,7 @@ def llms_full():
     lines += ["## Sık sorulanlar (Türkçe)", ""]
     for q, a in CONTENT["faq"]["tr"]:
         lines += [f"### {q}", "", a, ""]
-    lines += ["## Contact", "", "- Email: ykpgunduz@icloud.com", "- GitHub: https://github.com/yakup-gunduz", "- LinkedIn: https://www.linkedin.com/in/yakupgunduz", "- Harpos: https://harpos.app", "", f"Last updated: {TODAY}", ""]
+    lines += ["## Contact", "", "- Email: ykpgunduz@icloud.com", "- Phone: +90 544 181 96 44", "- GitHub: https://github.com/ykpgunduz", "- LinkedIn: https://www.linkedin.com/in/yakupgunduz", "- Harpos: https://harpos.app", "", f"Last updated: {TODAY}", ""]
     return "\n".join(lines)
 
 
@@ -564,7 +600,8 @@ def write(path, text):
 
 
 PAGE_IMAGES = {
-    "home": ["feature-workspace.webp", "harpos-pos.webp", "svc-app.webp", "svc-web.webp", "svc-db.webp", "svc-automation.webp"],
+    "home": ["yakup-gunduz-bust-1200.webp", "yakup-gunduz-bust-1600.webp", "yakup-gunduz-photo.jpg", "feature-workspace.webp", "harpos-pos.webp", "svc-app.webp", "svc-web.webp", "svc-db.webp", "svc-automation.webp"],
+    "about": ["yakup-gunduz-photo-720.webp", "yakup-gunduz-photo.jpg"],
 }
 
 

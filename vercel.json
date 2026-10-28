@@ -9,7 +9,9 @@
   "redirects": [
     { "source": "/contact", "destination": "/iletisim/", "permanent": true },
     { "source": "/akide-karporselen", "destination": "/hakkimda/", "permanent": true },
-    { "source": "/yesil-media", "destination": "/hakkimda/", "permanent": true }
+    { "source": "/yesil-media", "destination": "/hakkimda/", "permanent": true },
+    { "source": "/projeler/kurumsal-web-projeleri", "destination": "/projeler/", "permanent": true },
+    { "source": "/en/projects/kurumsal-web-projeleri", "destination": "/en/projects/", "permanent": true }
   ],
   "headers": [
     {

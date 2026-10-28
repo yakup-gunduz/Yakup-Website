@@ -17,7 +17,20 @@ class SiteBuildTests(unittest.TestCase):
         cls.pages = sorted(DIST.rglob("index.html"))
 
     def test_core_files_exist(self):
-        for name in ("index.html", "en/index.html", "404.html", "en/404.html", "robots.txt", "sitemap.xml", "llms.txt", "llms-full.txt", "favicon.ico"):
+        for name in (
+            "index.html",
+            "en/index.html",
+            "404.html",
+            "en/404.html",
+            "robots.txt",
+            "sitemap.xml",
+            "llms.txt",
+            "llms-full.txt",
+            "favicon.ico",
+            "assets/img/yakup-gunduz-photo.jpg",
+            "assets/img/yakup-gunduz-photo-720.webp",
+            "assets/img/yakup-gunduz-photo-400.webp",
+        ):
             self.assertTrue((DIST / name).is_file(), name)
 
     def test_every_page_has_seo_basics(self):
@@ -32,6 +45,9 @@ class SiteBuildTests(unittest.TestCase):
                 for lang in ("tr", "en", "x-default"):
                     self.assertIn(f'hreflang="{lang}"', src)
                 self.assertIn('property="og:image"', src)
+                self.assertIn(f'<meta name="thumbnail" content="{BASE}/assets/img/yakup-gunduz-photo.jpg">', src)
+                self.assertIn(f'"@id":"{BASE}/#photo"', src)
+                self.assertIn(f'"url":"{BASE}/assets/img/yakup-gunduz-photo.jpg"', src)
                 self.assertIn('application/ld+json', src)
 
     def test_sitemap_lists_every_page(self):
@@ -40,6 +56,8 @@ class SiteBuildTests(unittest.TestCase):
             path = "/" + str(page.parent.relative_to(DIST)).replace(".", "").strip("/")
             url = BASE + (path.rstrip("/") + "/" if path != "/" else "/")
             self.assertIn(f"<loc>{url}</loc>", sitemap)
+        self.assertIn(f"<image:loc>{BASE}/assets/img/yakup-gunduz-bust-1200.webp</image:loc>", sitemap)
+        self.assertIn(f"<image:loc>{BASE}/assets/img/yakup-gunduz-photo.jpg</image:loc>", sitemap)
         self.assertIn(f"Sitemap: {BASE}/sitemap.xml", (DIST / "robots.txt").read_text(encoding="utf-8"))
 
     def test_no_previous_owner_or_article_leftovers(self):

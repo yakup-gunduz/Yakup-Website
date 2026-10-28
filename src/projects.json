@@ -4,15 +4,15 @@
   "tr": {
    "title": "Projeler | Yakup Gündüz",
    "h1": "Yakup Gündüz'ün projeleri",
-   "description": "Yakup Gündüz'ün geliştirdiği projeler: Harpos POS platformu, Inscribi Director, Meringa QR Menü ve kurumsal web ve portal projeleri.",
-   "lead": "Kurduğum ürün, hackathon projesi ve müşteriler için geliştirdiğim web projeleri. Her sayfada ne yapıldığını ve rolümü bulabilirsiniz.",
+   "description": "Yakup Gündüz'ün geliştirdiği projeler: Harpos POS SaaS platformu, Inscribi Director, Meringa QR Menü, Caledor, +90 Ventures, Bircan Turizm, Özköse Group, MAİP, Intermed Medical Systems ve Yavuzoğlu Mimarlık.",
+   "lead": "Uçtan uca kurduğum SaaS ürünü, hackathon projesi, e-ticaret platformu ve 15+ müşteriye yönelik geliştirdiğim kurumsal web tasarım ve yazılım projeleri. Her sayfada ne yapıldığını, canlı bağlantısını ve rolümü bulabilirsiniz.",
    "crumb": "Projeler"
   },
   "en": {
    "title": "Projects | Yakup Gündüz",
    "h1": "Projects by Yakup Gündüz",
-   "description": "Projects built by Yakup Gündüz: the Harpos POS platform, Inscribi Director, Meringa QR Menu and corporate web and portal projects.",
-   "lead": "The product I founded, a hackathon build and web projects for clients. Each page covers what was built and my role.",
+   "description": "Projects built by Yakup Gündüz: the Harpos POS SaaS platform, Inscribi Director, Meringa QR Menu, Caledor, +90 Ventures, Bircan Turizm, Özköse Group, MAİP, Intermed Medical Systems and Yavuzoğlu Mimarlık.",
+   "lead": "The SaaS product I built end to end, a hackathon build, an e-commerce platform and corporate web design and development projects across 15+ clients. Each page covers what was built, the live link and my role.",
    "crumb": "Projects"
   }
  },
@@ -33,8 +33,8 @@
  "projects": [
   {
    "slug": "harpos",
-   "date": "2024-08",
-   "modifiedAt": "2026-10-16T20:00:00+03:00",
+   "date": "2024-10",
+   "modifiedAt": "2026-10-28T14:35:00+03:00",
    "pageCreatedAt": "2026-10-16T20:00:00+03:00",
    "schema": {
     "@type": "WebApplication",
@@ -45,30 +45,34 @@
    "tr": {
     "name": "Harpos",
     "title": "Harpos: restoran ve kafeler için POS platformu | Yakup Gündüz",
-    "description": "Harpos, Yakup Gündüz'ün kurduğu çoklu şubeli POS, adisyon ve QR menü SaaS platformu. 5 kafe ve restorana hizmet verdi.",
-    "summary": "Kurduğum çoklu şubeli POS, adisyon ve QR menü SaaS platformu.",
-    "lead": "Harpos, Ağustos 2024'te kurduğum SaaS girişimi: restoran, kafe ve oteller için adisyon, masa/sipariş ve QR menü özellikli, çoklu şubeli bir POS platformu.",
+    "description": "Harpos, Yakup Gündüz'ün uçtan uca kurduğu çoklu şubeli POS, adisyon ve QR menü SaaS platformu (Next.js, TypeScript, Laravel, WebSocket). 5 kafe ve restorana hizmet verdi.",
+    "summary": "Çoklu şubeli POS, adisyon ve QR menü SaaS platformu (Next.js, Laravel, WebSocket).",
+    "lead": "Harpos, Ekim 2024'te kurduğum ve geliştirmeye devam ettiğim SaaS girişimi: restoran, kafe ve oteller için adisyon, masa/sipariş ve QR menü özellikli, çoklu şubeli bir POS platformu.",
     "paragraphs": [
-     "Sistemi kurucu ve full-stack geliştirici olarak uçtan uca tasarlayıp geliştirdim. Platform 5 kafe ve restorana hizmet verdi.",
-     "Sipariş ve ödeme servislerini Next.js, Laravel ve REST ile geliştirdim; Docker/Nginx altyapısını ve dağıtım süreçlerini yönettim.",
-     "MSSQL, PostgreSQL ve MySQL sorgularını CTE ve stored procedure yapılarıyla optimize ettim."
+     "Sistemi kurucu ve full-stack yazılım geliştirici olarak uçtan uca tasarlayıp geliştirdim; platform 5 kafe ve restorana hizmet verdi.",
+     "Sipariş/ödeme servislerini ve WebSocket tabanlı anlık sipariş akışını Next.js, TypeScript, Laravel ve REST ile geliştirdim; Docker/Nginx bulut altyapısını ve CI/CD süreçlerini yönettim.",
+     "PostgreSQL ve MySQL sorgularını CTE ve stored procedure yapılarıyla %40 hızlandırdım. Projelerin çoğunu kiralık bir DigitalOcean bulut sunucusunda barındırdım; girişimcilik programı kapsamında AWS'den 5.000 $ kredi aldım."
     ],
     "facts": [
      [
       "Rol",
-      "Kurucu ve full-stack geliştirici"
+      "Kurucu & Full-Stack Yazılım Geliştirici"
      ],
      [
       "Dönem",
-      "Ağustos 2024 – Ağustos 2026"
+      "Ekim 2024 – Devam"
      ],
      [
       "Teknolojiler",
-      "Next.js, Laravel, REST, Docker, Nginx"
+      "Next.js, TypeScript, Laravel, REST, WebSocket, Docker, Nginx, CI/CD"
      ],
      [
       "Veritabanı",
-      "MSSQL, PostgreSQL, MySQL"
+      "PostgreSQL, MySQL (CTE ve stored procedure ile %40 hızlandırma)"
+     ],
+     [
+      "Bulut & Altyapı",
+      "DigitalOcean, AWS (5.000 $ girişimcilik kredisi)"
      ],
      [
       "Kullanım",
@@ -85,30 +89,34 @@
    "en": {
     "name": "Harpos",
     "title": "Harpos: a POS platform for restaurants and cafés | Yakup Gündüz",
-    "description": "Harpos is the multi-branch POS, billing and QR menu SaaS platform founded by Yakup Gündüz. It served 5 cafés and restaurants.",
-    "summary": "The multi-branch POS, billing and QR menu SaaS platform I founded.",
-    "lead": "Harpos is the SaaS startup I founded in August 2024: a multi-branch POS platform with billing, table/order management and QR menus for restaurants, cafés and hotels.",
+    "description": "Harpos is the multi-branch POS, billing and QR menu SaaS platform founded and built end to end by Yakup Gündüz (Next.js, TypeScript, Laravel, WebSocket). It served 5 cafés and restaurants.",
+    "summary": "Multi-branch POS, billing and QR menu SaaS platform (Next.js, Laravel, WebSocket).",
+    "lead": "Harpos is the SaaS startup I founded in October 2024: a multi-branch POS platform with billing, table/order management and QR menus for restaurants, cafés and hotels.",
     "paragraphs": [
-     "As founder and full-stack developer I designed and built the system end to end. The platform served 5 cafés and restaurants.",
-     "I built the order and payment services with Next.js, Laravel and REST, and ran the Docker/Nginx infrastructure and deployments.",
-     "I optimized MSSQL, PostgreSQL and MySQL queries with CTEs and stored procedures."
+     "As founder and full-stack software developer I designed and built the system end to end; the platform served 5 cafés and restaurants.",
+     "I developed the ordering/payment services and WebSocket-based real-time order flow with Next.js, TypeScript, Laravel and REST, and managed the Docker/Nginx cloud infrastructure and CI/CD processes.",
+     "I sped up PostgreSQL and MySQL queries by 40% with CTEs and stored procedures, hosted most projects on a rented DigitalOcean cloud server and received $5,000 in AWS credits through an entrepreneurship program."
     ],
     "facts": [
      [
       "Role",
-      "Founder and full-stack developer"
+      "Founder & Full-Stack Software Developer"
      ],
      [
       "Period",
-      "August 2024 – August 2026"
+      "October 2024 – Present"
      ],
      [
       "Stack",
-      "Next.js, Laravel, REST, Docker, Nginx"
+      "Next.js, TypeScript, Laravel, REST, WebSocket, Docker, Nginx, CI/CD"
      ],
      [
       "Databases",
-      "MSSQL, PostgreSQL, MySQL"
+      "PostgreSQL, MySQL (40% faster queries via CTEs and stored procedures)"
+     ],
+     [
+      "Cloud & Infrastructure",
+      "DigitalOcean, AWS ($5,000 entrepreneurship credits)"
      ],
      [
       "Usage",
@@ -125,25 +133,26 @@
   },
   {
    "slug": "inscribi-director",
-   "modifiedAt": "2026-10-16T20:00:00+03:00",
+   "modifiedAt": "2026-10-28T14:35:00+03:00",
    "pageCreatedAt": "2026-10-16T20:00:00+03:00",
    "schema": {
     "@type": "CreativeWork",
-    "name": "Inscribi Director"
+    "name": "Inscribi Director",
+    "url": "https://github.com/ykpgunduz/inscribi-director"
    },
    "tr": {
     "name": "Inscribi Director",
     "title": "Inscribi Director: Monad Blitz İstanbul üçüncüsü | Yakup Gündüz",
-    "description": "Inscribi Director, Monad Blitz İstanbul'da 46 takım arasında üçüncü oldu. Yakup Gündüz frontend'i ve oylama sonrası video görselleştirmesini geliştirdi.",
-    "summary": "Monad Blitz İstanbul'da 46 takım arasında üçüncü olan hackathon projesi.",
-    "lead": "Inscribi Director, Monad oylamasıyla yönlenen yapay zekâ destekli canlı bir video. Proje Monad Blitz İstanbul'da 46 takım arasında üçüncü oldu.",
+    "description": "Inscribi Director, Monad Blitz İstanbul'da 46 takımda 3.lük elde etti. Yakup Gündüz AI destekli canlı videonun frontend ve oylama görselleştirmesini geliştirdi.",
+    "summary": "Monad Blitz İstanbul'da 46 takımda 3.lük (ekip projesi, frontend katkısı). AI destekli canlı videonun frontend ve oylama görselleştirmesi.",
+    "lead": "Inscribi Director, Monad Blitz İstanbul'da 46 takım arasında üçüncü olan ekip projemiz.",
     "paragraphs": [
-     "Ekipte projenin frontend'ini ve oylama sonrası video görselleştirmesini geliştirdim."
+     "Ekipte AI destekli canlı videonun frontend ve oylama görselleştirmesini geliştirdim."
     ],
     "facts": [
      [
       "Rolüm",
-      "Frontend, oylama sonrası video görselleştirmesi"
+      "Ekip projesi, frontend katkısı (canlı video frontend ve oylama görselleştirmesi)"
      ],
      [
       "Etkinlik",
@@ -151,24 +160,29 @@
      ],
      [
       "Sonuç",
-      "46 takım arasında üçüncülük"
+      "46 takımda 3.lük"
      ]
     ],
-    "links": []
+    "links": [
+     [
+      "github.com/ykpgunduz/inscribi-director",
+      "https://github.com/ykpgunduz/inscribi-director"
+     ]
+    ]
    },
    "en": {
     "name": "Inscribi Director",
     "title": "Inscribi Director: 3rd at Monad Blitz Istanbul | Yakup Gündüz",
-    "description": "Inscribi Director placed third among 46 teams at Monad Blitz Istanbul. Yakup Gündüz built the frontend and the post-vote video visualization.",
-    "summary": "A hackathon project that placed third among 46 teams at Monad Blitz Istanbul.",
-    "lead": "Inscribi Director is an AI-powered live video steered by Monad voting. It placed third among 46 teams at Monad Blitz Istanbul.",
+    "description": "Inscribi Director placed third among 46 teams at Monad Blitz Istanbul. Yakup Gündüz built the frontend and voting visualization for the AI-powered live video.",
+    "summary": "3rd of 46 teams at Monad Blitz Istanbul (team project, frontend contribution). Frontend and voting visualization for an AI-powered live video.",
+    "lead": "Inscribi Director is our team project that placed third among 46 teams at Monad Blitz Istanbul.",
     "paragraphs": [
-     "On the team I built the frontend and the post-vote video visualization."
+     "On the team I built the frontend and voting visualization for the AI-powered live video."
     ],
     "facts": [
      [
       "My role",
-      "Frontend, post-vote video visualization"
+      "Team project, frontend contribution (live video frontend and voting visualization)"
      ],
      [
       "Event",
@@ -179,12 +193,17 @@
       "3rd of 46 teams"
      ]
     ],
-    "links": []
+    "links": [
+     [
+      "github.com/ykpgunduz/inscribi-director",
+      "https://github.com/ykpgunduz/inscribi-director"
+     ]
+    ]
    }
   },
   {
    "slug": "meringa-qr-menu",
-   "modifiedAt": "2026-10-16T20:00:00+03:00",
+   "modifiedAt": "2026-10-28T14:35:00+03:00",
    "pageCreatedAt": "2026-10-16T20:00:00+03:00",
    "schema": {
     "@type": "WebApplication",
@@ -194,14 +213,18 @@
    "tr": {
     "name": "Meringa QR Menü",
     "title": "Meringa QR Menü | Yakup Gündüz",
-    "description": "Meringa için geliştirilen responsive katalog, dinamik QR menü ve anlık sipariş sistemi.",
-    "summary": "Responsive katalog, dinamik QR menü ve anlık sipariş.",
-    "lead": "Meringa için responsive bir katalog, dinamik QR menü ve anlık sipariş sistemi geliştirdim.",
+    "description": "Meringa için geliştirilen responsive katalog, dinamik QR menü ve WebSocket ile anlık sipariş sistemi.",
+    "summary": "Responsive katalog, dinamik QR menü ve WebSocket ile anlık sipariş.",
+    "lead": "Meringa için responsive bir katalog, dinamik QR menü ve WebSocket ile anlık sipariş sistemi geliştirdim.",
     "paragraphs": [],
     "facts": [
      [
       "Kapsam",
-      "Responsive katalog, dinamik QR menü, anlık sipariş"
+      "Responsive katalog, dinamik QR menü, WebSocket ile anlık sipariş"
+     ],
+     [
+      "Teknolojiler",
+      "WebSocket, Responsive Web"
      ]
     ],
     "links": []
@@ -209,76 +232,484 @@
    "en": {
     "name": "Meringa QR Menu",
     "title": "Meringa QR Menu | Yakup Gündüz",
-    "description": "A responsive catalog, dynamic QR menu and live ordering system built for Meringa.",
-    "summary": "Responsive catalog, dynamic QR menu and live ordering.",
-    "lead": "I built a responsive catalog, a dynamic QR menu and a live ordering system for Meringa.",
+    "description": "A responsive catalog, dynamic QR menu and real-time WebSocket ordering system built for Meringa.",
+    "summary": "Responsive catalog, dynamic QR menu and real-time ordering with WebSocket.",
+    "lead": "I built a responsive catalog, a dynamic QR menu and a real-time WebSocket ordering system for Meringa.",
     "paragraphs": [],
     "facts": [
      [
       "Scope",
-      "Responsive catalog, dynamic QR menu, live ordering"
+      "Responsive catalog, dynamic QR menu, real-time ordering with WebSocket"
+     ],
+     [
+      "Technologies",
+      "WebSocket, Responsive Web"
      ]
     ],
     "links": []
    }
   },
   {
-   "slug": "kurumsal-web-projeleri",
-   "modifiedAt": "2026-10-16T20:00:00+03:00",
-   "pageCreatedAt": "2026-10-16T20:00:00+03:00",
+   "slug": "caledor",
+   "modifiedAt": "2026-10-28T14:35:00+03:00",
+   "pageCreatedAt": "2026-10-21T15:10:00+03:00",
    "schema": {
-    "@type": "CreativeWork",
-    "name": "Kurumsal web ve portal projeleri"
+    "@type": "WebApplication",
+    "name": "Caledor",
+    "url": "https://caledor.com.tr",
+    "applicationCategory": "ShoppingApplication"
    },
    "tr": {
-    "name": "Kurumsal web ve portal projeleri",
-    "title": "Kurumsal web ve portal projeleri | Yakup Gündüz",
-    "description": "Yakup Gündüz'ün Next.js ve Laravel ile geliştirdiği kurumsal web ve portal projeleri: 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS ve Yavuzoğlu Mimarlık.",
-    "summary": "Next.js ve Laravel ile kurumsal web siteleri ve portallar; SEO ve Nginx.",
-    "lead": "Kurumlar için Next.js ve Laravel ile web siteleri ve portallar geliştirdim; SEO çalışmalarını yaptım ve Nginx üzerinde yayına aldım.",
-    "paragraphs": [
-     "Müşteriler: 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS ve Yavuzoğlu Mimarlık."
-    ],
+    "name": "Caledor",
+    "title": "Caledor: giyim e-ticaret platformu | Yakup Gündüz",
+    "description": "Caledor (caledor.com.tr), Yakup Gündüz'ün Next.js, TypeScript, Laravel ve Tailwind CSS ile geliştirdiği kapsamlı giyim e-ticaret platformu (SEO, Nginx).",
+    "summary": "Next.js, TypeScript, Laravel ve Tailwind CSS ile geliştirilen kapsamlı giyim e-ticaret platformu (SEO, Nginx).",
+    "lead": "Caledor için Next.js, TypeScript, Laravel ve Tailwind CSS ile kapsamlı bir giyim e-ticaret platformu geliştirdim; SEO çalışmalarını yürüttüm ve Nginx üzerinde yayına aldım.",
+    "paragraphs": [],
     "facts": [
-     [
-      "Teknolojiler",
-      "Next.js, Laravel, Nginx"
-     ],
      [
       "Kapsam",
-      "Kurumsal web siteleri, portallar, SEO"
+      "Kapsamlı giyim e-ticaret platformu, web tasarım ve geliştirme, SEO"
      ],
      [
-      "Proje sayısı",
-      "7"
+      "Teknolojiler",
+      "Next.js, TypeScript, Laravel, Tailwind CSS, Nginx"
+     ],
+     [
+      "Web sitesi",
+      "caledor.com.tr"
      ]
     ],
-    "links": []
+    "links": [
+     [
+      "caledor.com.tr",
+      "https://caledor.com.tr"
+     ]
+    ]
    },
    "en": {
-    "name": "Corporate web and portal projects",
-    "title": "Corporate web and portal projects | Yakup Gündüz",
-    "description": "Corporate websites and portals built by Yakup Gündüz with Next.js and Laravel: 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS and Yavuzoğlu Mimarlık.",
-    "summary": "Corporate websites and portals with Next.js and Laravel; SEO and Nginx.",
-    "lead": "I built websites and portals for companies with Next.js and Laravel, handled SEO and served them on Nginx.",
-    "paragraphs": [
-     "Clients: 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS and Yavuzoğlu Mimarlık."
-    ],
+    "name": "Caledor",
+    "title": "Caledor: clothing e-commerce platform | Yakup Gündüz",
+    "description": "Caledor (caledor.com.tr) is a comprehensive clothing e-commerce platform built by Yakup Gündüz with Next.js, TypeScript, Laravel and Tailwind CSS (SEO, Nginx).",
+    "summary": "Comprehensive clothing e-commerce platform built with Next.js, TypeScript, Laravel and Tailwind CSS (SEO, Nginx).",
+    "lead": "I built a comprehensive clothing e-commerce platform for Caledor with Next.js, TypeScript, Laravel and Tailwind CSS, handled SEO and deployed it on Nginx.",
+    "paragraphs": [],
     "facts": [
      [
-      "Stack",
-      "Next.js, Laravel, Nginx"
-     ],
-     [
       "Scope",
-      "Corporate websites, portals, SEO"
+      "Comprehensive clothing e-commerce platform, web design & development, SEO"
      ],
      [
-      "Projects",
-      "7"
+      "Stack",
+      "Next.js, TypeScript, Laravel, Tailwind CSS, Nginx"
+     ],
+     [
+      "Website",
+      "caledor.com.tr"
      ]
     ],
-    "links": []
+    "links": [
+     [
+      "caledor.com.tr",
+      "https://caledor.com.tr"
+     ]
+    ]
+   }
+  },
+  {
+   "slug": "90-ventures",
+   "modifiedAt": "2026-10-28T14:35:00+03:00",
+   "pageCreatedAt": "2026-10-28T14:35:00+03:00",
+   "schema": {
+    "@type": "WebSite",
+    "name": "+90 Ventures",
+    "url": "https://90.ventures/"
+   },
+   "tr": {
+    "name": "+90 Ventures",
+    "title": "+90 Ventures kurumsal web sitesi | Yakup Gündüz",
+    "description": "Yakup Gündüz'ün dijital ürün stüdyosu +90 Ventures (90.ventures) için Next.js, TypeScript ve Tailwind CSS ile geliştirdiği kurumsal web sitesi (SEO, Nginx).",
+    "summary": "Dijital ürün stüdyosu +90 Ventures için kurumsal web tasarımı ve geliştirme (Next.js, TypeScript, Tailwind CSS, SEO).",
+    "lead": "İstanbul merkezli dijital ürün stüdyosu +90 Ventures için modern, responsive ve SEO uyumlu kurumsal web sitesini geliştirip Nginx üzerinde yayına aldım.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Kapsam",
+      "Kurumsal web tasarımı ve geliştirme, responsive arayüz, SEO"
+     ],
+     [
+      "Teknolojiler",
+      "Next.js, TypeScript, Tailwind CSS, Nginx"
+     ],
+     [
+      "Web sitesi",
+      "90.ventures"
+     ]
+    ],
+    "links": [
+     [
+      "90.ventures",
+      "https://90.ventures/"
+     ]
+    ]
+   },
+   "en": {
+    "name": "+90 Ventures",
+    "title": "+90 Ventures corporate website | Yakup Gündüz",
+    "description": "Corporate website built by Yakup Gündüz for the digital product studio +90 Ventures (90.ventures) with Next.js, TypeScript and Tailwind CSS (SEO, Nginx).",
+    "summary": "Corporate web design and development for the digital product studio +90 Ventures (Next.js, TypeScript, Tailwind CSS, SEO).",
+    "lead": "I built and deployed a modern, responsive and SEO-ready website on Nginx for the Istanbul-based digital product studio +90 Ventures.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Scope",
+      "Corporate web design and development, responsive UI, SEO"
+     ],
+     [
+      "Stack",
+      "Next.js, TypeScript, Tailwind CSS, Nginx"
+     ],
+     [
+      "Website",
+      "90.ventures"
+     ]
+    ],
+    "links": [
+     [
+      "90.ventures",
+      "https://90.ventures/"
+     ]
+    ]
+   }
+  },
+  {
+   "slug": "bircan-turizm",
+   "modifiedAt": "2026-10-28T14:35:00+03:00",
+   "pageCreatedAt": "2026-10-28T14:35:00+03:00",
+   "schema": {
+    "@type": "WebSite",
+    "name": "Bircan Turizm",
+    "url": "https://bircanturizm.com/"
+   },
+   "tr": {
+    "name": "Bircan Turizm",
+    "title": "Bircan Turizm kurumsal web sitesi | Yakup Gündüz",
+    "description": "Yakup Gündüz'ün Bircan Turizm & Seyahat Acentesi (bircanturizm.com) için geliştirdiği kurumsal web sitesi, SEO ve Nginx sunucu kurulumu.",
+    "summary": "Bircan Turizm & Seyahat Acentesi için kurumsal web tasarımı, geliştirme ve SEO çalışması.",
+    "lead": "IATA akredite ve TÜRSAB belgeli Bircan Turizm & Seyahat Acentesi için kurumsal web sitesini geliştirdim; SEO çalışmalarını yürüttüm ve Nginx üzerinde yayına aldım.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Kapsam",
+      "Kurumsal web tasarımı ve geliştirme, SEO"
+     ],
+     [
+      "Teknolojiler",
+      "Next.js, TypeScript, Laravel, Tailwind CSS, Nginx"
+     ],
+     [
+      "Web sitesi",
+      "bircanturizm.com"
+     ]
+    ],
+    "links": [
+     [
+      "bircanturizm.com",
+      "https://bircanturizm.com/"
+     ]
+    ]
+   },
+   "en": {
+    "name": "Bircan Turizm",
+    "title": "Bircan Turizm corporate website | Yakup Gündüz",
+    "description": "Corporate website, SEO and Nginx deployment built by Yakup Gündüz for Bircan Turizm & Travel Agency (bircanturizm.com).",
+    "summary": "Corporate web design, development and SEO for Bircan Turizm & Travel Agency.",
+    "lead": "I built the corporate website for IATA-accredited travel agency Bircan Turizm, handled SEO and deployed it on Nginx.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Scope",
+      "Corporate web design and development, SEO"
+     ],
+     [
+      "Stack",
+      "Next.js, TypeScript, Laravel, Tailwind CSS, Nginx"
+     ],
+     [
+      "Website",
+      "bircanturizm.com"
+     ]
+    ],
+    "links": [
+     [
+      "bircanturizm.com",
+      "https://bircanturizm.com/"
+     ]
+    ]
+   }
+  },
+  {
+   "slug": "ozkose-group",
+   "modifiedAt": "2026-10-28T14:35:00+03:00",
+   "pageCreatedAt": "2026-10-28T14:35:00+03:00",
+   "schema": {
+    "@type": "WebSite",
+    "name": "Özköse Group",
+    "url": "https://ozkosegroup.com/"
+   },
+   "tr": {
+    "name": "Özköse Group",
+    "title": "Özköse Group kurumsal web sitesi | Yakup Gündüz",
+    "description": "Yakup Gündüz'ün inşaat, turizm, restorasyon ve gayrimenkul alanlarında faaliyet gösteren Özköse Group (ozkosegroup.com) için geliştirdiği kurumsal web sitesi.",
+    "summary": "İnşaat, turizm, restorasyon ve gayrimenkul grubu Özköse Group için kurumsal web tasarımı ve geliştirme (SEO, Nginx).",
+    "lead": "İnşaat, turizm, madencilik, restorasyon, gıda ve gayrimenkul sektörlerinde faaliyet gösteren Özköse Group için kurumsal web sitesini geliştirdim; SEO çalışmalarını yürüttüm ve Nginx üzerinde yayına aldım.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Kapsam",
+      "Kurumsal web tasarımı ve geliştirme, SEO"
+     ],
+     [
+      "Teknolojiler",
+      "Next.js, TypeScript, Laravel, Tailwind CSS, Nginx"
+     ],
+     [
+      "Web sitesi",
+      "ozkosegroup.com"
+     ]
+    ],
+    "links": [
+     [
+      "ozkosegroup.com",
+      "https://ozkosegroup.com/"
+     ]
+    ]
+   },
+   "en": {
+    "name": "Özköse Group",
+    "title": "Özköse Group corporate website | Yakup Gündüz",
+    "description": "Corporate website built by Yakup Gündüz for Özköse Group (ozkosegroup.com), active in construction, tourism, restoration and real estate.",
+    "summary": "Corporate web design and development for construction, tourism and real estate group Özköse Group (SEO, Nginx).",
+    "lead": "I built the corporate website for Özköse Group across its construction, tourism, restoration and real estate divisions, handled SEO and deployed it on Nginx.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Scope",
+      "Corporate web design and development, SEO"
+     ],
+     [
+      "Stack",
+      "Next.js, TypeScript, Laravel, Tailwind CSS, Nginx"
+     ],
+     [
+      "Website",
+      "ozkosegroup.com"
+     ]
+    ],
+    "links": [
+     [
+      "ozkosegroup.com",
+      "https://ozkosegroup.com/"
+     ]
+    ]
+   }
+  },
+  {
+   "slug": "maip",
+   "modifiedAt": "2026-10-28T14:35:00+03:00",
+   "pageCreatedAt": "2026-10-28T14:35:00+03:00",
+   "schema": {
+    "@type": "WebSite",
+    "name": "MAİP (Malatya İş İnsanları Platformu)",
+    "url": "https://maip.org.tr/"
+   },
+   "tr": {
+    "name": "MAİP (Malatya İş İnsanları Platformu)",
+    "title": "MAİP: Malatya İş İnsanları Platformu web sitesi | Yakup Gündüz",
+    "description": "Yakup Gündüz'ün Malatya İş İnsanları Platformu (maip.org.tr) için geliştirdiği kurumsal web ve portal projesi (SEO, Nginx).",
+    "summary": "Malatya İş İnsanları Platformu için kurumsal web ve portal tasarımı/geliştirmesi (SEO, Nginx).",
+    "lead": "Malatya İş İnsanları Platformu (MAİP) için kurumsal web ve portal projesini geliştirdim; SEO çalışmalarını yürüttüm ve Nginx üzerinde yayına aldım.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Kapsam",
+      "Kurumsal web ve portal tasarımı/geliştirmesi, SEO"
+     ],
+     [
+      "Teknolojiler",
+      "Next.js, TypeScript, Laravel, Tailwind CSS, Nginx"
+     ],
+     [
+      "Web sitesi",
+      "maip.org.tr"
+     ]
+    ],
+    "links": [
+     [
+      "maip.org.tr",
+      "https://maip.org.tr/"
+     ]
+    ]
+   },
+   "en": {
+    "name": "MAİP (Malatya Businesspeople Platform)",
+    "title": "MAİP: Malatya Businesspeople Platform website | Yakup Gündüz",
+    "description": "Corporate website and portal built by Yakup Gündüz for Malatya İş İnsanları Platformu (maip.org.tr) with SEO and Nginx deployment.",
+    "summary": "Corporate web and portal design/development for Malatya İş İnsanları Platformu (SEO, Nginx).",
+    "lead": "I developed the corporate web and portal project for Malatya İş İnsanları Platformu (MAİP), handled SEO and deployed it on Nginx.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Scope",
+      "Corporate web and portal design/development, SEO"
+     ],
+     [
+      "Stack",
+      "Next.js, TypeScript, Laravel, Tailwind CSS, Nginx"
+     ],
+     [
+      "Website",
+      "maip.org.tr"
+     ]
+    ],
+    "links": [
+     [
+      "maip.org.tr",
+      "https://maip.org.tr/"
+     ]
+    ]
+   }
+  },
+  {
+   "slug": "intermed-ms",
+   "modifiedAt": "2026-10-28T14:35:00+03:00",
+   "pageCreatedAt": "2026-10-28T14:35:00+03:00",
+   "schema": {
+    "@type": "WebSite",
+    "name": "Intermed Medical Systems",
+    "url": "https://intermedms.com/"
+   },
+   "tr": {
+    "name": "Intermed Medical Systems",
+    "title": "Intermed Medical Systems kurumsal web sitesi | Yakup Gündüz",
+    "description": "Yakup Gündüz'ün medikal görüntüleme çözümleri sunan Intermed Medical Systems (intermedms.com) için geliştirdiği kurumsal web sitesi (SEO, Nginx).",
+    "summary": "Medikal görüntüleme sistemleri şirketi Intermed Medical Systems için kurumsal web tasarımı ve geliştirme (SEO, Nginx).",
+    "lead": "Medikal görüntüleme sistemleri ve teknik servis çözümleri sunan Intermed Medical Systems için kurumsal web sitesini geliştirdim; SEO çalışmalarını yürüttüm ve Nginx üzerinde yayına aldım.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Kapsam",
+      "Kurumsal web tasarımı ve geliştirme, ürün kataloğu, SEO"
+     ],
+     [
+      "Teknolojiler",
+      "Next.js, TypeScript, Laravel, Tailwind CSS, Nginx"
+     ],
+     [
+      "Web sitesi",
+      "intermedms.com"
+     ]
+    ],
+    "links": [
+     [
+      "intermedms.com",
+      "https://intermedms.com/"
+     ]
+    ]
+   },
+   "en": {
+    "name": "Intermed Medical Systems",
+    "title": "Intermed Medical Systems corporate website | Yakup Gündüz",
+    "description": "Corporate website built by Yakup Gündüz for medical imaging solutions provider Intermed Medical Systems (intermedms.com).",
+    "summary": "Corporate web design and development for medical imaging company Intermed Medical Systems (SEO, Nginx).",
+    "lead": "I built the corporate website for medical imaging and technical service provider Intermed Medical Systems, handled SEO and deployed it on Nginx.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Scope",
+      "Corporate web design and development, product catalog, SEO"
+     ],
+     [
+      "Stack",
+      "Next.js, TypeScript, Laravel, Tailwind CSS, Nginx"
+     ],
+     [
+      "Website",
+      "intermedms.com"
+     ]
+    ],
+    "links": [
+     [
+      "intermedms.com",
+      "https://intermedms.com/"
+     ]
+    ]
+   }
+  },
+  {
+   "slug": "yavuzoglu-mimarlik",
+   "modifiedAt": "2026-10-28T14:35:00+03:00",
+   "pageCreatedAt": "2026-10-28T14:35:00+03:00",
+   "schema": {
+    "@type": "WebSite",
+    "name": "Yavuzoğlu Mimarlık",
+    "url": "https://yavuzoglumimarlik.com/"
+   },
+   "tr": {
+    "name": "Yavuzoğlu Mimarlık",
+    "title": "Yavuzoğlu Mimarlık web sitesi | Yakup Gündüz",
+    "description": "Yakup Gündüz'ün İstanbul merkezli Yavuzoğlu Mimarlık (yavuzoglumimarlik.com) ofisi için geliştirdiği portfolyo ve kurumsal web sitesi (SEO, Nginx).",
+    "summary": "İstanbul merkezli Yavuzoğlu Mimarlık ofisi için portfolyo ve kurumsal web tasarımı/geliştirmesi (SEO, Nginx).",
+    "lead": "İstanbul merkezli Yavuzoğlu Mimarlık ofisi için mimari projelerin sergilendiği kurumsal ve portfolyo web sitesini geliştirdim; SEO çalışmalarını yürüttüm ve Nginx üzerinde yayına aldım.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Kapsam",
+      "Mimari portfolyo ve kurumsal web tasarımı/geliştirmesi, SEO"
+     ],
+     [
+      "Teknolojiler",
+      "Next.js, TypeScript, Laravel, Tailwind CSS, Nginx"
+     ],
+     [
+      "Web sitesi",
+      "yavuzoglumimarlik.com"
+     ]
+    ],
+    "links": [
+     [
+      "yavuzoglumimarlik.com",
+      "https://yavuzoglumimarlik.com/"
+     ]
+    ]
+   },
+   "en": {
+    "name": "Yavuzoğlu Mimarlık",
+    "title": "Yavuzoğlu Mimarlık website | Yakup Gündüz",
+    "description": "Portfolio and corporate website built by Yakup Gündüz for Istanbul-based architecture studio Yavuzoğlu Mimarlık (yavuzoglumimarlik.com).",
+    "summary": "Portfolio and corporate web design/development for Istanbul-based architecture studio Yavuzoğlu Mimarlık (SEO, Nginx).",
+    "lead": "I built the portfolio and corporate website showcasing architectural projects for Istanbul-based studio Yavuzoğlu Mimarlık, handled SEO and deployed it on Nginx.",
+    "paragraphs": [],
+    "facts": [
+     [
+      "Scope",
+      "Architecture portfolio and corporate web design/development, SEO"
+     ],
+     [
+      "Stack",
+      "Next.js, TypeScript, Laravel, Tailwind CSS, Nginx"
+     ],
+     [
+      "Website",
+      "yavuzoglumimarlik.com"
+     ]
+    ],
+    "links": [
+     [
+      "yavuzoglumimarlik.com",
+      "https://yavuzoglumimarlik.com/"
+     ]
+    ]
    }
   }
  ]

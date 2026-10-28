@@ -1,6 +1,6 @@
 <title>Yakup Gündüz</title>
 <meta name="description"
-  content="Yakup Gündüz: İstanbul'da full-stack yazılım geliştirici ve Harpos kurucusu. Next.js ve Laravel ile SaaS, web ve otomasyon sistemleri.">
+  content="Yakup Gündüz: İstanbul'da full-stack yazılım geliştirici, ürün geliştirici ve Harpos kurucusu. Next.js, TypeScript ve Laravel ile SaaS, web ve otomasyon sistemleri.">
 <style>
   @font-face {
     font-family: "Fraunces Display";
@@ -1793,6 +1793,18 @@
     font-variant-numeric: tabular-nums;
   }
 
+  .rows .r-meta a {
+    color: var(--muted);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    transition: color .2s ease;
+  }
+
+  .rows .r-meta a:hover {
+    color: var(--lime);
+  }
+
   .rows.tools li {
     align-items: flex-start;
     padding: .4rem 0;
@@ -2109,7 +2121,7 @@
     height: auto;
     aspect-ratio: 1;
     object-fit: cover;
-    background: var(--graphite);
+    background: var(--paper);
   }
 
   .a-photo figcaption {
@@ -2278,7 +2290,7 @@
 
 <header class="nav" id="nav">
   <div class="nav-social">
-    <a class="icon-link" href="https://github.com/yakup-gunduz" target="_blank" rel="noopener" aria-label="GitHub"><svg>
+    <a class="icon-link" href="https://github.com/ykpgunduz" target="_blank" rel="noopener" aria-label="GitHub"><svg>
         <use href="#i-github" />
       </svg></a>
     <a class="icon-link" href="https://www.linkedin.com/in/yakupgunduz" target="_blank" rel="noopener"
@@ -2318,7 +2330,7 @@
       type="button" data-lang="en" aria-pressed="false">EN</button>
   </div>
   <div class="socials-round">
-    <a class="circle" href="https://github.com/yakup-gunduz" target="_blank" rel="noopener" aria-label="GitHub"><svg>
+    <a class="circle" href="https://github.com/ykpgunduz" target="_blank" rel="noopener" aria-label="GitHub"><svg>
         <use href="#i-github" />
       </svg></a>
     <a class="circle" href="https://www.linkedin.com/in/yakupgunduz" target="_blank" rel="noopener"
@@ -2350,7 +2362,7 @@
           </div>
         </div>
         <div class="hero-content">
-          <p class="tagline" data-i18n="hero.tagline">Kodu tasarımcı gözüyle yazan full-stack geliştirici. Harpos'un kurucusu, 42 İstanbul öğrencisi.</p>
+          <p class="tagline" data-i18n="hero.tagline">Kodu tasarımcı gözüyle yazan full-stack ve ürün geliştirici. Harpos'un kurucusu, 42 İstanbul öğrencisi.</p>
           <a class="btn hero-cta" href="#contact" data-i18n="hero.cta">Birlikte çalışalım</a>
         </div>
       </div>
@@ -2360,7 +2372,7 @@
   <section class="intro wrap sec-s" id="intro">
     <div class="container">
       <div class="mw-xx">
-        <h2 class="statement intro-text" id="intro-text" data-i18n="intro.text">Ben Yakup Gündüz; İstanbul'da yaşayan bir full-stack yazılım geliştiriciyim. Next.js ve Laravel ile SaaS, web ve otomasyon sistemleri geliştiriyorum. Restoran ve kafeler için POS platformu Harpos'un kurucusuyum; 42 İstanbul'da bilgisayar bilimi, İstanbul Üniversitesi'nde grafik tasarım eğitimi alıyorum.</h2>
+        <h2 class="statement intro-text" id="intro-text" data-i18n="intro.text">Ben Yakup Gündüz; İstanbul'da yaşayan bir full-stack yazılım geliştirici ve ürün geliştiriciyim. 2+ yıldır Next.js, TypeScript ve Laravel ile 15+ müşteriye yönelik SaaS, web ve otomasyon sistemleri geliştiriyorum. Restoran ve kafeler için POS platformu Harpos'un kurucusuyum; 42 İstanbul'da bilgisayar bilimi, İstanbul Üniversitesi'nde grafik tasarım eğitimi alıyorum.</h2>
         <div class="mt2"><a class="btn btn-alt" href="#about" data-i18n="intro.cta">Hikâyemi okuyun</a></div>
       </div>
     </div>
@@ -2423,9 +2435,9 @@
       <div class="grid2" data-reveal>
         <div>
           <h2 class="h5" data-i18n="approach.title">Yaklaşım: sağlam temel, hızlı sorgu, sorunsuz dağıtım.</h2>
-          <div class="mt2"><a class="btn btn-alt" href="https://github.com/yakup-gunduz" target="_blank" rel="noopener" data-i18n="approach.cta">Kodlarım GitHub'da</a></div>
+          <div class="mt2"><a class="btn btn-alt" href="https://github.com/ykpgunduz" target="_blank" rel="noopener" data-i18n="approach.cta">Kodlarım GitHub'da</a></div>
         </div>
-        <p class="t-md" data-i18n-html="approach.body">C/C++ ile edindiğim temeli günlük web işlerine taşıyorum: algoritma, bellek ve performans düşüncesi. Uygulamaları SOLID, MVC ve Repository Pattern ile kuruyor, RESTful API'lerle birbirine bağlıyorum. MSSQL, PostgreSQL ve MySQL sorgularını CTE ve stored procedure yapılarıyla optimize ediyor; Docker ve Nginx ile dağıtım süreçlerini yönetiyorum. Harpos'un sipariş ve ödeme servislerini Next.js, Laravel ve REST ile bu yaklaşımla geliştirdim.</p>
+        <p class="t-md" data-i18n-html="approach.body">C/C++ ile edindiğim temeli günlük web işlerine taşıyorum: algoritma, bellek ve performans düşüncesi. Uygulamaları SOLID, MVC ve Repository Pattern ile kuruyor, RESTful API ve WebSocket ile birbirine bağlıyorum. PostgreSQL ve MySQL sorgularını CTE ve stored procedure yapılarıyla %40'a kadar hızlandırıyor; Docker, Nginx, DigitalOcean ve CI/CD ile bulut dağıtım süreçlerini yönetiyorum. Harpos'un sipariş, ödeme ve anlık sipariş servislerini Next.js, TypeScript, Laravel ve REST ile bu yaklaşımla geliştirdim.</p>
       </div>
       <figure class="media16" data-reveal="lg">
         <img src="assets/img/feature-workspace.webp" width="1600" height="1067" loading="lazy" alt="Gece İstanbul manzaralı bir masada kod editörü açık dizüstü bilgisayar ve veritabanı sorgularını gösteren ekran" data-i18n-attr="alt:approach.alt">
@@ -2453,7 +2465,7 @@
             <h2 class="statement" data-i18n="process.s3">Sağlam bir mimari kurarım. SOLID ilkeleri, temiz katmanlar ve bakımı kolay kod.</h2>
           </li>
           <li class="p-item"><span class="p-num serif" aria-hidden="true">04</span>
-            <h2 class="statement" data-i18n="process.s4">Hızlı ve güvenli yayına alırım. Optimize edilmiş sorgular, Docker ve Nginx ile tekrarlanabilir dağıtım.</h2>
+            <h2 class="statement" data-i18n="process.s4">Hızlı ve güvenli yayına alırım. Optimize edilmiş sorgular, Docker, Nginx ve CI/CD ile tekrarlanabilir dağıtım.</h2>
           </li>
         </ol>
       </div>
@@ -2468,7 +2480,7 @@
             <h2 class="h5" data-i18n="feature.title">Harpos: restoran ve kafeler için POS platformu</h2>
             <div class="mt2"><a class="btn" href="https://harpos.app" target="_blank" rel="noopener" data-i18n="feature.cta">harpos.app'i ziyaret edin</a></div>
           </div>
-          <p class="t-md" data-i18n-html="feature.body">Harpos, kurucusu olduğum SaaS girişimi. Restoran, kafe ve oteller için adisyon, masa/sipariş yönetimi ve QR menüyü tek bir platformda topluyor; çoklu şube yapısıyla çalışıyor. Sistemi uçtan uca tasarlayıp geliştirdim: sipariş ve ödeme servislerini Next.js, Laravel ve REST ile yazdım, Docker/Nginx altyapısını ve dağıtım süreçlerini yönettim. Platform 5 kafe ve restorana hizmet verdi.</p>
+          <p class="t-md" data-i18n-html="feature.body">Harpos, Ekim 2024'te kurduğum SaaS girişimi. Restoran, kafe ve oteller için adisyon, masa/sipariş yönetimi ve QR menüyü tek bir platformda topluyor; çoklu şube yapısıyla çalışıyor. Sistemi uçtan uca tasarlayıp geliştirdim: sipariş/ödeme servislerini ve WebSocket tabanlı anlık sipariş akışını Next.js, TypeScript, Laravel ve REST ile yazdım; PostgreSQL ve MySQL sorgularını %40 hızlandırdım; Docker/Nginx bulut altyapısını ve CI/CD süreçlerini yönettim. Platform 5 kafe ve restorana hizmet verdi ve girişimcilik programı kapsamında AWS'den 5.000 $ kredi aldı.</p>
         </div>
         <figure class="reel">
           <img src="assets/img/harpos-pos.webp" width="1600" height="900" loading="lazy" alt="Bir kafe tezgâhında masa ve sipariş yönetimi ekranını gösteren POS tableti ve QR menü standı" data-i18n-attr="alt:feature.alt">
@@ -2479,29 +2491,34 @@
           <div class="t-track">
             <div class="t-row" id="t-row">
               <article class="t-card">
-                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.1.stat">46 takım arasında üçüncülük</span></p>
-                <p class="t-quote" data-i18n="rec.1.body">Inscribi Director: Monad oylamasıyla yönlenen, yapay zekâ destekli canlı bir video. Frontend'i ve oylama sonrası video görselleştirmesini ben geliştirdim.</p>
-                <p><span class="t-name" data-i18n="rec.1.name">Monad Blitz İstanbul</span><span class="t-role" data-i18n="rec.1.role">Hackathon</span></p>
+                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.1.stat">46 takımda üçüncülük</span></p>
+                <p class="t-quote" data-i18n="rec.1.body">Inscribi Director: AI destekli canlı videonun frontend ve oylama görselleştirmesini geliştirdim.</p>
+                <p><span class="t-name" data-i18n="rec.1.name">Monad Blitz İstanbul</span><span class="t-role" data-i18n="rec.1.role">Hackathon · Ekip projesi</span></p>
               </article>
               <article class="t-card">
-                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.2.stat">5 kafe ve restoran</span></p>
-                <p class="t-quote" data-i18n="rec.2.body">Adisyon, masa/sipariş ve QR menü özellikli POS sistemini tasarlayıp geliştirdim; sistem 5 kafe ve restorana hizmet verdi.</p>
-                <p><span class="t-name" data-i18n="rec.2.name">Harpos</span><span class="t-role" data-i18n="rec.2.role">Kendi girişimim, SaaS</span></p>
+                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.2.stat">5 kafe ve restoran · %40 hızlı sorgu</span></p>
+                <p class="t-quote" data-i18n="rec.2.body">Adisyon, masa/sipariş ve QR menü özellikli POS sistemini tasarlayıp geliştirdim; PostgreSQL ve MySQL sorgularını CTE ve stored procedure ile %40 hızlandırdım.</p>
+                <p><span class="t-name" data-i18n="rec.2.name">Harpos Teknoloji</span><span class="t-role" data-i18n="rec.2.role">Kendi girişimim, SaaS</span></p>
               </article>
               <article class="t-card">
-                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.3.stat">Veri boru hatları</span></p>
-                <p class="t-quote" data-i18n="rec.3.body">Veri setlerini analiz edip temizledim; analitik veri boru hatları kurdum, modelleme ve sorgu performansını iyileştirdim.</p>
-                <p><span class="t-name" data-i18n="rec.3.name">Uniqh</span><span class="t-role" data-i18n="rec.3.role">Londra, 2024</span></p>
+                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.6.stat">5.000 $ AWS kredisi</span></p>
+                <p class="t-quote" data-i18n="rec.6.body">Projelerin çoğunu kiralık bir DigitalOcean bulut sunucusunda barındırdım; girişimcilik programı kapsamında AWS'den 5.000 $ kredi aldım.</p>
+                <p><span class="t-name" data-i18n="rec.6.name">AWS &amp; DigitalOcean</span><span class="t-role" data-i18n="rec.6.role">Bulut altyapısı ve girişimcilik desteği</span></p>
               </article>
               <article class="t-card">
-                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.4.stat">Dinamik QR menü</span></p>
-                <p class="t-quote" data-i18n="rec.4.body">Responsive katalog, dinamik QR menü ve anlık sipariş akışı olan bir web uygulaması.</p>
+                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.3.stat">%35 hızlı API · 90+ e-ticaret</span></p>
+                <p class="t-quote" data-i18n="rec.3.body">Repository Pattern ile API yanıt süresini %35 düşürdüm; Uniqh Mobile App için 90+ uluslararası e-ticaret platformundan CSS selector ve DOM ayrıştırma ile veri toplayan entegrasyon hatları geliştirdim.</p>
+                <p><span class="t-name" data-i18n="rec.3.name">Kle Bilgi Teknolojileri · Uniqh</span><span class="t-role" data-i18n="rec.3.role">YTÜ Teknopark, 2024</span></p>
+              </article>
+              <article class="t-card">
+                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.4.stat">WebSocket ile anlık sipariş</span></p>
+                <p class="t-quote" data-i18n="rec.4.body">Responsive katalog, dinamik QR menü ve WebSocket ile anlık sipariş akışı olan bir web uygulaması.</p>
                 <p><span class="t-name" data-i18n="rec.4.name">Meringa QR Menü</span><span class="t-role" data-i18n="rec.4.role">Web uygulaması</span></p>
               </article>
               <article class="t-card">
-                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.5.stat">7 kurumsal proje</span></p>
-                <p class="t-quote" data-i18n="rec.5.body">Next.js ve Laravel ile kurumsal web siteleri ve portallar: 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS ve Yavuzoğlu Mimarlık.</p>
-                <p><span class="t-name" data-i18n="rec.5.name">Kurumsal web ve portal projeleri</span><span class="t-role" data-i18n="rec.5.role">SEO, Nginx</span></p>
+                <p class="t-stat"><svg aria-hidden="true"><use href="#i-star" /></svg><span data-i18n="rec.5.stat">15+ müşteri ve e-ticaret</span></p>
+                <p class="t-quote" data-i18n="rec.5.body">Caledor kapsamlı giyim e-ticaret platformu ile 90.ventures, Bircan Turizm, Özköse Group, MAİP, Intermed ve Yavuzoğlu Mimarlık için Next.js, TypeScript, Laravel ve Tailwind CSS projeleri.</p>
+                <p><span class="t-name" data-i18n="rec.5.name">Caledor ve kurumsal projeler</span><span class="t-role" data-i18n="rec.5.role">SEO, Nginx</span></p>
               </article>
             </div>
           </div>
@@ -2517,22 +2534,22 @@
           <button class="tab" type="button" role="tab" id="tab-1" aria-selected="true" aria-controls="pane-1">
             <span class="h4 tab-title" data-i18n="svc.1.title">SaaS ve web uygulamaları</span>
             <span class="tab-short" data-i18n="svc.1.short">SaaS</span>
-            <span class="tab-desc"><span><span class="tab-p" data-i18n="svc.1.body">Next.js, React ve Laravel ile uçtan uca SaaS ve web uygulamaları geliştiririm: sipariş, ödeme, yönetim panelleri ve RESTful API'ler. Mimari SOLID ilkelerine ve temiz katmanlara dayanır.</span></span></span>
+            <span class="tab-desc"><span><span class="tab-p" data-i18n="svc.1.body">Next.js, React, TypeScript, Tailwind CSS ve Laravel ile uçtan uca SaaS ve web uygulamaları geliştiririm: sipariş, ödeme, WebSocket tabanlı anlık akışlar, yönetim panelleri ve RESTful API'ler. Mimari SOLID, MVC ve Repository Pattern ilkelerine dayanır.</span></span></span>
           </button>
           <button class="tab" type="button" role="tab" id="tab-2" aria-selected="false" aria-controls="pane-2" tabindex="-1">
-            <span class="h4 tab-title" data-i18n="svc.2.title">Kurumsal web siteleri ve portallar</span>
+            <span class="h4 tab-title" data-i18n="svc.2.title">Kurumsal web siteleri ve e-ticaret</span>
             <span class="tab-short" data-i18n="svc.2.short">Web</span>
-            <span class="tab-desc"><span><span class="tab-p" data-i18n="svc.2.body">Kurumlar için hızlı, responsive ve SEO uyumlu web siteleri ve portallar kurarım. Next.js veya Laravel ile geliştirir, Nginx üzerinde yayına alırım.</span></span></span>
+            <span class="tab-desc"><span><span class="tab-p" data-i18n="svc.2.body">Kurumlar ve markalar için hızlı, responsive ve SEO uyumlu web siteleri, portallar ve e-ticaret platformları kurarım. Next.js, TypeScript, Tailwind CSS ve Laravel ile geliştirir, Nginx üzerinde yayına alırım.</span></span></span>
           </button>
           <button class="tab" type="button" role="tab" id="tab-3" aria-selected="false" aria-controls="pane-3" tabindex="-1">
             <span class="h4 tab-title" data-i18n="svc.3.title">Veritabanı tasarımı ve sorgu optimizasyonu</span>
             <span class="tab-short" data-i18n="svc.3.short">Veritabanı</span>
-            <span class="tab-desc"><span><span class="tab-p" data-i18n="svc.3.body">MSSQL, PostgreSQL ve MySQL için veritabanı tasarımı ve modelleme yaparım; yavaş sorguları CTE ve stored procedure yapılarıyla optimize ederim.</span></span></span>
+            <span class="tab-desc"><span><span class="tab-p" data-i18n="svc.3.body">PostgreSQL ve MySQL için veritabanı tasarımı ve modelleme yaparım; yavaş sorguları CTE ve stored procedure yapılarıyla optimize ederek yanıt sürelerini hızlandırırım.</span></span></span>
           </button>
           <button class="tab" type="button" role="tab" id="tab-4" aria-selected="false" aria-controls="pane-4" tabindex="-1">
             <span class="h4 tab-title" data-i18n="svc.4.title">Otomasyon, DevOps ve yapay zekâ</span>
             <span class="tab-short" data-i18n="svc.4.short">Otomasyon</span>
-            <span class="tab-desc"><span><span class="tab-p" data-i18n="svc.4.body">Docker ve Nginx ile tekrarlanabilir dağıtım süreçleri kurar, iş akışlarını otomatikleştiririm. Claude ve Codex gibi araçlarla LLM entegrasyonları geliştiririm.</span></span></span>
+            <span class="tab-desc"><span><span class="tab-p" data-i18n="svc.4.body">Docker, Nginx, DigitalOcean ve AWS üzerinde CI/CD ile tekrarlanabilir bulut dağıtım süreçleri kurar, veri entegrasyon ve iş akışlarını otomatikleştiririm. Claude ve Cursor ile AI destekli geliştirme yapar, LLM API entegrasyonları kurarım.</span></span></span>
           </button>
         </div>
         <div class="services-media">
@@ -2543,7 +2560,7 @@
         </div>
         <div class="m-detail">
           <h3 class="h4" id="m-title">SaaS ve web uygulamaları</h3>
-          <p id="m-body">Next.js, React ve Laravel ile uçtan uca SaaS ve web uygulamaları geliştiririm: sipariş, ödeme, yönetim panelleri ve RESTful API'ler. Mimari SOLID ilkelerine ve temiz katmanlara dayanır.</p>
+          <p id="m-body">Next.js, React, TypeScript, Tailwind CSS ve Laravel ile uçtan uca SaaS ve web uygulamaları geliştiririm: sipariş, ödeme, WebSocket tabanlı anlık akışlar, yönetim panelleri ve RESTful API'ler. Mimari SOLID, MVC ve Repository Pattern ilkelerine dayanır.</p>
         </div>
         <div class="services-cta"><a class="btn btn-alt btn-full" href="#contact" data-i18n="hero.cta">Birlikte çalışalım</a></div>
       </div>
@@ -2557,7 +2574,7 @@
     <div class="container about">
       <div class="arow" data-reveal>
         <div class="a-empty"></div>
-        <h1 class="about-h1 serif" tabindex="-1" data-i18n="about.h1">Yakup Gündüz, İstanbul'da full-stack yazılım geliştirici. SaaS, web ve otomasyon sistemleri.</h1>
+        <h1 class="about-h1 serif" tabindex="-1" data-i18n="about.h1">Yakup Gündüz, İstanbul'da full-stack yazılım geliştirici ve ürün geliştirici. SaaS, web ve otomasyon sistemleri.</h1>
       </div>
       <hr class="divider">
       <div class="arow" data-reveal>
@@ -2566,11 +2583,11 @@
           <a class="btn btn-alt" href="#contact" data-i18n="hero.cta">Birlikte çalışalım</a>
         </div>
         <div class="rich">
-          <p data-i18n="about.p1">Ben Yakup Gündüz. İstanbul'da yaşayan bir full-stack yazılım geliştiriciyim; Next.js ve Laravel ile SaaS, web ve otomasyon sistemleri geliştiriyorum. C/C++ temelimi SQL optimizasyonu, RESTful API ve Docker/Nginx ile dağıtım deneyimiyle birleştiriyorum. Diğer şehirlerden uzaktan çalışmaya da açığım.</p>
-          <p data-i18n="about.p2">Ağustos 2024'te kendi girişimim Harpos Teknoloji'yi kurdum ve Ağustos 2026'ya kadar kurucu ve full-stack geliştirici olarak yürüttüm. Restoran, kafe ve oteller için adisyon, masa/sipariş ve QR menü özellikli bir POS sistemi tasarlayıp geliştirdim; sistem 5 kafe ve restorana hizmet verdi. Sipariş ve ödeme servislerini Next.js, Laravel ve REST ile yazdım, Docker/Nginx altyapısını ve dağıtım süreçlerini yönettim; MSSQL, PostgreSQL ve MySQL sorgularını CTE ve stored procedure yapılarıyla optimize ettim.</p>
-          <p data-i18n="about.p3">Yazılıma Ekim 2023'te Yıldız Teknik Üniversitesi Teknopark'taki Kle Bilgi Teknolojileri'nde stajyer olarak başladım; HTML/CSS/JavaScript arayüzleri ve API tüketimi geliştirdim, Git, CI/CD ve hata ayıklama süreçlerine katkı sağladım. Mayıs–Eylül 2024 arasında aynı şirkette tam zamanlı yazılım geliştirici olarak kurumsal web ve backend uygulamalarını SOLID, MVC ve Repository Pattern ile geliştirdim. Aynı dönemde Londra merkezli Uniqh'te veri bilimi uzmanı olarak veri setlerini analiz edip temizledim ve analitik veri boru hatları kurdum.</p>
-          <p data-i18n="about.p4">Haziran 2025'ten beri 42 İstanbul'da (Bilişim Vadisi) proje tabanlı bilgisayar bilimi eğitimi alıyorum: C/C++, algoritmalar, bellek yönetimi, eşzamanlılık ve UNIX. 2024'ten beri İstanbul Üniversitesi'nde grafik tasarım okuyor, UX/UI ve dijital görsel tasarım prensipleri üzerine çalışıyorum. Monad Blitz İstanbul'da 46 takım arasında üçüncü olan Inscribi Director projesinde frontend'i ve oylama sonrası video görselleştirmesini geliştirdim.</p>
-          <p data-i18n="about.p5">Bunların yanında 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS ve Yavuzoğlu Mimarlık için Next.js ve Laravel ile kurumsal web ve portal projeleri geliştirdim; Meringa için responsive katalog, dinamik QR menü ve anlık sipariş sistemi kurdum.</p>
+          <p data-i18n="about.p1">Ben Yakup Gündüz. İstanbul'da yaşayan, 2+ yıl deneyimli bir full-stack yazılım geliştirici ve ürün geliştiriciyim. 15+ müşteriye yönelik çok sayıda proje geliştirdim ve Harpos POS SaaS ürününü uçtan uca kurdum. Next.js, React, TypeScript ve Laravel ile SaaS, e-ticaret, web ve otomasyon sistemleri geliştiriyor; C/C++ temelimi PostgreSQL/MySQL sorgu optimizasyonu, RESTful API, WebSocket ve Docker/Nginx bulut altyapısıyla birleştiriyorum. Diğer şehirlerde uzaktan çalışmaya, tüm remote ve hibrit rollere açığım.</p>
+          <p data-i18n="about.p2">Ekim 2024'te kendi girişimim Harpos Teknoloji'yi kurdum ve kurucu &amp; full-stack yazılım geliştirici olarak geliştirmeye devam ediyorum. Restoran, kafe ve oteller için adisyon, masa/sipariş ve QR menü özellikli POS sistemini tasarlayıp geliştirdim; 5 kafe ve restorana hizmet verdim. Sipariş/ödeme servislerini ve WebSocket tabanlı anlık sipariş akışını Next.js, TypeScript, Laravel ve REST ile geliştirdim; Docker/Nginx bulut altyapısını ve CI/CD süreçlerini yönettim. PostgreSQL ve MySQL sorgularını CTE ve stored procedure yapılarıyla %40 hızlandırdım. Projelerin çoğunu kiralık bir DigitalOcean bulut sunucusunda barındırdım ve girişimcilik programı kapsamında AWS'den 5.000 $ kredi aldım.</p>
+          <p data-i18n="about.p3">Yazılıma Ekim 2023'te Yıldız Teknik Üniversitesi Teknopark'taki Kle Bilgi Teknolojileri A.Ş.'de stajyer yazılım geliştirici olarak başladım; Mayıs 2024'e kadar HTML/CSS/JavaScript arayüzleri ve API tüketimi geliştirdim, uçtan uca prototip modüller kurdum, birim/API testleri yazdım ve Git, CI/CD, hata ayıklama ve DevOps iş akışlarını kurguladım. Mayıs–Eylül 2024 arasında aynı şirkette tam zamanlı yazılım geliştirici olarak Laravel ve RESTful API ile SOLID ve MVC prensipleriyle kurumsal web/backend servisleri geliştirdim; Repository Pattern ile veritabanı şemalarını ve API servislerini %35 hızlandırdım (yanıt süresini düşürdüm). Bu kapsamda Uniqh Mobile App Projesi için 90+ uluslararası e-ticaret platformunun kamuya açık ürün kataloglarını CSS selector ve DOM ayrıştırma ile toplayan otomatik veri entegrasyon hatları geliştirdim.</p>
+          <p data-i18n="about.p4">2025–2027 döneminde 42 İstanbul'da (Bilişim Vadisi) C/C++, algoritmalar, bellek yönetimi, eşzamanlılık ve UNIX üzerine proje tabanlı bilgisayar bilimi eğitimi alıyor; aynı dönemde (2025–2027) İstanbul Üniversitesi'nde Grafik Tasarım önlisans programında UX/UI ve dijital görsel tasarım prensipleri üzerine eğitimime devam ediyorum. Monad Blitz İstanbul'da 46 takımda 3.lük elde eden ekip projemiz Inscribi Director'da AI destekli canlı videonun frontend ve oylama görselleştirmesini geliştirdim.</p>
+          <p data-i18n="about.p5">Bunların yanında Caledor için Next.js, TypeScript, Laravel ve Tailwind CSS ile kapsamlı bir giyim e-ticaret platformu (SEO, Nginx); Meringa için responsive katalog, dinamik QR menü ve WebSocket ile anlık sipariş sistemi; 90.ventures, Bircan Turizm, Özköse Group, MAİP, Intermed ve Yavuzoğlu Mimarlık için kurumsal web projeleri geliştirdim.</p>
         </div>
       </div>
       <hr class="divider">
@@ -2580,12 +2597,13 @@
           <a class="btn btn-alt" href="https://www.linkedin.com/in/yakupgunduz" target="_blank" rel="noopener" data-i18n="about.linkedin">LinkedIn profilim</a>
         </div>
         <ul class="rows" id="milestones">
-          <li><span class="r-name" data-i18n="ms.1">Monad Blitz İstanbul'da 46 takım arasında üçüncülük (Inscribi Director)</span><span class="r-meta" data-i18n="ms.1.date">Hackathon</span></li>
-          <li><span class="r-name" data-i18n="ms.2">42 İstanbul'da bilgisayar bilimi eğitimine başladım</span><span class="r-meta" data-date="2025-06">Haz 2025</span></li>
-          <li><span class="r-name" data-i18n="ms.3">Harpos Teknoloji'yi kurdum (Ağu 2024 – Ağu 2026)</span><span class="r-meta" data-date="2024-08">Ağu 2024</span></li>
-          <li><span class="r-name" data-i18n="ms.4">İstanbul Üniversitesi, Grafik Tasarım</span><span class="r-meta">2024</span></li>
+          <li><span class="r-name" data-i18n="ms.1">Monad Blitz İstanbul'da 46 takımda üçüncülük (Inscribi Director)</span><span class="r-meta" data-i18n="ms.1.date">Hackathon</span></li>
+          <li><span class="r-name" data-i18n="ms.8">Girişimcilik programı kapsamında AWS'den 5.000 $ kredi</span><span class="r-meta" data-i18n="ms.8.date">AWS Desteği</span></li>
+          <li><span class="r-name" data-i18n="ms.2">42 İstanbul'da bilgisayar bilimi eğitimi (2025 – 2027)</span><span class="r-meta" data-date="2025-06">Haz 2025</span></li>
+          <li><span class="r-name" data-i18n="ms.4">İstanbul Üniversitesi, Grafik Tasarım (Önlisans)</span><span class="r-meta">2025 – 2027</span></li>
+          <li><span class="r-name" data-i18n="ms.3">Harpos Teknoloji'yi kurdum (Eki 2024 – Devam)</span><span class="r-meta" data-date="2024-10">Eki 2024</span></li>
           <li><span class="r-name" data-i18n="ms.5">Kle Bilgi Teknolojileri'nde yazılım geliştirici (tam zamanlı)</span><span class="r-meta" data-date="2024-05">May 2024</span></li>
-          <li><span class="r-name" data-i18n="ms.6">Uniqh'te veri bilimi uzmanı / geliştirici (Londra)</span><span class="r-meta" data-date="2024-05">May 2024</span></li>
+          <li><span class="r-name" data-i18n="ms.6">Uniqh Mobile App Projesi: 90+ e-ticaret veri entegrasyonu (Kle Bilgi)</span><span class="r-meta" data-date="2024-05">May 2024</span></li>
           <li><span class="r-name" data-i18n="ms.7">Kle Bilgi Teknolojileri'nde stajyer yazılım geliştirici</span><span class="r-meta" data-date="2023-10">Eki 2023</span></li>
         </ul>
       </div>
@@ -2595,14 +2613,13 @@
           <h2 class="h5" data-i18n="about.tools">Teknik yetkinlikler</h2>
         </div>
         <ul class="rows tools">
-          <li><span class="r-name" data-i18n="tools.dev">Geliştirme</span><span class="r-meta">Next.js, React, Laravel, JavaScript, HTML5, CSS3, C, C++</span></li>
-          <li><span class="r-name" data-i18n="tools.data">Veri</span><span class="r-meta">SQL Server (MSSQL), PostgreSQL, MySQL</span></li>
-          <li><span class="r-name" data-i18n="tools.db">Veritabanı</span><span class="r-meta" data-i18n="tools.dbList">CTE, stored procedure, sorgu optimizasyonu, tasarım ve modelleme</span></li>
-          <li><span class="r-name" data-i18n="tools.arch">Mimari</span><span class="r-meta" data-i18n="tools.archList">RESTful API, mikroservis ve monolitik mimari, OOP, SOLID</span></li>
-          <li><span class="r-name" data-i18n="tools.pattern">Tasarım desenleri</span><span class="r-meta">MVC, Repository Pattern, CQRS</span></li>
-          <li><span class="r-name">DevOps</span><span class="r-meta">Docker, Nginx, Git, GitHub, Postman</span></li>
-          <li><span class="r-name" data-i18n="tools.ai">Yapay zekâ</span><span class="r-meta" data-i18n="tools.aiList">Claude, Codex, Antigravity; LLM entegrasyonları</span></li>
-          <li><span class="r-name" data-i18n="tools.lang">Diller</span><span class="r-meta" data-i18n="tools.langList">Türkçe, İngilizce (B1)</span></li>
+          <li><span class="r-name" data-i18n="tools.dev">Geliştirme</span><span class="r-meta">Next.js, React, TypeScript, JavaScript, Laravel, PHP, Tailwind CSS, HTML5, CSS3, C/C++</span></li>
+          <li><span class="r-name" data-i18n="tools.db">Veritabanı</span><span class="r-meta" data-i18n="tools.dbList">PostgreSQL, MySQL, CTE, stored procedure, sorgu optimizasyonu, tasarım ve modelleme</span></li>
+          <li><span class="r-name" data-i18n="tools.arch">Mimari</span><span class="r-meta" data-i18n="tools.archList">RESTful API, WebSocket, JWT/OAuth, mikroservis ve monolitik mimari, OOP, SOLID</span></li>
+          <li><span class="r-name" data-i18n="tools.pattern">Tasarım &amp; Süreç</span><span class="r-meta">MVC, Repository Pattern, CQRS, Agile/Scrum</span></li>
+          <li><span class="r-name" data-i18n="tools.devops">DevOps &amp; Bulut</span><span class="r-meta">Docker, Nginx, AWS, DigitalOcean, CI/CD, Linux, Git, GitHub, Postman</span></li>
+          <li><span class="r-name" data-i18n="tools.ai">Yapay zekâ</span><span class="r-meta" data-i18n="tools.aiList">AI destekli geliştirme (Claude, Cursor), LLM API entegrasyonları, Prompt Engineering</span></li>
+          <li><span class="r-name" data-i18n="tools.lang">Diller</span><span class="r-meta" data-i18n="tools.langList">Türkçe, İngilizce: A2 (mesleki ve teknik kullanım: dokümantasyon okuma ve kod yazma)</span></li>
         </ul>
       </div>
     </div>
@@ -2617,7 +2634,7 @@
         <div class="c-grid">
           <div class="c-left">
             <h1 class="c-h1 serif" tabindex="-1" data-i18n-html="contact.h1">Bir projeniz mi var?<br>Konuşalım.</h1>
-            <p data-i18n="contact.intro">Proje, iş birliği ya da kısa bir soru için bana en hızlı e-postayla ulaşırsınız.
+            <p data-i18n="contact.intro">Proje, iş birliği ya da kısa bir soru için bana en hızlı e-posta veya telefonla ulaşırsınız.
               LinkedIn ve GitHub'dan da yazabilirsiniz.</p>
           </div>
           <dl class="c-list">
@@ -2626,16 +2643,20 @@
               <dd><a href="mailto:ykpgunduz@icloud.com">ykpgunduz@icloud.com</a></dd>
             </div>
             <div class="c-row">
+              <dt data-i18n="contact.d.phone">Telefon</dt>
+              <dd><a href="tel:+905441819644">+90 544 181 96 44</a></dd>
+            </div>
+            <div class="c-row">
               <dt lang="en">LinkedIn</dt>
               <dd><a href="https://www.linkedin.com/in/yakupgunduz" target="_blank" rel="noopener">linkedin.com/in/yakupgunduz</a></dd>
             </div>
             <div class="c-row">
               <dt lang="en">GitHub</dt>
-              <dd><a href="https://github.com/yakup-gunduz" target="_blank" rel="noopener">github.com/yakup-gunduz</a></dd>
+              <dd><a href="https://github.com/ykpgunduz" target="_blank" rel="noopener">github.com/ykpgunduz</a></dd>
             </div>
             <div class="c-row">
               <dt data-i18n="contact.d.loc">Konum</dt>
-              <dd data-i18n="contact.d.locVal">İstanbul, Türkiye · uzaktan çalışmaya açık</dd>
+              <dd data-i18n="contact.d.locVal">İstanbul, Türkiye · diğer şehirlerde uzaktan çalışmaya, tüm remote ve hibrit rollere açık</dd>
             </div>
           </dl>
         </div>
@@ -2665,7 +2686,7 @@
         </nav>
       </div>
       <div class="socials-round f-social">
-        <a class="circle" href="https://github.com/yakup-gunduz" target="_blank" rel="noopener" aria-label="GitHub"><svg>
+        <a class="circle" href="https://github.com/ykpgunduz" target="_blank" rel="noopener" aria-label="GitHub"><svg>
             <use href="#i-github" />
           </svg></a>
         <a class="circle" href="https://www.linkedin.com/in/yakupgunduz" target="_blank" rel="noopener"
@@ -2693,7 +2714,7 @@
     "use strict";
 
     var EN = {
-      "meta.description": "Yakup Gündüz: full-stack software developer in Istanbul and founder of Harpos. SaaS, web and automation systems with Next.js and Laravel.",
+      "meta.description": "Yakup Gündüz: full-stack software and product developer in Istanbul and founder of Harpos. SaaS, web and automation systems with Next.js, TypeScript and Laravel.",
       "title.home": "Yakup Gündüz",
       "title.about": "About · Yakup Gündüz",
       "title.contact": "Contact · Yakup Gündüz",
@@ -2708,64 +2729,68 @@
       "nav.open": "Open menu",
       "nav.close": "Close menu",
       "hero.label": "Introduction",
-      "hero.tagline": "A full-stack developer who codes with a designer's eye. Founder of Harpos, student at 42 İstanbul.",
+      "hero.tagline": "A full-stack and product developer who codes with a designer's eye. Founder of Harpos, student at 42 İstanbul.",
       "hero.cta": "Work with me",
       "hero.portrait": "Portrait of Yakup Gündüz",
-      "intro.text": "I'm Yakup Gündüz, a full-stack software developer based in Istanbul. I build SaaS, web and automation systems with Next.js and Laravel. I founded Harpos, a POS platform for restaurants and cafés, and I study computer science at 42 İstanbul and graphic design at Istanbul University.",
+      "intro.text": "I'm Yakup Gündüz, a full-stack software and product developer based in Istanbul. With 2+ years of experience, I have built SaaS, web and automation systems with Next.js, TypeScript and Laravel for 15+ clients. I founded Harpos, a POS platform for restaurants and cafés, and I study computer science at 42 İstanbul and graphic design at Istanbul University.",
       "intro.cta": "Read my story",
       "logos.label": "Where I've worked, trained, delivered projects and been part of",
       "approach.title": "Approach: a solid foundation, fast queries, smooth deploys.",
       "approach.cta": "See my code on GitHub",
-      "approach.body": "I bring the foundation I built with C/C++ into everyday web work: thinking in algorithms, memory and performance. I structure applications with SOLID, MVC and the Repository Pattern and connect them through RESTful APIs. I optimize MSSQL, PostgreSQL and MySQL queries with CTEs and stored procedures, and run deployments with Docker and Nginx. That is how I built the order and payment services of Harpos with Next.js, Laravel and REST.",
+      "approach.body": "I bring the foundation I built with C/C++ into everyday web work: thinking in algorithms, memory and performance. I structure applications with SOLID, MVC and the Repository Pattern and connect them through RESTful APIs and WebSocket. I speed up PostgreSQL and MySQL queries by up to 40% with CTEs and stored procedures, and run cloud deployments with Docker, Nginx, DigitalOcean and CI/CD. That is how I built the ordering, payment and real-time order services of Harpos with Next.js, TypeScript, Laravel and REST.",
       "approach.alt": "A laptop with a code editor and a screen of database queries on a desk overlooking Istanbul at night",
       "process.label": "How I work",
       "process.s1": "I start from the person. Who will use this, and what do they need to get done?",
       "process.s2": "I keep it simple. The smallest thing that solves the real problem wins.",
       "process.s3": "I build on a solid architecture. SOLID principles, clean layers and code that is easy to maintain.",
-      "process.s4": "I ship fast and safely. Optimized queries and repeatable deployments with Docker and Nginx.",
+      "process.s4": "I ship fast and safely. Optimized queries and repeatable deployments with Docker, Nginx and CI/CD.",
       "feature.title": "Harpos: a POS platform for restaurants and cafés",
       "feature.cta": "Visit harpos.app",
-      "feature.body": "Harpos is the SaaS startup I founded. It brings billing, table and order management and QR menus together on one platform for restaurants, cafés and hotels, with multi-branch support. I designed and built the system end to end: I wrote the order and payment services with Next.js, Laravel and REST, and ran the Docker/Nginx infrastructure and deployments. The platform served 5 cafés and restaurants.",
+      "feature.body": "Harpos is the SaaS startup I founded in October 2024. It brings billing, table and order management and QR menus together on one platform for restaurants, cafés and hotels, with multi-branch support. I designed and built the system end to end: I wrote the ordering/payment services and WebSocket real-time order flow with Next.js, TypeScript, Laravel and REST, sped up PostgreSQL and MySQL queries by 40%, and managed the Docker/Nginx cloud infrastructure and CI/CD pipelines. The platform served 5 cafés and restaurants and received $5,000 in AWS credits through an entrepreneurship program.",
       "feature.alt": "A POS tablet showing table and order management next to a QR menu stand on a café counter",
       "feature.caption": "Billing, tables, orders and QR menus on one platform",
       "rec.label": "Projects and results",
       "rec.1.stat": "3rd of 46 teams",
-      "rec.1.body": "Inscribi Director: an AI-powered live video steered by Monad voting. I built the frontend and the post-vote video visualization.",
+      "rec.1.body": "Inscribi Director: I built the frontend and voting visualization for the AI-powered live video.",
       "rec.1.name": "Monad Blitz Istanbul",
-      "rec.1.role": "Hackathon",
-      "rec.2.stat": "5 cafés and restaurants",
-      "rec.2.body": "I designed and built a POS system with billing, table/order management and QR menus; it served 5 cafés and restaurants.",
-      "rec.2.name": "Harpos",
+      "rec.1.role": "Hackathon · Team project",
+      "rec.2.stat": "5 cafés & restaurants · 40% faster queries",
+      "rec.2.body": "Designed and built a POS system with billing, table/order management and QR menus; sped up PostgreSQL and MySQL queries by 40% with CTEs and stored procedures.",
+      "rec.2.name": "Harpos Teknoloji",
       "rec.2.role": "My own startup, SaaS",
-      "rec.3.stat": "Data pipelines",
-      "rec.3.body": "I analysed and cleaned datasets, built analytics data pipelines and improved modelling and query performance.",
-      "rec.3.name": "Uniqh",
-      "rec.3.role": "London, 2024",
-      "rec.4.stat": "Dynamic QR menu",
-      "rec.4.body": "A web app with a responsive catalog, a dynamic QR menu and live ordering.",
+      "rec.6.stat": "$5,000 in AWS credits",
+      "rec.6.body": "Hosted most projects on a rented DigitalOcean cloud server and received $5,000 in AWS credits through an entrepreneurship program.",
+      "rec.6.name": "AWS & DigitalOcean",
+      "rec.6.role": "Cloud infrastructure & startup grant",
+      "rec.3.stat": "35% faster APIs · 90+ stores",
+      "rec.3.body": "Reduced API response times by 35% with the Repository Pattern, and built automated CSS selector and DOM parsing pipelines across 90+ international e-commerce platforms for the Uniqh Mobile App.",
+      "rec.3.name": "Kle Bilgi Teknolojileri · Uniqh",
+      "rec.3.role": "YTU Technopark, 2024",
+      "rec.4.stat": "Real-time WebSocket ordering",
+      "rec.4.body": "A web app with a responsive catalog, a dynamic QR menu and real-time ordering via WebSocket.",
       "rec.4.name": "Meringa QR Menu",
       "rec.4.role": "Web application",
-      "rec.5.stat": "7 corporate projects",
-      "rec.5.body": "Corporate websites and portals built with Next.js and Laravel: 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS and Yavuzoğlu Mimarlık.",
-      "rec.5.name": "Corporate web and portal projects",
+      "rec.5.stat": "15+ clients & e-commerce",
+      "rec.5.body": "The Caledor clothing e-commerce platform and projects with Next.js, TypeScript, Laravel and Tailwind CSS for 90.ventures, Bircan Turizm, Özköse Group, MAİP, Intermed and Yavuzoğlu Mimarlık.",
+      "rec.5.name": "Caledor & corporate projects",
       "rec.5.role": "SEO, Nginx",
       "svc.label": "What I do",
       "svc.tabs": "Services",
       "svc.1.title": "SaaS and web applications",
       "svc.1.short": "SaaS",
-      "svc.1.body": "I build SaaS and web applications end to end with Next.js, React and Laravel: ordering, payments, admin panels and RESTful APIs. The architecture rests on SOLID principles and clean layers.",
+      "svc.1.body": "I build SaaS and web applications end to end with Next.js, React, TypeScript, Tailwind CSS and Laravel: ordering, payments, real-time WebSocket flows, admin panels and RESTful APIs. The architecture rests on SOLID, MVC and the Repository Pattern.",
       "svc.1.alt": "A SaaS admin dashboard with sales charts and a branch list next to a laptop with a code editor",
-      "svc.2.title": "Corporate websites and portals",
+      "svc.2.title": "Corporate websites and e-commerce",
       "svc.2.short": "Web",
-      "svc.2.body": "I build fast, responsive, SEO-friendly websites and portals for companies, developed with Next.js or Laravel and served on Nginx.",
+      "svc.2.body": "I build fast, responsive, SEO-friendly websites, portals and e-commerce platforms for companies and brands, developed with Next.js, TypeScript, Tailwind CSS and Laravel and served on Nginx.",
       "svc.2.alt": "A corporate website design on a monitor, with its responsive view on a phone beside it",
       "svc.3.title": "Database design and query optimization",
       "svc.3.short": "Database",
-      "svc.3.body": "I design and model databases on MSSQL, PostgreSQL and MySQL, and optimize slow queries with CTEs and stored procedures.",
+      "svc.3.body": "I design and model databases on PostgreSQL and MySQL, and optimize slow queries with CTEs and stored procedures to speed up response times.",
       "svc.3.alt": "A laptop showing an SQL query and database performance charts in front of a server room",
       "svc.4.title": "Automation, DevOps and AI",
       "svc.4.short": "Automation",
-      "svc.4.body": "I set up repeatable deployments with Docker and Nginx and automate workflows. I build LLM integrations with tools like Claude and Codex.",
+      "svc.4.body": "I set up repeatable cloud deployments with Docker, Nginx, DigitalOcean, AWS and CI/CD, and automate data integration and workflows. I use Claude and Cursor for AI-assisted development and build LLM API integrations.",
       "svc.4.alt": "An Nginx config in a code editor, Docker containers running in the terminal and an AI assistant panel",
       "footer.heading": "Write to me about a new project, a collaboration or a quick question.",
       "footer.copy": "Copy",
@@ -2773,40 +2798,43 @@
       "footer.copyFail": "Select the address",
       "footer.menu": "Footer menu",
       "footer.rights": "All rights reserved.",
-      "about.h1": "Yakup Gündüz, full-stack software developer in Istanbul. SaaS, web and automation systems.",
+      "about.h1": "Yakup Gündüz, full-stack software and product developer in Istanbul. SaaS, web and automation systems.",
       "about.bio": "Bio",
-      "about.p1": "I'm Yakup Gündüz, a full-stack software developer based in Istanbul. I build SaaS, web and automation systems with Next.js and Laravel, combining a C/C++ foundation with experience in SQL optimization, RESTful APIs and Docker/Nginx deployment. I'm also open to remote work for other cities.",
-      "about.p2": "In August 2024 I founded my own startup, Harpos Teknoloji, and ran it as founder and full-stack developer until August 2026. I designed and built a POS system with billing, table/order management and QR menus for restaurants, cafés and hotels; it served 5 cafés and restaurants. I wrote the order and payment services with Next.js, Laravel and REST, ran the Docker/Nginx infrastructure and deployments, and optimized MSSQL, PostgreSQL and MySQL queries with CTEs and stored procedures.",
-      "about.p3": "I started in software in October 2023 as an intern at Kle Bilgi Teknolojileri in Yıldız Technical University Technopark, building HTML/CSS/JavaScript interfaces and API integrations and contributing to Git, CI/CD and debugging. From May to September 2024 I worked there full time as a software developer, building enterprise web and backend applications with SOLID, MVC and the Repository Pattern. In the same period I worked as a data science specialist at London-based Uniqh, analysing and cleaning datasets and building analytics data pipelines.",
-      "about.p4": "Since June 2025 I have been studying computer science at 42 İstanbul (Bilişim Vadisi) in a project-based program: C/C++, algorithms, memory management, concurrency and UNIX. Since 2024 I have also been studying graphic design at Istanbul University, focusing on UX/UI and digital visual design. At Monad Blitz Istanbul I built the frontend and the post-vote video visualization of Inscribi Director, which placed third among 46 teams.",
-      "about.p5": "Alongside this I have built corporate websites and portals with Next.js and Laravel for 90.ventures, Bircan Turizm, Özköse Group, MAİP, Caledor, Intermed MS and Yavuzoğlu Mimarlık, and a responsive catalog, dynamic QR menu and live ordering system for Meringa.",
+      "about.p1": "I'm Yakup Gündüz, a full-stack software and product developer based in Istanbul with 2+ years of experience. I have delivered projects for 15+ clients and built the Harpos POS SaaS product end to end. I build SaaS, e-commerce, web and automation systems with Next.js, React, TypeScript and Laravel, combining a C/C++ foundation with PostgreSQL/MySQL query optimization, RESTful APIs, WebSocket and Docker/Nginx cloud infrastructure. I'm open to remote work for other cities and all remote and hybrid roles.",
+      "about.p2": "In October 2024 I founded my own startup, Harpos Teknoloji, which I continue to lead as founder and full-stack software developer. I designed and built a POS system with billing, table/order management and QR menus for restaurants, cafés and hotels, serving 5 cafés and restaurants. I developed the ordering/payment services and WebSocket-based real-time order flow with Next.js, TypeScript, Laravel and REST, and managed the Docker/Nginx cloud infrastructure and CI/CD processes. I sped up PostgreSQL and MySQL queries by 40% with CTEs and stored procedures, hosted most projects on a rented DigitalOcean cloud server and received $5,000 in AWS credits through an entrepreneurship program.",
+      "about.p3": "I started in software in October 2023 as an intern software developer at Kle Bilgi Teknolojileri A.Ş. in Yıldız Technical University Technopark; until May 2024 I built HTML/CSS/JavaScript interfaces and API integrations, developed end-to-end prototype modules, wrote unit/API tests and set up Git, CI/CD, debugging and DevOps workflows. From May to September 2024 I worked there full time as a software developer, building enterprise web/backend services with Laravel and RESTful APIs using SOLID and MVC principles, and speeding up database schemas and API services by 35% (reducing response times) with the Repository Pattern. As part of the Uniqh Mobile App Project, I built automated data integration pipelines that collected public product catalogs from 90+ international e-commerce platforms using CSS selectors and DOM parsing.",
+      "about.p4": "For 2025–2027 I am studying computer science at 42 İstanbul (Bilişim Vadisi) in a project-based curriculum covering C/C++, algorithms, memory management, concurrency and UNIX, while simultaneously pursuing an associate degree in Graphic Design at Istanbul University (2025–2027) focused on UX/UI and digital visual design principles. At Monad Blitz Istanbul, our team project Inscribi Director placed 3rd out of 46 teams; I built the frontend and voting visualization for the AI-powered live video.",
+      "about.p5": "Alongside this I built Caledor, a comprehensive clothing e-commerce platform with Next.js, TypeScript, Laravel and Tailwind CSS (SEO, Nginx); a responsive catalog, dynamic QR menu and real-time WebSocket ordering system for Meringa; and corporate web projects for 90.ventures, Bircan Turizm, Özköse Group, MAİP, Intermed and Yavuzoğlu Mimarlık.",
       "about.milestones": "Milestones",
       "about.linkedin": "My LinkedIn profile",
       "ms.1": "3rd of 46 teams at Monad Blitz Istanbul (Inscribi Director)",
       "ms.1.date": "Hackathon",
-      "ms.2": "Started computer science at 42 İstanbul",
-      "ms.3": "Founded Harpos Teknoloji (Aug 2024 – Aug 2026)",
-      "ms.4": "Istanbul University, Graphic Design",
+      "ms.8": "$5,000 in AWS credits through an entrepreneurship program",
+      "ms.8.date": "AWS Grant",
+      "ms.2": "Computer science at 42 İstanbul (2025 – 2027)",
+      "ms.3": "Founded Harpos Teknoloji (Oct 2024 – Present)",
+      "ms.4": "Istanbul University, Graphic Design (Associate Degree)",
       "ms.5": "Software developer at Kle Bilgi Teknolojileri (full time)",
-      "ms.6": "Data science specialist / developer at Uniqh (London)",
+      "ms.6": "Uniqh Mobile App Project: 90+ e-commerce data integration (Kle Bilgi)",
       "ms.7": "Intern software developer at Kle Bilgi Teknolojileri",
       "about.tools": "Technical skills",
       "tools.dev": "Development",
-      "tools.data": "Data",
       "tools.db": "Databases",
-      "tools.dbList": "CTEs, stored procedures, query optimization, design and modelling",
+      "tools.dbList": "PostgreSQL, MySQL, CTEs, stored procedures, query optimization, design and modelling",
       "tools.arch": "Architecture",
-      "tools.archList": "RESTful APIs, microservice and monolithic architecture, OOP, SOLID",
-      "tools.pattern": "Design patterns",
+      "tools.archList": "RESTful APIs, WebSocket, JWT/OAuth, microservice and monolithic architecture, OOP, SOLID",
+      "tools.pattern": "Design & process",
+      "tools.devops": "DevOps & cloud",
       "tools.ai": "AI",
-      "tools.aiList": "Claude, Codex, Antigravity; LLM integrations",
+      "tools.aiList": "AI-assisted development (Claude, Cursor), LLM API integrations, Prompt Engineering",
       "tools.lang": "Languages",
-      "tools.langList": "Turkish, English (B1)",
+      "tools.langList": "Turkish, English: A2 (professional and technical use: reading documentation and writing code)",
       "contact.h1": "Have a project?<br>Let’s talk.",
-      "contact.intro": "For projects, collaborations or a quick question, email is the fastest way to reach me. You can also write on LinkedIn or GitHub.",
+      "contact.intro": "For projects, collaborations or a quick question, email or phone is the fastest way to reach me. You can also write on LinkedIn or GitHub.",
       "contact.d.email": "Email",
+      "contact.d.phone": "Phone",
       "contact.d.loc": "Location",
-      "contact.d.locVal": "Istanbul, Türkiye · open to remote work"
+      "contact.d.locVal": "Istanbul, Türkiye · open to remote work for other cities and all remote and hybrid roles"
     };
     var TR_EXTRA = {
       "title.home": "Yakup Gündüz",
